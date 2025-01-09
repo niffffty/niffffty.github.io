@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>吴广喆的blog</title><link>https://niffffty.github.io</link><description>个人学习记录</description><copyright>吴广喆的blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/94451088?v=4</url><title>avatar</title><link>https://niffffty.github.io</link></image><lastBuildDate>Thu, 09 Jan 2025 14:15:15 +0000</lastBuildDate><managingEditor>吴广喆的blog</managingEditor><ttl>60</ttl><webMaster>吴广喆的blog</webMaster><item><title>使用Gmeek博客框架搭建个人博客</title><link>https://niffffty.github.io/post/shi-yong-Gmeek-bo-ke-kuang-jia-da-jian-ge-ren-bo-ke.html</link><description> ### fork框架&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>吴广喆的blog</title><link>https://niffffty.github.io</link><description>个人学习记录</description><copyright>吴广喆的blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/94451088?v=4</url><title>avatar</title><link>https://niffffty.github.io</link></image><lastBuildDate>Thu, 09 Jan 2025 14:39:58 +0000</lastBuildDate><managingEditor>吴广喆的blog</managingEditor><ttl>60</ttl><webMaster>吴广喆的blog</webMaster><item><title>使用Gmeek博客框架搭建个人博客</title><link>https://niffffty.github.io/post/shi-yong-Gmeek-bo-ke-kuang-jia-da-jian-ge-ren-bo-ke.html</link><description> ### fork框架&#13;
 &#13;
 - 打开框架网站`github.com/Meekdai/Gmeek`，找到安装--通过模板创建仓库&#13;
 - 修改自己的仓库名，创建仓库&#13;
@@ -13,7 +13,7 @@
 ### 修改配置&#13;
 &#13;
 - 修改配置：仓库--代码--`config.json`--编辑文件，修改title、subTitle、avatarUrl即标题、描述、头像，修改完成后点击右上角`Commit changes`&#13;
-- 手动构建：仓库--Actions--左侧build Gmeek--右侧Run workflow--Run workflow&#13;
+- 手动构建(每次修改完config.json需要手动构建一次)：仓库--Actions--左侧build Gmeek--右侧Run workflow--Run workflow&#13;
 &#13;
 &#13;
 &#13;

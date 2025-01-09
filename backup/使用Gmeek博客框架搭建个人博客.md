@@ -12,7 +12,7 @@
 ### 修改配置
 
 - 修改配置：仓库--代码--`config.json`--编辑文件，修改title、subTitle、avatarUrl即标题、描述、头像，修改完成后点击右上角`Commit changes`
-- 手动构建：仓库--Actions--左侧build Gmeek--右侧Run workflow--Run workflow
+- 手动构建(每次修改完config.json需要手动构建一次)：仓库--Actions--左侧build Gmeek--右侧Run workflow--Run workflow
 
 
 
