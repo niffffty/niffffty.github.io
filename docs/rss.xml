@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>吴广喆的blog</title><link>https://niffffty.github.io</link><description>个人学习记录</description><copyright>吴广喆的blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/94451088?v=4</url><title>avatar</title><link>https://niffffty.github.io</link></image><lastBuildDate>Tue, 04 Feb 2025 09:34:32 +0000</lastBuildDate><managingEditor>吴广喆的blog</managingEditor><ttl>60</ttl><webMaster>吴广喆的blog</webMaster><item><title>Cursor：AI编程助手</title><link>https://niffffty.github.io/post/Cursor%EF%BC%9AAI-bian-cheng-zhu-shou.html</link><description># cursor：AI编程助手
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>吴广喆的blog</title><link>https://niffffty.github.io</link><description>个人学习记录</description><copyright>吴广喆的blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/94451088?v=4</url><title>avatar</title><link>https://niffffty.github.io</link></image><lastBuildDate>Wed, 05 Feb 2025 15:20:35 +0000</lastBuildDate><managingEditor>吴广喆的blog</managingEditor><ttl>60</ttl><webMaster>吴广喆的blog</webMaster><item><title>Cursor：AI编程助手</title><link>https://niffffty.github.io/post/Cursor%EF%BC%9AAI-bian-cheng-zhu-shou.html</link><description># cursor：AI编程助手
 ### 概括
 Cursor 是一个基于人工智能的编程助手，提供智能代码补全、错误检测和自然语言处理功能，帮助开发者更高效地编写和优化代码。</description><guid isPermaLink="true">https://niffffty.github.io/post/Cursor%EF%BC%9AAI-bian-cheng-zhu-shou.html</guid><pubDate>Thu, 23 Jan 2025 13:00:16 +0000</pubDate></item><item><title>信息聚合工具Follow</title><link>https://niffffty.github.io/post/xin-xi-ju-he-gong-ju-Follow.html</link><description>### 简介&#13;
 &#13;
@@ -63,7 +63,7 @@ Follow可以订阅文章、图片、视频、音频等，用一个软件包揽�
 
 - [x] 2025.2.4
 
-- [ ] 2025.2.5
+- [x] 2025.2.5
 
 - [ ] 2025.2.6
 
