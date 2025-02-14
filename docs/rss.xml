@@ -1,5 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>吴广喆的blog</title><link>https://niffffty.github.io</link><description>个人学习记录</description><copyright>吴广喆的blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/94451088?v=4</url><title>avatar</title><link>https://niffffty.github.io</link></image><lastBuildDate>Wed, 12 Feb 2025 16:10:25 +0000</lastBuildDate><managingEditor>吴广喆的blog</managingEditor><ttl>60</ttl><webMaster>吴广喆的blog</webMaster><item><title>Cursor：AI编程助手</title><link>https://niffffty.github.io/post/Cursor%EF%BC%9AAI-bian-cheng-zhu-shou.html</link><description># cursor：AI编程助手
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>吴广喆的blog</title><link>https://niffffty.github.io</link><description>个人学习记录</description><copyright>吴广喆的blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/94451088?v=4</url><title>avatar</title><link>https://niffffty.github.io</link></image><lastBuildDate>Fri, 14 Feb 2025 01:17:22 +0000</lastBuildDate><managingEditor>吴广喆的blog</managingEditor><ttl>60</ttl><webMaster>吴广喆的blog</webMaster><item><title>沉没成本</title><link>https://niffffty.github.io/post/chen-mei-cheng-ben.html</link><description># 沉没成本
+
+- **概念**：已经付出，不可回收的成本
+
+- **决策时不应考虑沉没成本**
+
+  - **来源**：2001年诺贝尔经济学奖得主斯蒂格里茨在著作《经济学》中提到： “如果一项开支已经付出并且不管作出何种选择都不能收回，一个理性的人就会忽略它。</description><guid isPermaLink="true">https://niffffty.github.io/post/chen-mei-cheng-ben.html</guid><pubDate>Fri, 14 Feb 2025 01:16:51 +0000</pubDate></item><item><title>Cursor：AI编程助手</title><link>https://niffffty.github.io/post/Cursor%EF%BC%9AAI-bian-cheng-zhu-shou.html</link><description># cursor：AI编程助手
 ### 概括
 Cursor 是一个基于人工智能的编程助手，提供智能代码补全、错误检测和自然语言处理功能，帮助开发者更高效地编写和优化代码。</description><guid isPermaLink="true">https://niffffty.github.io/post/Cursor%EF%BC%9AAI-bian-cheng-zhu-shou.html</guid><pubDate>Thu, 23 Jan 2025 13:00:16 +0000</pubDate></item><item><title>信息聚合工具Follow</title><link>https://niffffty.github.io/post/xin-xi-ju-he-gong-ju-Follow.html</link><description>### 简介&#13;
 &#13;
