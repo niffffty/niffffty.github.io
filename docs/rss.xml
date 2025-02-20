@@ -1,5 +1,105 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>吴广喆的blog</title><link>https://niffffty.github.io</link><description>个人学习记录</description><copyright>吴广喆的blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/94451088?v=4</url><title>avatar</title><link>https://niffffty.github.io</link></image><lastBuildDate>Wed, 19 Feb 2025 05:00:57 +0000</lastBuildDate><managingEditor>吴广喆的blog</managingEditor><ttl>60</ttl><webMaster>吴广喆的blog</webMaster><item><title>沉没成本</title><link>https://niffffty.github.io/post/chen-mei-cheng-ben.html</link><description># 沉没成本
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>吴广喆的blog</title><link>https://niffffty.github.io</link><description>个人学习记录</description><copyright>吴广喆的blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/94451088?v=4</url><title>avatar</title><link>https://niffffty.github.io</link></image><lastBuildDate>Thu, 20 Feb 2025 12:41:12 +0000</lastBuildDate><managingEditor>吴广喆的blog</managingEditor><ttl>60</ttl><webMaster>吴广喆的blog</webMaster><item><title>香橙派Orange PI zero3实现NAS</title><link>https://niffffty.github.io/post/xiang-cheng-pai-Orange%20PI%20zero3-shi-xian-NAS.html</link><description>
+### 概括：
+
+- 香橙派+CasaOS+移动硬盘来实现内网访问存储
+- Cpolar进行内网穿透实现外网访问
+
+### 烧录香橙派系统系统
+
+1. 硬件准备：
+
+   1. 香橙派zero3
+   2. 读卡器、sd卡（我用的32G）
+   3. typeC线（香橙派电源）
+   4. 外接显示器+转接头（香橙派是Micro HDMI口）
+   5. 键盘
+
+2. 烧录系统
+
+   1. sd卡+读卡器插电脑
+   2. 官网下载镜像：打开官网-服务于下载-下载-搜索zero3-下拉选择下载ubuntu镜像
+   3. 下载完解压出img后缀镜像文件，用烧录软件ether烧录系统到sd卡中，烧录完成后将sd卡插到香橙派上
+   4. 给香橙派插上电源、显示器、键盘，电源灯亮即可开机，屏幕显示OrangePI即为烧录成功
+
+3. 配置系统
+
+   1. 配置网络（若用网线则可忽略）
+      1. 命令行输入sudo su获取root权限，密码默认为orangepi
+      2. 输入orangepi-config进入配置界面，方向键进入network，再进入WIFI，输入密码连接Wifi
+   2. 设置中国时区
+      1. 返回到配置界面主菜单，选择Personal-Timezone-Asia-shanghai
+   3. 获取Wifi分配给香橙派的ip地址
+      1. 返回到命令行，输入ip address，输入的3：inet后边的即ip地址（我的是192.168.18.104）
+      2. 现在就不需要显示器和键盘了
+   4. 用自己的电脑ssh连接香橙派
+      1. 使用putty连接：用户名为root，密码默认为orangepi，地址为刚刚获取的ip地址
+      2. 能看到此页面即配置完成：&lt;img src='C:\Users\wuguangzhe\AppData\Roaming\Typora\typora-user-images\1740053154207.png' alt='1740053154207' style='zoom:33%;' /&gt;
+
+   ### 部署CasaOS
+
+   1. 登录casaos的官网，下拉
+   2. 找到`curl -fsSL https://get.casaos.io | sudo bash`，复制到香橙派的命令行，耐心等待部署
+   3. 在同一个wifi下输入刚才获取的ip地址即可内网访问部署在香橙派上的CasaOS了，根据提示注册一个casaOS的账号
+   4. 进入以下页面即部署完成（可以通过下方的Files进行文件存储与下载，若需扩大储存可外插移动硬盘）&lt;img src='C:\Users\wuguangzhe\AppData\Roaming\Typora\typora-user-images\1740053460648.png' alt='1740053460648' style='zoom:33%;' /&gt;
+
+   ### Cpolar内网穿透
+
+   1. 下载Cpolar
+
+      ```
+      #在香橙派命令行输入：
+      curl -L https://www.cpolar.com/static/downloads/install-release-cpolar.sh | sudo bash		#下载cpolar
+      
+      cpolar version	#查看Cpolar是否下载成功
+      
+      ```
+
+      
+
+   2. token认证
+
+      1. 登录cpolar官网，注册，登录
+
+      2. 点击左侧的认证，复制自己的token&lt;img src='C:\Users\wuguangzhe\AppData\Roaming\Typora\typora-user-images\1740054233457.png' alt='1740054233457' style='zoom:50%;' /&gt;
+
+      3. 命令行中输入`cpolar authtoken abcd`，abcd为刚才复制的token
+
+      4. 简单的穿透测试
+
+         ```
+         cpolar http 8080		#可以看到成功生成了两个指向本机8080端口的随机公网地址
+         ```
+
+   3. 向香橙派系统中添加cpolar服务
+
+      ```
+      systemctl enable cpolar
+      systemctl start cpolar		#开启服务
+      systemctl status cpolar		#查看服务
+      ```
+
+      &lt;img src='C:\Users\wuguangzhe\AppData\Roaming\Typora\typora-user-images\1740054589288.png' alt='1740054589288' style='zoom: 50%;' /&gt;
+
+4. 创建外网连接的地址
+
+   1. 浏览器输入： http://香橙派的局域网ip:9200 
+
+   2. 创建隧道&lt;img src='C:\Users\wuguangzhe\AppData\Roaming\Typora\typora-user-images\1740054809731.png' alt='1740054809731' style='zoom: 25%;' /&gt;
+
+   3. 在状态-在线隧道列表中可以看到自己创建的隧道和公网地址
+
+      &lt;img src='C:\Users\wuguangzhe\AppData\Roaming\Typora\typora-user-images\1740054947762.png' alt='1740054947762' style='zoom:25%;' /&gt;
+
+5. 创建的是免费隧道，公网地址24小时内会随机变化，固定的地址需要付费升级
+
+
+
+
+
+
+
+。</description><guid isPermaLink="true">https://niffffty.github.io/post/xiang-cheng-pai-Orange%20PI%20zero3-shi-xian-NAS.html</guid><pubDate>Thu, 20 Feb 2025 12:40:51 +0000</pubDate></item><item><title>沉没成本</title><link>https://niffffty.github.io/post/chen-mei-cheng-ben.html</link><description># 沉没成本
 
 - **概念**：已经付出，不可回收的成本
 
