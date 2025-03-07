@@ -1,5 +1,68 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>吴广喆的blog</title><link>https://niffffty.github.io</link><description>个人学习记录</description><copyright>吴广喆的blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/94451088?v=4</url><title>avatar</title><link>https://niffffty.github.io</link></image><lastBuildDate>Thu, 06 Mar 2025 09:13:01 +0000</lastBuildDate><managingEditor>吴广喆的blog</managingEditor><ttl>60</ttl><webMaster>吴广喆的blog</webMaster><item><title>香橙派Orange PI zero3实现NAS</title><link>https://niffffty.github.io/post/xiang-cheng-pai-Orange%20PI%20zero3-shi-xian-NAS.html</link><description>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>吴广喆的blog</title><link>https://niffffty.github.io</link><description>个人学习记录</description><copyright>吴广喆的blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/94451088?v=4</url><title>avatar</title><link>https://niffffty.github.io</link></image><lastBuildDate>Fri, 07 Mar 2025 14:36:27 +0000</lastBuildDate><managingEditor>吴广喆的blog</managingEditor><ttl>60</ttl><webMaster>吴广喆的blog</webMaster><item><title>树莓派3B重装系统</title><link>https://niffffty.github.io/post/shu-mei-pai-3B-zhong-zhuang-xi-tong.html</link><description># 树莓派3B重装系统
+
+- sd卡插读卡器再插电脑usb
+
+- 使用SD Card Formatter工具格式化sd卡
+
+- 使用官方烧录工具Imager烧录系统
+
+  - 设备选择树莓派3
+  - 操作系统选择树莓派OS32位
+  - 选择SD卡
+  - 提示：Would you like to apply OS等，编辑设置：修改主机名、用户名、密码、wifi、ssh使用密码登录
+  - 烧录成功
+
+  
+
+# 初始配置
+
+### 外接7寸显示屏
+
+- 打开sd卡根目录下的config.txt文件，在文件最后加入：
+
+  ```
+  max_usb_current=1
+  hdmi_force_hotplug=1 
+  hdmi_group=2
+  hdmi_mode=87
+  hdmi_timings=1024 0 168 32 120 600 0 15 6 14 0 0 0 60 0 51200000 3
+  hdmi_drive=1
+  ```
+
+  
+
+### vscode连接树莓派
+
+- 前提：树莓派与电脑连接在同一网络下
+- ifconfig查看树莓派wlan0下的ip
+- vscode下载remote ssh插件
+- Ctrl+Shift+P添加远程连接
+- 配置完成，即可在vscode终端输入命令，在左侧文件管理器中查看树莓派文件
+
+
+
+
+
+# 配环境
+
+```
+sudo apt update
+python3 -m venv ~/myenv //创建虚拟环境
+source ~/myenv/bin/activate 	//激活虚拟环境
+pip install tensorflow numpy pillow		//在虚拟环境中安装包
+deactivate					//退出虚拟环境
+
+pip3 install protobuf
+pip3 install tensorflow-hub
+pip3 install pycocotools
+```
+
+
+
+
+
+。</description><guid isPermaLink="true">https://niffffty.github.io/post/shu-mei-pai-3B-zhong-zhuang-xi-tong.html</guid><pubDate>Fri, 07 Mar 2025 14:36:04 +0000</pubDate></item><item><title>香橙派Orange PI zero3实现NAS</title><link>https://niffffty.github.io/post/xiang-cheng-pai-Orange%20PI%20zero3-shi-xian-NAS.html</link><description>
 ### 概括：
 
 - 香橙派+CasaOS+移动硬盘来实现内网访问存储
