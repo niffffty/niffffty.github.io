@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>吴广喆的blog</title><link>https://niffffty.github.io</link><description>个人学习记录</description><copyright>吴广喆的blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/94451088?v=4</url><title>avatar</title><link>https://niffffty.github.io</link></image><lastBuildDate>Mon, 10 Mar 2025 08:37:53 +0000</lastBuildDate><managingEditor>吴广喆的blog</managingEditor><ttl>60</ttl><webMaster>吴广喆的blog</webMaster><item><title>verilog模块例化，计数器</title><link>https://niffffty.github.io/post/verilog-mo-kuai-li-hua-%EF%BC%8C-ji-shu-qi.html</link><description>### 模块例化
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>吴广喆的blog</title><link>https://niffffty.github.io</link><description>个人学习记录</description><copyright>吴广喆的blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/94451088?v=4</url><title>avatar</title><link>https://niffffty.github.io</link></image><lastBuildDate>Tue, 11 Mar 2025 10:55:07 +0000</lastBuildDate><managingEditor>吴广喆的blog</managingEditor><ttl>60</ttl><webMaster>吴广喆的blog</webMaster><item><title>verilog模块例化，计数器</title><link>https://niffffty.github.io/post/verilog-mo-kuai-li-hua-%EF%BC%8C-ji-shu-qi.html</link><description>### 模块例化
      
 - 模块例化=c语言中的函数调用
 
@@ -611,7 +611,59 @@ Follow可以订阅文章、图片、视频、音频等，用一个软件包揽�
 
 - [x] 2025.3.10
 
-- [ ] 2025.3.11。</description><guid isPermaLink="true">https://niffffty.github.io/post/tiao-zhan-mei-tian-jing-ting-2-ge-xiao-shi-ying-yu-ting-li.html</guid><pubDate>Thu, 09 Jan 2025 14:51:23 +0000</pubDate></item><item><title>使用Gmeek博客框架搭建个人博客</title><link>https://niffffty.github.io/post/shi-yong-Gmeek-bo-ke-kuang-jia-da-jian-ge-ren-bo-ke.html</link><description> ### fork框架&#13;
+- [x] 2025.3.11
+
+- [ ] 2025.3.12
+
+- [] 2025.3.13
+
+- [ ] 2025.3.14
+
+- [ ] 2025.3.15
+
+- [ ] 2025.3.16
+
+- [ ] 2025.3.17
+
+- [ ] 2025.3.18
+
+- [ ] 2025.3.19
+
+- [ ] 2025.3.20
+
+- [ ] 2025.3.21
+
+- [ ] 2025.3.22
+
+- [ ] 2025.3.23
+
+- [ ] 2025.3.24
+
+- [ ] 2025.2.25
+
+- [ ] 2025.2.26
+
+- [ ] 2025.3.27
+
+- [ ] 2025.3.28
+
+- [ ] 2025.3.29
+
+- [ ] 2025.3.30
+
+- [ ] 2025.3.21
+
+- [ ] 2025.4.1
+
+- [ ] 2025.4.2
+
+- [ ] 2025.43
+
+- [ ] 2025.4.4
+
+- [ ] 2025.4.5
+
+- [ ] 2025.4.6。</description><guid isPermaLink="true">https://niffffty.github.io/post/tiao-zhan-mei-tian-jing-ting-2-ge-xiao-shi-ying-yu-ting-li.html</guid><pubDate>Thu, 09 Jan 2025 14:51:23 +0000</pubDate></item><item><title>使用Gmeek博客框架搭建个人博客</title><link>https://niffffty.github.io/post/shi-yong-Gmeek-bo-ke-kuang-jia-da-jian-ge-ren-bo-ke.html</link><description> ### fork框架&#13;
 &#13;
 - 打开框架网站`github.com/Meekdai/Gmeek`，找到安装--通过模板创建仓库&#13;
 - 修改自己的仓库名，创建仓库&#13;
