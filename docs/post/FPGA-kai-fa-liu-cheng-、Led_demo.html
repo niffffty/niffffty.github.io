@@ -144,6 +144,49 @@
 
 
 
+### 流水灯_demo
+
+功能：
+
+```verilog
+//led_shift.v
+module led_shift(
+    input wire clk,
+    input wire reset_n,
+    output reg [3:0] led
+);
+    reg [25:0] cnt;  // 1秒计数器
+    reg [1:0] cnt_shift;  // 移位计数器，2位足够表示0~3
+    localparam CNT_MAX = 49_999_999;  // 最大计数值
+
+    always @(posedge clk or negedge reset_n) begin
+        if (~reset_n) begin
+            cnt <= 0;  // 重置计数器
+            cnt_shift <= 0;  // 重置移位计数器
+            led <= 4'b0001;  // 初始状态
+        end
+        else begin
+            // 计数器逻辑
+            if (cnt == CNT_MAX) begin
+                cnt <= 0;  // 重置计数器
+                // LED 移位逻辑
+                if (cnt_shift == 3) begin
+                    cnt_shift <= 0;  // 重置移位计数器
+                    led <= 4'b0001;  // 重置LED状态
+                end
+                else begin
+                    led <= led << 1;  // 左移一位
+                    cnt_shift <= cnt_shift + 1;  // 移位计数器加1
+                end
+            end
+            else begin
+                cnt <= cnt + 1;  // 计数器加1
+            end
+        end
+    end
+endmodule
+```
+
 
 
 
@@ -319,6 +362,49 @@
   - auto connect，左键xc7a...，右键选择Program Device，选择bit文件
 
 
+
+### 流水灯_demo
+
+功能：
+
+```verilog
+//led_shift.v
+module led_shift(
+    input wire clk,
+    input wire reset_n,
+    output reg [3:0] led
+);
+    reg [25:0] cnt;  // 1秒计数器
+    reg [1:0] cnt_shift;  // 移位计数器，2位足够表示0~3
+    localparam CNT_MAX = 49_999_999;  // 最大计数值
+
+    always @(posedge clk or negedge reset_n) begin
+        if (~reset_n) begin
+            cnt <= 0;  // 重置计数器
+            cnt_shift <= 0;  // 重置移位计数器
+            led <= 4'b0001;  // 初始状态
+        end
+        else begin
+            // 计数器逻辑
+            if (cnt == CNT_MAX) begin
+                cnt <= 0;  // 重置计数器
+                // LED 移位逻辑
+                if (cnt_shift == 3) begin
+                    cnt_shift <= 0;  // 重置移位计数器
+                    led <= 4'b0001;  // 重置LED状态
+                end
+                else begin
+                    led <= led << 1;  // 左移一位
+                    cnt_shift <= cnt_shift + 1;  // 移位计数器加1
+                end
+            end
+            else begin
+                cnt <= cnt + 1;  // 计数器加1
+            end
+        end
+    end
+endmodule
+```
 
 
 
@@ -564,7 +650,45 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <li>auto connect，左键xc7a...，右键选择Program Device，选择bit文件</li>
 </ul>
 </li>
-</ul></div>
+</ul>
+<h3>流水灯_demo</h3>
+<p>功能：</p>
+<div class="highlight highlight-source-verilog"><pre class="notranslate"><span class="pl-c"><span class="pl-c">//</span>led_shift.v</span>
+<span class="pl-k">module</span> <span class="pl-en">led_shift</span>(
+    <span class="pl-k">input</span> <span class="pl-k">wire</span> clk,
+    <span class="pl-k">input</span> <span class="pl-k">wire</span> reset_n,
+    <span class="pl-k">output</span> <span class="pl-k">reg</span> [<span class="pl-c1">3</span>:<span class="pl-c1">0</span>] led
+);
+    <span class="pl-k">reg</span> [<span class="pl-c1">25</span>:<span class="pl-c1">0</span>] cnt;  <span class="pl-c"><span class="pl-c">//</span> 1秒计数器</span>
+    <span class="pl-k">reg</span> [<span class="pl-c1">1</span>:<span class="pl-c1">0</span>] cnt_shift;  <span class="pl-c"><span class="pl-c">//</span> 移位计数器，2位足够表示0~3</span>
+    <span class="pl-k">localparam</span> CNT_MAX <span class="pl-k">=</span> 49_999_999;  <span class="pl-c"><span class="pl-c">//</span> 最大计数值</span>
+
+    <span class="pl-k">always</span> @(<span class="pl-k">posedge</span> clk <span class="pl-k">or</span> <span class="pl-k">negedge</span> reset_n) <span class="pl-k">begin</span>
+        <span class="pl-k">if</span> (<span class="pl-k">~</span>reset_n) <span class="pl-k">begin</span>
+            cnt <span class="pl-k">&lt;=</span> <span class="pl-c1">0</span>;  <span class="pl-c"><span class="pl-c">//</span> 重置计数器</span>
+            cnt_shift <span class="pl-k">&lt;=</span> <span class="pl-c1">0</span>;  <span class="pl-c"><span class="pl-c">//</span> 重置移位计数器</span>
+            led <span class="pl-k">&lt;=</span> <span class="pl-c1">4'b0001</span>;  <span class="pl-c"><span class="pl-c">//</span> 初始状态</span>
+        <span class="pl-k">end</span>
+        <span class="pl-k">else</span> <span class="pl-k">begin</span>
+            <span class="pl-c"><span class="pl-c">//</span> 计数器逻辑</span>
+            <span class="pl-k">if</span> (cnt <span class="pl-k">==</span> CNT_MAX) <span class="pl-k">begin</span>
+                cnt <span class="pl-k">&lt;=</span> <span class="pl-c1">0</span>;  <span class="pl-c"><span class="pl-c">//</span> 重置计数器</span>
+                <span class="pl-c"><span class="pl-c">//</span> LED 移位逻辑</span>
+                <span class="pl-k">if</span> (cnt_shift <span class="pl-k">==</span> <span class="pl-c1">3</span>) <span class="pl-k">begin</span>
+                    cnt_shift <span class="pl-k">&lt;=</span> <span class="pl-c1">0</span>;  <span class="pl-c"><span class="pl-c">//</span> 重置移位计数器</span>
+                    led <span class="pl-k">&lt;=</span> <span class="pl-c1">4'b0001</span>;  <span class="pl-c"><span class="pl-c">//</span> 重置LED状态</span>
+                <span class="pl-k">end</span>
+                <span class="pl-k">else</span> <span class="pl-k">begin</span>
+                    led <span class="pl-k">&lt;=</span> led <span class="pl-k">&lt;&lt;</span> <span class="pl-c1">1</span>;  <span class="pl-c"><span class="pl-c">//</span> 左移一位</span>
+                    cnt_shift <span class="pl-k">&lt;=</span> cnt_shift <span class="pl-k">+</span> <span class="pl-c1">1</span>;  <span class="pl-c"><span class="pl-c">//</span> 移位计数器加1</span>
+                <span class="pl-k">end</span>
+            <span class="pl-k">end</span>
+            <span class="pl-k">else</span> <span class="pl-k">begin</span>
+                cnt <span class="pl-k">&lt;=</span> cnt <span class="pl-k">+</span> <span class="pl-c1">1</span>;  <span class="pl-c"><span class="pl-c">//</span> 计数器加1</span>
+            <span class="pl-k">end</span>
+        <span class="pl-k">end</span>
+    <span class="pl-k">end</span>
+<span class="pl-k">endmodule</span></pre></div></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

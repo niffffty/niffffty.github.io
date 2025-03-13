@@ -132,6 +132,49 @@
 
 
 
+### 流水灯_demo
+
+功能：
+
+```verilog
+//led_shift.v
+module led_shift(
+    input wire clk,
+    input wire reset_n,
+    output reg [3:0] led
+);
+    reg [25:0] cnt;  // 1秒计数器
+    reg [1:0] cnt_shift;  // 移位计数器，2位足够表示0~3
+    localparam CNT_MAX = 49_999_999;  // 最大计数值
+
+    always @(posedge clk or negedge reset_n) begin
+        if (~reset_n) begin
+            cnt <= 0;  // 重置计数器
+            cnt_shift <= 0;  // 重置移位计数器
+            led <= 4'b0001;  // 初始状态
+        end
+        else begin
+            // 计数器逻辑
+            if (cnt == CNT_MAX) begin
+                cnt <= 0;  // 重置计数器
+                // LED 移位逻辑
+                if (cnt_shift == 3) begin
+                    cnt_shift <= 0;  // 重置移位计数器
+                    led <= 4'b0001;  // 重置LED状态
+                end
+                else begin
+                    led <= led << 1;  // 左移一位
+                    cnt_shift <= cnt_shift + 1;  // 移位计数器加1
+                end
+            end
+            else begin
+                cnt <= cnt + 1;  // 计数器加1
+            end
+        end
+    end
+endmodule
+```
+
 
 
 
