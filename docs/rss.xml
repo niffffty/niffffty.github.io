@@ -1,5 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>吴广喆的blog</title><link>https://niffffty.github.io</link><description>个人学习记录</description><copyright>吴广喆的blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/94451088?v=4</url><title>avatar</title><link>https://niffffty.github.io</link></image><lastBuildDate>Tue, 18 Mar 2025 11:45:04 +0000</lastBuildDate><managingEditor>吴广喆的blog</managingEditor><ttl>60</ttl><webMaster>吴广喆的blog</webMaster><item><title>电路笔记3</title><link>https://niffffty.github.io/post/dian-lu-bi-ji-3.html</link><description># 十四章 线性动态电路的复频域分析
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>吴广喆的blog</title><link>https://niffffty.github.io</link><description>个人学习记录</description><copyright>吴广喆的blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/94451088?v=4</url><title>avatar</title><link>https://niffffty.github.io</link></image><lastBuildDate>Tue, 18 Mar 2025 13:18:15 +0000</lastBuildDate><managingEditor>吴广喆的blog</managingEditor><ttl>60</ttl><webMaster>吴广喆的blog</webMaster><item><title>如何突破贫困陷阱？基于诺奖研究的贫富差异解析</title><link>https://niffffty.github.io/post/ru-he-tu-po-pin-kun-xian-jing-%EF%BC%9F-ji-yu-nuo-jiang-yan-jiu-de-pin-fu-cha-yi-jie-xi.html</link><description>
+
+---
+
+# 如何突破贫困陷阱？基于诺奖研究的贫富差异解析  
+——班纳吉与迪弗洛发展经济学研究框架
+
+### 研究背景与理论突破
+2019年诺贝尔经济学奖授予麻省理工学院班纳吉（Abhijit Banerjee）、迪弗洛（Esther Duflo）夫妇及哈佛大学克雷默（Michael Kremer），表彰其基于随机对照试验（RCT）的贫困研究范式创新。</description><guid isPermaLink="true">https://niffffty.github.io/post/ru-he-tu-po-pin-kun-xian-jing-%EF%BC%9F-ji-yu-nuo-jiang-yan-jiu-de-pin-fu-cha-yi-jie-xi.html</guid><pubDate>Tue, 18 Mar 2025 13:17:54 +0000</pubDate></item><item><title>电路笔记3</title><link>https://niffffty.github.io/post/dian-lu-bi-ji-3.html</link><description># 十四章 线性动态电路的复频域分析
 
 ### 概念
 
