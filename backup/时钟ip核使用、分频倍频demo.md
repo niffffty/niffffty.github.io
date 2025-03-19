@@ -52,12 +52,12 @@
             clk_wiz_1 clk_wiz_1
             (
                 .clk_out1(clk_out1),
-                .clk_out1(clk_out2),
-                .clk_out1(clk_out3),
-                .clk_out1(clk_out4),
-                .clk_out1(clk_out5),
-                .clk_out1(clk_out6),
-                .clk_out1(clk_out7),
+                .clk_out2(clk_out2),
+                .clk_out3(clk_out3),
+                .clk_out4(clk_out4),
+                .clk_out5(clk_out5),
+                .clk_out6(clk_out6),
+                .clk_out7(clk_out7),
                 .reset(1'd0),
                 .locked(locked1),
                 .clk_in1(clk)
