@@ -84,10 +84,12 @@
     module tb_led();		
     	reg clk;
         reg reset_n;
+        wire led;
+
     //激励
         initial begin 	//可以从testbench文件复制
         	clk = 0;
-            forecer #10
+            forever #10
             clk = ~clk;
         end
         

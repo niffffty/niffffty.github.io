@@ -96,10 +96,12 @@
     module tb_led();		
     	reg clk;
         reg reset_n;
+        wire led;
+
     //激励
         initial begin 	//可以从testbench文件复制
         	clk = 0;
-            forecer #10
+            forever #10
             clk = ~clk;
         end
         
@@ -315,10 +317,12 @@ endmodule
     module tb_led();		
     	reg clk;
         reg reset_n;
+        wire led;
+
     //激励
         initial begin 	//可以从testbench文件复制
         	clk = 0;
-            forecer #10
+            forever #10
             clk = ~clk;
         end
         
@@ -599,10 +603,12 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <span class="pl-k">module</span> <span class="pl-en">tb_led</span>();		
 	<span class="pl-k">reg</span> clk;
     <span class="pl-k">reg</span> reset_n;
+    <span class="pl-k">wire</span> led;
+
 <span class="pl-c"><span class="pl-c">//</span>激励</span>
     <span class="pl-k">initial</span> <span class="pl-k">begin</span> 	<span class="pl-c"><span class="pl-c">//</span>可以从testbench文件复制</span>
     	clk <span class="pl-k">=</span> <span class="pl-c1">0</span>;
-        forecer <span class="pl-c1">#10</span>
+        <span class="pl-k">forever</span> <span class="pl-c1">#10</span>
         clk <span class="pl-k">=</span> <span class="pl-k">~</span>clk;
     <span class="pl-k">end</span>
     
