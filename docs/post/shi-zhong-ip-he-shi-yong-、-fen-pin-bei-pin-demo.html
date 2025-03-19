@@ -47,7 +47,7 @@
         //top.v
         `timescale 1ns / 1ps
         module top(
-        	input 		clk,
+        	input 		clk
         );
             wire locked1;	//在系统初始化阶段，需要等待locked信号为高电平后，
             wire clk_out1;	//才能安全地使用时钟管理模块输出的时钟信号，以避免因时钟不稳定导致的电路异常行为
@@ -71,7 +71,7 @@
                 .clk_out1(clk_out6),
                 .clk_out1(clk_out7),
                 .reset(1'd0),
-                .locked(locked1)
+                .locked(locked1),
                 .clk_in1(clk)
             );
         //clk的ip核2
@@ -79,7 +79,7 @@
             (
                 .clk_out1(clk_out8),
                 .reset(1'd0),
-                .locked(locked2)
+                .locked(locked2),
                 .clk_in1(clk_out5)
             );
         endmodule
@@ -147,7 +147,7 @@
         //top.v
         `timescale 1ns / 1ps
         module top(
-        	input 		clk,
+        	input 		clk
         );
             wire locked1;	//在系统初始化阶段，需要等待locked信号为高电平后，
             wire clk_out1;	//才能安全地使用时钟管理模块输出的时钟信号，以避免因时钟不稳定导致的电路异常行为
@@ -171,7 +171,7 @@
                 .clk_out1(clk_out6),
                 .clk_out1(clk_out7),
                 .reset(1'd0),
-                .locked(locked1)
+                .locked(locked1),
                 .clk_in1(clk)
             );
         //clk的ip核2
@@ -179,7 +179,7 @@
             (
                 .clk_out1(clk_out8),
                 .reset(1'd0),
-                .locked(locked2)
+                .locked(locked2),
                 .clk_in1(clk_out5)
             );
         endmodule
@@ -329,7 +329,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <div class="highlight highlight-source-verilog"><pre class="notranslate"><span class="pl-c"><span class="pl-c">//</span>top.v</span>
 <span class="pl-k">`timescale</span> 1ns <span class="pl-k">/</span> 1ps
 <span class="pl-k">module</span> <span class="pl-en">top</span>(
-	<span class="pl-k">input</span> 		clk,
+	<span class="pl-ent">input</span> 		<span class="pl-ent">clk</span>
 );
     <span class="pl-k">wire</span> locked1;	<span class="pl-c"><span class="pl-c">//</span>在系统初始化阶段，需要等待locked信号为高电平后，</span>
     <span class="pl-k">wire</span> clk_out1;	<span class="pl-c"><span class="pl-c">//</span>才能安全地使用时钟管理模块输出的时钟信号，以避免因时钟不稳定导致的电路异常行为</span>
@@ -353,7 +353,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
         .clk_out1(clk_out6),
         .clk_out1(clk_out7),
         .reset(<span class="pl-c1">1'd0</span>),
-        .locked(locked1)
+        .locked(locked1),
         .clk_in1(clk)
     );
 <span class="pl-c"><span class="pl-c">//</span>clk的ip核2</span>
@@ -361,7 +361,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     (
         .clk_out1(clk_out8),
         .reset(<span class="pl-c1">1'd0</span>),
-        .locked(locked2)
+        .locked(locked2),
         .clk_in1(clk_out5)
     );
 <span class="pl-k">endmodule</span></pre></div>

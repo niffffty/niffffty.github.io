@@ -35,7 +35,7 @@
         //top.v
         `timescale 1ns / 1ps
         module top(
-        	input 		clk,
+        	input 		clk
         );
             wire locked1;	//在系统初始化阶段，需要等待locked信号为高电平后，
             wire clk_out1;	//才能安全地使用时钟管理模块输出的时钟信号，以避免因时钟不稳定导致的电路异常行为
@@ -59,7 +59,7 @@
                 .clk_out1(clk_out6),
                 .clk_out1(clk_out7),
                 .reset(1'd0),
-                .locked(locked1)
+                .locked(locked1),
                 .clk_in1(clk)
             );
         //clk的ip核2
@@ -67,7 +67,7 @@
             (
                 .clk_out1(clk_out8),
                 .reset(1'd0),
-                .locked(locked2)
+                .locked(locked2),
                 .clk_in1(clk_out5)
             );
         endmodule
