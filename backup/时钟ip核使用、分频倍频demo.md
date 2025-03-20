@@ -49,7 +49,7 @@
             wire locked2;
             wire clk_out8;
         //clk的ip核1
-            clk_wiz_1 clk_wiz_1
+            clk_wiz_0 clk_wiz_0
             (
                 .clk_out1(clk_out1),
                 .clk_out2(clk_out2),
@@ -63,7 +63,7 @@
                 .clk_in1(clk)
             );
         //clk的ip核2
-            clk_wiz_2 clk_wiz_2
+            clk_wiz_1 clk_wiz_1                 //此处注意例化ip核的名称！ 是clk0还是clk1还是clk2！
             (
                 .clk_out1(clk_out8),
                 .reset(1'd0),

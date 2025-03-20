@@ -61,7 +61,7 @@
             wire locked2;
             wire clk_out8;
         //clk的ip核1
-            clk_wiz_1 clk_wiz_1
+            clk_wiz_0 clk_wiz_0
             (
                 .clk_out1(clk_out1),
                 .clk_out2(clk_out2),
@@ -75,7 +75,7 @@
                 .clk_in1(clk)
             );
         //clk的ip核2
-            clk_wiz_2 clk_wiz_2
+            clk_wiz_1 clk_wiz_1                 //此处注意例化ip核的名称！ 是clk0还是clk1还是clk2！
             (
                 .clk_out1(clk_out8),
                 .reset(1'd0),
@@ -162,7 +162,7 @@
             wire locked2;
             wire clk_out8;
         //clk的ip核1
-            clk_wiz_1 clk_wiz_1
+            clk_wiz_0 clk_wiz_0
             (
                 .clk_out1(clk_out1),
                 .clk_out2(clk_out2),
@@ -176,7 +176,7 @@
                 .clk_in1(clk)
             );
         //clk的ip核2
-            clk_wiz_2 clk_wiz_2
+            clk_wiz_1 clk_wiz_1                 //此处注意例化ip核的名称！ 是clk0还是clk1还是clk2！
             (
                 .clk_out1(clk_out8),
                 .reset(1'd0),
@@ -345,7 +345,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     <span class="pl-k">wire</span> locked2;
     <span class="pl-k">wire</span> clk_out8;
 <span class="pl-c"><span class="pl-c">//</span>clk的ip核1</span>
-    <span class="pl-ent">clk_wiz_1</span> <span class="pl-ent">clk_wiz_1</span>
+    <span class="pl-ent">clk_wiz_0</span> <span class="pl-ent">clk_wiz_0</span>
     (
         .clk_out1(clk_out1),
         .clk_out2(clk_out2),
@@ -359,7 +359,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
         .clk_in1(clk)
     );
 <span class="pl-c"><span class="pl-c">//</span>clk的ip核2</span>
-    <span class="pl-ent">clk_wiz_2</span> <span class="pl-ent">clk_wiz_2</span>
+    clk_wiz_1 clk_wiz_1                 <span class="pl-c"><span class="pl-c">//</span>此处注意例化ip核的名称！ 是clk0还是clk1还是clk2！</span>
     (
         .clk_out1(clk_out8),
         .reset(<span class="pl-c1">1'd0</span>),
