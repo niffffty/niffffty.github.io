@@ -88,6 +88,7 @@
         ```verilog
         //top_tb.v
         //Subline里右键生成Testbench
+        `timescale 1ns / 1ps
         module tb_top();
             
             reg clk;
@@ -188,6 +189,7 @@
         ```verilog
         //top_tb.v
         //Subline里右键生成Testbench
+        `timescale 1ns / 1ps
         module tb_top();
             
             reg clk;
@@ -367,6 +369,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <span class="pl-k">endmodule</span></pre></div>
 <div class="highlight highlight-source-verilog"><pre class="notranslate"><span class="pl-c"><span class="pl-c">//</span>top_tb.v</span>
 <span class="pl-c"><span class="pl-c">//</span>Subline里右键生成Testbench</span>
+<span class="pl-k">`timescale</span> 1ns <span class="pl-k">/</span> 1ps
 <span class="pl-k">module</span> <span class="pl-en">tb_top</span>();
     
     <span class="pl-k">reg</span> clk;

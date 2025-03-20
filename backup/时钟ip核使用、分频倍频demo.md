@@ -76,6 +76,7 @@
         ```verilog
         //top_tb.v
         //Subline里右键生成Testbench
+        `timescale 1ns / 1ps
         module tb_top();
             
             reg clk;
