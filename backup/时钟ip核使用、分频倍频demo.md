@@ -46,7 +46,7 @@
             wire clk_out6;
             wire clk_out7;
             
-            wire lock2;
+            wire locked2;
             wire clk_out8;
         //clk的ip核1
             clk_wiz_1 clk_wiz_1
