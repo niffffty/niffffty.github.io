@@ -1,5 +1,63 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>吴广喆的blog</title><link>https://niffffty.github.io</link><description>个人学习记录</description><copyright>吴广喆的blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/94451088?v=4</url><title>avatar</title><link>https://niffffty.github.io</link></image><lastBuildDate>Wed, 09 Apr 2025 01:18:58 +0000</lastBuildDate><managingEditor>吴广喆的blog</managingEditor><ttl>60</ttl><webMaster>吴广喆的blog</webMaster><item><title>报错：使用gentime导出svg格式文件时编码报错</title><link>https://niffffty.github.io/post/bao-cuo-%EF%BC%9A-shi-yong-gentime-dao-chu-svg-ge-shi-wen-jian-shi-bian-ma-bao-cuo.html</link><description>报错：使用gentime导出svg格式文件时编码报错
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>吴广喆的blog</title><link>https://niffffty.github.io</link><description>个人学习记录</description><copyright>吴广喆的blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/94451088?v=4</url><title>avatar</title><link>https://niffffty.github.io</link></image><lastBuildDate>Wed, 09 Apr 2025 12:16:11 +0000</lastBuildDate><managingEditor>吴广喆的blog</managingEditor><ttl>60</ttl><webMaster>吴广喆的blog</webMaster><item><title>FIFO_demo</title><link>https://niffffty.github.io/post/FIFO_demo.html</link><description># fifo的ip核
+
+- 特性：
+  - 存数据，先入先出
+  - size：深度/宽度
+  - 同步FIFO与异步FIFO
+- 时序
+  - 写时序
+    - wr_en(写使能)和din(读数据)对齐
+  - 读时序
+    - 读数据与读使能对齐
+    - 读数据比读使能延迟一个clk
+
+
+
+### 使用
+
+- 找到FIFO generator
+
+- 配置：
+
+  - 第一页Fifo Implementation：
+    - Common是同步，Independent异步
+    - BRAM：数据大
+    - DRAM：数据小
+  - 第二页Read Mode：
+    - Standard FIFO：读数据比读使能延迟一个clk
+    - First W F T：对齐
+  - 宽度/深度：默认18/128
+  - Reset pin：复位引脚（此次demo不用）
+  - 第四页勾选Data Count
+
+- 例化ip核：从veo里复制
+
+- ip核内容：
+
+  - 端口信号：
+    - full:为高时，fifo满了
+    - empty：为高时，fifo没数据
+    - data_count:表示FIFO里大约有多少数据
+
+  
+
+  
+
+  
+
+  
+
+  
+
+### 状态机
+
+- 两个条件：
+  - 状态机的跳转
+  - 状态机的输出
+- demo：
+  - 目标：往fifo里面写入128个数据，等待一会，然后读出来128个数据
+  - 流程：IDLE--写--等待--读--等待--写。</description><guid isPermaLink="true">https://niffffty.github.io/post/FIFO_demo.html</guid><pubDate>Wed, 09 Apr 2025 12:15:44 +0000</pubDate></item><item><title>报错：使用gentime导出svg格式文件时编码报错</title><link>https://niffffty.github.io/post/bao-cuo-%EF%BC%9A-shi-yong-gentime-dao-chu-svg-ge-shi-wen-jian-shi-bian-ma-bao-cuo.html</link><description>报错：使用gentime导出svg格式文件时编码报错
 原因：文件中有中文，默认为utf-8编码，应该为GB2312
 解决：用vscode打开svg文件，修改编码为GB2312。</description><guid isPermaLink="true">https://niffffty.github.io/post/bao-cuo-%EF%BC%9A-shi-yong-gentime-dao-chu-svg-ge-shi-wen-jian-shi-bian-ma-bao-cuo.html</guid><pubDate>Wed, 09 Apr 2025 01:18:32 +0000</pubDate></item><item><title>ila，vio使用</title><link>https://niffffty.github.io/post/ila%EF%BC%8Cvio-shi-yong.html</link><description># ila使用
 
