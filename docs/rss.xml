@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>吴广喆的blog</title><link>https://niffffty.github.io</link><description>个人学习记录</description><copyright>吴广喆的blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/94451088?v=4</url><title>avatar</title><link>https://niffffty.github.io</link></image><lastBuildDate>Wed, 09 Apr 2025 23:56:45 +0000</lastBuildDate><managingEditor>吴广喆的blog</managingEditor><ttl>60</ttl><webMaster>吴广喆的blog</webMaster><item><title>FIFO_demo</title><link>https://niffffty.github.io/post/FIFO_demo.html</link><description># fifo的ip核
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>吴广喆的blog</title><link>https://niffffty.github.io</link><description>个人学习记录</description><copyright>吴广喆的blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/94451088?v=4</url><title>avatar</title><link>https://niffffty.github.io</link></image><lastBuildDate>Thu, 10 Apr 2025 01:36:52 +0000</lastBuildDate><managingEditor>吴广喆的blog</managingEditor><ttl>60</ttl><webMaster>吴广喆的blog</webMaster><item><title>FIFO_demo</title><link>https://niffffty.github.io/post/FIFO_demo.html</link><description># fifo的ip核
 
 - 特性：
   - 存数据，先入先出
@@ -38,6 +38,8 @@
   - 端口信号：
     - full:为高时，fifo满了
     - empty：为高时，fifo没数据
+      - 往fifo写数据时，过几个clk，才拉高
+      - 读完数据时，立马拉高
     - data_count:表示FIFO里大约有多少数据
 
   
