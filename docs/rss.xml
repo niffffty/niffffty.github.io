@@ -1,5 +1,41 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>吴广喆的blog</title><link>https://niffffty.github.io</link><description>个人学习记录</description><copyright>吴广喆的blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/94451088?v=4</url><title>avatar</title><link>https://niffffty.github.io</link></image><lastBuildDate>Mon, 14 Apr 2025 11:34:51 +0000</lastBuildDate><managingEditor>吴广喆的blog</managingEditor><ttl>60</ttl><webMaster>吴广喆的blog</webMaster><item><title>xadc采集芯片温度</title><link>https://niffffty.github.io/post/xadc-cai-ji-xin-pian-wen-du.html</link><description>### xadc硬核
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>吴广喆的blog</title><link>https://niffffty.github.io</link><description>个人学习记录</description><copyright>吴广喆的blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/94451088?v=4</url><title>avatar</title><link>https://niffffty.github.io</link></image><lastBuildDate>Mon, 14 Apr 2025 12:03:14 +0000</lastBuildDate><managingEditor>吴广喆的blog</managingEditor><ttl>60</ttl><webMaster>吴广喆的blog</webMaster><item><title>复位问题；时序优化问题</title><link>https://niffffty.github.io/post/fu-wei-wen-ti-%EF%BC%9B-shi-xu-you-hua-wen-ti.html</link><description>### 科学设计复位信号
+
+- 两种复位方式
+
+  - 异步低复位：reset_n拉低时，不等待clk，直接复位
+
+    ```verilog
+    always @(posedge clk or negedge reset_n)begin
+        if(~reset_n)begin
+        	led &lt;= 1'b0;
+        end
+        else begin
+        
+        end
+    end
+    ```
+
+  - 同步高复位：reset拉高以后，等到下一个clk上升沿复位
+
+    
+
+    ```verilog
+    always @(posedge clk)begin
+        if(reset)begin
+        	led &lt;= 1'b0;
+        end
+        else begin
+        
+        end
+    end
+    ```
+
+- Xilinx复位策略：
+
+  - 同步高复位
+  - 计数器和状态机必须复位
+  - 能不使用复位尽量不使用。</description><guid isPermaLink="true">https://niffffty.github.io/post/fu-wei-wen-ti-%EF%BC%9B-shi-xu-you-hua-wen-ti.html</guid><pubDate>Mon, 14 Apr 2025 12:02:50 +0000</pubDate></item><item><title>xadc采集芯片温度</title><link>https://niffffty.github.io/post/xadc-cai-ji-xin-pian-wen-du.html</link><description>### xadc硬核
 
 - 概念
 
