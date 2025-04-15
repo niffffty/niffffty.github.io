@@ -1,5 +1,26 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>吴广喆的blog</title><link>https://niffffty.github.io</link><description>个人学习记录</description><copyright>吴广喆的blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/94451088?v=4</url><title>avatar</title><link>https://niffffty.github.io</link></image><lastBuildDate>Mon, 14 Apr 2025 12:03:14 +0000</lastBuildDate><managingEditor>吴广喆的blog</managingEditor><ttl>60</ttl><webMaster>吴广喆的blog</webMaster><item><title>复位问题；时序优化问题</title><link>https://niffffty.github.io/post/fu-wei-wen-ti-%EF%BC%9B-shi-xu-you-hua-wen-ti.html</link><description>### 科学设计复位信号
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>吴广喆的blog</title><link>https://niffffty.github.io</link><description>个人学习记录</description><copyright>吴广喆的blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/94451088?v=4</url><title>avatar</title><link>https://niffffty.github.io</link></image><lastBuildDate>Tue, 15 Apr 2025 11:18:23 +0000</lastBuildDate><managingEditor>吴广喆的blog</managingEditor><ttl>60</ttl><webMaster>吴广喆的blog</webMaster><item><title>FPGA串口接收/发送数据</title><link>https://niffffty.github.io/post/FPGA-chuan-kou-jie-shou---fa-song-shu-ju.html</link><description># 接收模块
+
+### 变量
+
+- 端口：
+  - 输入：
+    - `clk`
+    - `reset`
+    - `uart_rxd`：串口接收的数据
+  - 输出：
+    - `uart_rx_en`：接收完数据的标志
+    - `uart_rx_data`：接收到的数据
+- 参数：
+  - `CLK_FREQ `：FPGA的时钟频率
+  - `BAUD_RATE`：波特率，一秒传输多少bit数据
+- 本地参数：
+  - `BAUD_CNT_MAX `：波特计数的最大值
+  - `BAUD_CNT_MAX_HALF`：波特计数的中间值
+- 代码中用到的变量：
+  - `uart_rxd_d0`，`uart_rxd_d1`：用于把接收的数据级联两层寄存器，防止亚稳态
+  - `baud_cnt`：波特计数器，数到最大周期数时(即一个bit传输完毕)清零
+  - `bit_cnt`：比特计数器，数哪一位数据。</description><guid isPermaLink="true">https://niffffty.github.io/post/FPGA-chuan-kou-jie-shou---fa-song-shu-ju.html</guid><pubDate>Tue, 15 Apr 2025 11:17:53 +0000</pubDate></item><item><title>复位问题；时序优化问题</title><link>https://niffffty.github.io/post/fu-wei-wen-ti-%EF%BC%9B-shi-xu-you-hua-wen-ti.html</link><description>### 科学设计复位信号
 
 - 两种复位方式
 
