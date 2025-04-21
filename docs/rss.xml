@@ -1,5 +1,38 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>吴广喆的blog</title><link>https://niffffty.github.io</link><description>个人学习记录</description><copyright>吴广喆的blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/94451088?v=4</url><title>avatar</title><link>https://niffffty.github.io</link></image><lastBuildDate>Sat, 19 Apr 2025 11:12:50 +0000</lastBuildDate><managingEditor>吴广喆的blog</managingEditor><ttl>60</ttl><webMaster>吴广喆的blog</webMaster><item><title>vivado打开不同版本工程时ip核被锁</title><link>https://niffffty.github.io/post/vivado-da-kai-bu-tong-ban-ben-gong-cheng-shi-ip-he-bei-suo.html</link><description>- 问题：vivado打开不同版本工程时ip核被锁
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>吴广喆的blog</title><link>https://niffffty.github.io</link><description>个人学习记录</description><copyright>吴广喆的blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/94451088?v=4</url><title>avatar</title><link>https://niffffty.github.io</link></image><lastBuildDate>Mon, 21 Apr 2025 10:36:40 +0000</lastBuildDate><managingEditor>吴广喆的blog</managingEditor><ttl>60</ttl><webMaster>吴广喆的blog</webMaster><item><title>CRC校验</title><link>https://niffffty.github.io/post/CRC-xiao-yan.html</link><description># CRC校验
+
+- 校验：发送数据时，带着校验一起发送；在接收端检测校验是否一致
+- 特点：
+  - 基于模2除法（异或）
+  - 若模型为`CRC-8 x8+x2+x+1`，则展开为：x8+x7+x6+...+x0，取系数，则为1000 0011 1
+- CRC校验步骤：
+  - 把G（X）换成二进制
+  - 将待校验数据转换成二进制后，在低位补0（模型是几，补几个0）
+  - 进行模2除法，待校验数据当被除数，G(x)的表达式当除数
+  - 得到模2除法的余数，就是CRC校验的值
+
+
+
+# Verilog实现CRC校验
+
+### 端口
+
+- 输入：
+  - `clk`
+  - `reset`
+  - `crc_din_vld`：CRC输入有效
+  - `crc_din`：待校验数据
+  - `crc_done`：校验成功
+- 输出：
+  - `crc_dout`：CRC输出待校验的值
+
+
+
+
+
+### 代码思路
+
+- 将待校验的数据，进行两位两位校验。</description><guid isPermaLink="true">https://niffffty.github.io/post/CRC-xiao-yan.html</guid><pubDate>Mon, 21 Apr 2025 10:36:10 +0000</pubDate></item><item><title>vivado打开不同版本工程时ip核被锁</title><link>https://niffffty.github.io/post/vivado-da-kai-bu-tong-ban-ben-gong-cheng-shi-ip-he-bei-suo.html</link><description>- 问题：vivado打开不同版本工程时ip核被锁
 
 - 解决：法一：在命令行中输入命令：upgrade_ip [get_ips]。</description><guid isPermaLink="true">https://niffffty.github.io/post/vivado-da-kai-bu-tong-ban-ben-gong-cheng-shi-ip-he-bei-suo.html</guid><pubDate>Sat, 19 Apr 2025 11:12:25 +0000</pubDate></item><item><title>FPGA串口接收/发送数据</title><link>https://niffffty.github.io/post/FPGA-chuan-kou-jie-shou---fa-song-shu-ju.html</link><description># 接收模块
 
