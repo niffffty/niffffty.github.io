@@ -1,5 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>吴广喆的blog</title><link>https://niffffty.github.io</link><description>个人学习记录</description><copyright>吴广喆的blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/94451088?v=4</url><title>avatar</title><link>https://niffffty.github.io</link></image><lastBuildDate>Tue, 22 Apr 2025 08:28:53 +0000</lastBuildDate><managingEditor>吴广喆的blog</managingEditor><ttl>60</ttl><webMaster>吴广喆的blog</webMaster><item><title>CRC校验</title><link>https://niffffty.github.io/post/CRC-xiao-yan.html</link><description># CRC校验
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>吴广喆的blog</title><link>https://niffffty.github.io</link><description>个人学习记录</description><copyright>吴广喆的blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/94451088?v=4</url><title>avatar</title><link>https://niffffty.github.io</link></image><lastBuildDate>Wed, 23 Apr 2025 00:27:34 +0000</lastBuildDate><managingEditor>吴广喆的blog</managingEditor><ttl>60</ttl><webMaster>吴广喆的blog</webMaster><item><title>subline技巧</title><link>https://niffffty.github.io/post/subline-ji-qiao.html</link><description>### subline技巧
+
+- shift+鼠标右键：选中多列
+- ctrl+鼠标左键：选中多列
+
+
+
+。</description><guid isPermaLink="true">https://niffffty.github.io/post/subline-ji-qiao.html</guid><pubDate>Wed, 23 Apr 2025 00:27:06 +0000</pubDate></item><item><title>CRC校验</title><link>https://niffffty.github.io/post/CRC-xiao-yan.html</link><description># CRC校验
 
 - 校验：发送数据时，带着校验一起发送；在接收端检测校验是否一致
 - 特点：
