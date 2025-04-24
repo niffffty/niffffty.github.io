@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>吴广喆的blog</title><link>https://niffffty.github.io</link><description>个人学习记录</description><copyright>吴广喆的blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/94451088?v=4</url><title>avatar</title><link>https://niffffty.github.io</link></image><lastBuildDate>Wed, 23 Apr 2025 11:57:36 +0000</lastBuildDate><managingEditor>吴广喆的blog</managingEditor><ttl>60</ttl><webMaster>吴广喆的blog</webMaster><item><title>DDR3测试工程</title><link>https://niffffty.github.io/post/DDR3-ce-shi-gong-cheng.html</link><description>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>吴广喆的blog</title><link>https://niffffty.github.io</link><description>个人学习记录</description><copyright>吴广喆的blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/94451088?v=4</url><title>avatar</title><link>https://niffffty.github.io</link></image><lastBuildDate>Thu, 24 Apr 2025 00:51:29 +0000</lastBuildDate><managingEditor>吴广喆的blog</managingEditor><ttl>60</ttl><webMaster>吴广喆的blog</webMaster><item><title>DDR3测试工程</title><link>https://niffffty.github.io/post/DDR3-ce-shi-gong-cheng.html</link><description>
 
 
 
@@ -1440,6 +1440,24 @@ endmodule
   - 八进制：Octal
   - 十进制：Decimal
   - 十六进制：Hexadecimal
+
+
+
+
+
+
+
+- 单位换算：
+  - 1bit = 1位（最小信息单位）
+  - 8 bit = 1字节 = 1B
+  - 1KB = 1024 字节
+  - 1MB = 1024 KB
+  - 1GM = 1024 MB
+  - 二进制与十进制不同，可能导致实际容量略有差异（十进制：1KB=1000B）
+
+
+
+
 
 - 数电基础：
 
