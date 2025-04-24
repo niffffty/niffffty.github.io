@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
+    <script src='https://blog.meekdai.com/Gmeek/plugins/GmeekBSZ.js'></script>
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/94451088?v=4"><script>
+        let theme = localStorage.getItem("meek_theme") || "light";
+        document.documentElement.setAttribute("data-color-mode", theme);
+    </script>
+<meta name="description" content="# 硬件构成
+
+- FPGA只需要关注与PHY芯片通信，就能实现通过以太网和PC通信
+
+![Image](https://github.com/user-attachments/assets/05408804-a922-4957-9776-3d471452ffcf)
+
+
+# OSI七层协议
+
+![Image](https://github.com/user-attachments/assets/eb6eac6a-c99f-4573-8de7-2db061919f70)
+
+
+
+# FPGA使用TCP/IP五层协议
+
+- TCP/IP协议与OSI七层协议类似，更简洁
+- 一般来说，FPGA只做到了传输层，**PHY芯片提供物理层**
+- 通过UDP、IP、MAC层，层层**打包数据头部**，最终通过PHY芯片将数据发送出去
+
+![Image](https://github.com/user-attachments/assets/dbfe112d-dc5b-4c25-8608-8814e53786cb)
+
+
+
+# GMII和RGMII接口
+
+### 概念
+
+- GMII与RGMII是物理层(PHY)和数据链路层(MAC)之间的标准接口，RGMII更新
+
+### GMII
+
+- **数据宽度**：8位(1字节)数据总线，用于发送/接收
+- **时钟**：发送/接收时钟都是125MHz(千兆)
+- **控制信号**：
+  - **发送**使能：`TX_EN`，表示发送数据有效
+  - **发送**错误：`TX_ER`，指示发送数据错误
+  - **接收**数据有效：`RX_DX`，接收数据有效
+  - **接收**错误：`RX_ER`，接收数据错误
+  - 载波监听、冲突检测：CRS、COL
+- **引脚数量**：约24个
+- **带宽**：支持1000M，也向下兼容10、100M
+- **应用场景**：早期千兆以太网设备、对引脚数量不敏感的设计
+
+
+
+### RGMII
+
+- `RGMII`是`GMII`的**简化版本**，通过减少引脚数量、优化信号传输方式，降低设计复杂性、成本
+- **数据宽度**：4位(半字节)数据总线，即TXD[3:0]，RXD[3:0]，相比GMII减少一半
+- **时钟**：
+  - 使用双边沿触发（DDR）
+  - 时钟频率也125M（由于DDR技术，传输速率等同于GMII）
+- **控制信号**：
+  - `TX_EN`和`TX_ER`在时钟的上升沿/下降沿复用（编码为`TX_CTL`）
+  - `RX_DV`和`RX_ER`同样复用`RX_CTL`
+  - 不在需要独立的`CRS、COL`信号
+- **引脚数量**：约12个，大幅减少
+- 带宽：支持千兆速率，也向下兼容10、100M
+- **延时补偿**：时序分为延时模式和非延时模式，一半**延时模式**用的多
+- 应用场景：广泛应用于现代嵌入式、SOC系统等
+
+![Image](https://github.com/user-attachments/assets/46c179a4-6bc2-432b-8923-c51496f3bc5c)
+![Image](https://github.com/user-attachments/assets/a5b13cf3-dee2-40b7-a407-410d74e1817b)
+
+- 在时钟上升沿传输低四位，下降沿传输高四位，一共传输8bit/1字节数据
+- 延时模式：接收时在RXD的中间位置接收；发送时正常发送。">
+<meta property="og:title" content="以太网基础">
+<meta property="og:description" content="# 硬件构成
+
+- FPGA只需要关注与PHY芯片通信，就能实现通过以太网和PC通信
+
+![Image](https://github.com/user-attachments/assets/05408804-a922-4957-9776-3d471452ffcf)
+
+
+# OSI七层协议
+
+![Image](https://github.com/user-attachments/assets/eb6eac6a-c99f-4573-8de7-2db061919f70)
+
+
+
+# FPGA使用TCP/IP五层协议
+
+- TCP/IP协议与OSI七层协议类似，更简洁
+- 一般来说，FPGA只做到了传输层，**PHY芯片提供物理层**
+- 通过UDP、IP、MAC层，层层**打包数据头部**，最终通过PHY芯片将数据发送出去
+
+![Image](https://github.com/user-attachments/assets/dbfe112d-dc5b-4c25-8608-8814e53786cb)
+
+
+
+# GMII和RGMII接口
+
+### 概念
+
+- GMII与RGMII是物理层(PHY)和数据链路层(MAC)之间的标准接口，RGMII更新
+
+### GMII
+
+- **数据宽度**：8位(1字节)数据总线，用于发送/接收
+- **时钟**：发送/接收时钟都是125MHz(千兆)
+- **控制信号**：
+  - **发送**使能：`TX_EN`，表示发送数据有效
+  - **发送**错误：`TX_ER`，指示发送数据错误
+  - **接收**数据有效：`RX_DX`，接收数据有效
+  - **接收**错误：`RX_ER`，接收数据错误
+  - 载波监听、冲突检测：CRS、COL
+- **引脚数量**：约24个
+- **带宽**：支持1000M，也向下兼容10、100M
+- **应用场景**：早期千兆以太网设备、对引脚数量不敏感的设计
+
+
+
+### RGMII
+
+- `RGMII`是`GMII`的**简化版本**，通过减少引脚数量、优化信号传输方式，降低设计复杂性、成本
+- **数据宽度**：4位(半字节)数据总线，即TXD[3:0]，RXD[3:0]，相比GMII减少一半
+- **时钟**：
+  - 使用双边沿触发（DDR）
+  - 时钟频率也125M（由于DDR技术，传输速率等同于GMII）
+- **控制信号**：
+  - `TX_EN`和`TX_ER`在时钟的上升沿/下降沿复用（编码为`TX_CTL`）
+  - `RX_DV`和`RX_ER`同样复用`RX_CTL`
+  - 不在需要独立的`CRS、COL`信号
+- **引脚数量**：约12个，大幅减少
+- 带宽：支持千兆速率，也向下兼容10、100M
+- **延时补偿**：时序分为延时模式和非延时模式，一半**延时模式**用的多
+- 应用场景：广泛应用于现代嵌入式、SOC系统等
+
+![Image](https://github.com/user-attachments/assets/46c179a4-6bc2-432b-8923-c51496f3bc5c)
+![Image](https://github.com/user-attachments/assets/a5b13cf3-dee2-40b7-a407-410d74e1817b)
+
+- 在时钟上升沿传输低四位，下降沿传输高四位，一共传输8bit/1字节数据
+- 延时模式：接收时在RXD的中间位置接收；发送时正常发送。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://niffffty.github.io/post/yi-tai-wang-ji-chu.html">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/94451088?v=4">
+<title>以太网基础</title>
+
+
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:24px;}
+}
+
+</style>
+
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle">以太网基础</h1>
+<div class="title-right">
+    <a href="https://niffffty.github.io" id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+    <a href="https://github.com/niffffty/niffffty.github.io/issues/33" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="markdown-body" id="postBody"><h1>硬件构成</h1>
+<ul>
+<li>FPGA只需要关注与PHY芯片通信，就能实现通过以太网和PC通信</li>
+</ul>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/user-attachments/assets/05408804-a922-4957-9776-3d471452ffcf"><img src="https://github.com/user-attachments/assets/05408804-a922-4957-9776-3d471452ffcf" alt="Image" style="max-width: 100%;"></a></p>
+<h1>OSI七层协议</h1>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/user-attachments/assets/eb6eac6a-c99f-4573-8de7-2db061919f70"><img src="https://github.com/user-attachments/assets/eb6eac6a-c99f-4573-8de7-2db061919f70" alt="Image" style="max-width: 100%;"></a></p>
+<h1>FPGA使用TCP/IP五层协议</h1>
+<ul>
+<li>TCP/IP协议与OSI七层协议类似，更简洁</li>
+<li>一般来说，FPGA只做到了传输层，<strong>PHY芯片提供物理层</strong></li>
+<li>通过UDP、IP、MAC层，层层<strong>打包数据头部</strong>，最终通过PHY芯片将数据发送出去</li>
+</ul>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/user-attachments/assets/dbfe112d-dc5b-4c25-8608-8814e53786cb"><img src="https://github.com/user-attachments/assets/dbfe112d-dc5b-4c25-8608-8814e53786cb" alt="Image" style="max-width: 100%;"></a></p>
+<h1>GMII和RGMII接口</h1>
+<h3>概念</h3>
+<ul>
+<li>GMII与RGMII是物理层(PHY)和数据链路层(MAC)之间的标准接口，RGMII更新</li>
+</ul>
+<h3>GMII</h3>
+<ul>
+<li><strong>数据宽度</strong>：8位(1字节)数据总线，用于发送/接收</li>
+<li><strong>时钟</strong>：发送/接收时钟都是125MHz(千兆)</li>
+<li><strong>控制信号</strong>：
+<ul>
+<li><strong>发送</strong>使能：<code class="notranslate">TX_EN</code>，表示发送数据有效</li>
+<li><strong>发送</strong>错误：<code class="notranslate">TX_ER</code>，指示发送数据错误</li>
+<li><strong>接收</strong>数据有效：<code class="notranslate">RX_DX</code>，接收数据有效</li>
+<li><strong>接收</strong>错误：<code class="notranslate">RX_ER</code>，接收数据错误</li>
+<li>载波监听、冲突检测：CRS、COL</li>
+</ul>
+</li>
+<li><strong>引脚数量</strong>：约24个</li>
+<li><strong>带宽</strong>：支持1000M，也向下兼容10、100M</li>
+<li><strong>应用场景</strong>：早期千兆以太网设备、对引脚数量不敏感的设计</li>
+</ul>
+<h3>RGMII</h3>
+<ul>
+<li><code class="notranslate">RGMII</code>是<code class="notranslate">GMII</code>的<strong>简化版本</strong>，通过减少引脚数量、优化信号传输方式，降低设计复杂性、成本</li>
+<li><strong>数据宽度</strong>：4位(半字节)数据总线，即TXD[3:0]，RXD[3:0]，相比GMII减少一半</li>
+<li><strong>时钟</strong>：
+<ul>
+<li>使用双边沿触发（DDR）</li>
+<li>时钟频率也125M（由于DDR技术，传输速率等同于GMII）</li>
+</ul>
+</li>
+<li><strong>控制信号</strong>：
+<ul>
+<li><code class="notranslate">TX_EN</code>和<code class="notranslate">TX_ER</code>在时钟的上升沿/下降沿复用（编码为<code class="notranslate">TX_CTL</code>）</li>
+<li><code class="notranslate">RX_DV</code>和<code class="notranslate">RX_ER</code>同样复用<code class="notranslate">RX_CTL</code></li>
+<li>不在需要独立的<code class="notranslate">CRS、COL</code>信号</li>
+</ul>
+</li>
+<li><strong>引脚数量</strong>：约12个，大幅减少</li>
+<li>带宽：支持千兆速率，也向下兼容10、100M</li>
+<li><strong>延时补偿</strong>：时序分为延时模式和非延时模式，一半<strong>延时模式</strong>用的多</li>
+<li>应用场景：广泛应用于现代嵌入式、SOC系统等</li>
+</ul>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/user-attachments/assets/46c179a4-6bc2-432b-8923-c51496f3bc5c"><img src="https://github.com/user-attachments/assets/46c179a4-6bc2-432b-8923-c51496f3bc5c" alt="Image" style="max-width: 100%;"></a><br>
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/user-attachments/assets/a5b13cf3-dee2-40b7-a407-410d74e1817b"><img src="https://github.com/user-attachments/assets/a5b13cf3-dee2-40b7-a407-410d74e1817b" alt="Image" style="max-width: 100%;"></a></p>
+<ul>
+<li>在时钟上升沿传输低四位，下降沿传输高四位，一共传输8bit/1字节数据</li>
+<li>延时模式：接收时在RXD的中间位置接收；发送时正常发送。PHY芯片默认延时模式</li>
+</ul>
+<h1>MAC数据包</h1>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/user-attachments/assets/cff0bd07-2b28-421e-bd36-2c00e05d153a"><img src="https://github.com/user-attachments/assets/cff0bd07-2b28-421e-bd36-2c00e05d153a" alt="Image" style="max-width: 100%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/user-attachments/assets/9c7f1161-f6fd-4fa1-8c7a-1a4b40f359e5"><img src="https://github.com/user-attachments/assets/9c7f1161-f6fd-4fa1-8c7a-1a4b40f359e5" alt="Image" style="max-width: 100%;"></a></p>
+<ul>
+<li>以太网MAC数据包根据<code class="notranslate">Type Length</code>，分为IP数据包(8000)、ARP包(8060)</li>
+<li>根据IP首部的协议，IP数据包分为UDP、ICMP、TCP</li>
+</ul>
+<h3>MAC帧格式</h3>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/user-attachments/assets/6e00096c-0907-420b-84fe-ada3d900f663"><img src="https://github.com/user-attachments/assets/6e00096c-0907-420b-84fe-ada3d900f663" alt="Image" style="max-width: 100%;"></a></p>
+<ul>
+<li>MAC帧：MAC子层是数据链路层的下半部分，主要负责与物理层进行数据交换。</li>
+<li>格式：
+<ul>
+<li>前导码：帧头，内容为7个字节的0x55</li>
+<li>帧起始界定符：用于区分前导段和数据段，内容为0xD5</li>
+<li>MAC地址：网卡的物理地址，在以太网传输的最底层</li>
+<li>数据包类型Type/length：描述本MAC数据包是属于TCP/IP协议层的IP包、ARP包还是SNMP包</li>
+<li>数据段：MAC包核心内容，包含的数据来自MAC上层</li>
+<li>FCS校验和域：保存了CRC校验序列，用于检错</li>
+</ul>
+</li>
+</ul>
+<h3>IP帧格式</h3>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/user-attachments/assets/b3303b82-468c-453f-bc64-ca490248b555"><img src="https://github.com/user-attachments/assets/b3303b82-468c-453f-bc64-ca490248b555" alt="Image" style="max-width: 100%;"></a></p>
+<ul>
+<li>IP协议：当MAC数据包通过数据链路层到达网络层，只有有效数据传入了网络层，通过IP协议实现网络层互联</li>
+<li>IP帧格式：
+<ul>
+<li>IP首部（20字节）：
+<ul>
+<li>版本：4bit，定义协议版本，如IPv4的值是4，IPv6的值是6</li>
+<li>首部长度：4bit，指定ip头部的长度，单位是4字节。如最小值是5(20字节)，最大值是15(60字节)</li>
+<li>服务类型：8bit，指定数据包的优先级和服务质量</li>
+<li>总长度</li>
+<li>标识</li>
+<li>标志</li>
+<li>分段偏移</li>
+<li>生产时间</li>
+<li>协议</li>
+<li>检测错误</li>
+<li>源IP地址</li>
+<li>目的IP地址</li>
+</ul>
+</li>
+<li>DATA数据</li>
+</ul>
+</li>
+</ul>
+<h3>UDP帧格式</h3>
+<ul>
+<li>
+<p>网络层接收到数据包后，取下数据包的IP首部，将剩余的有效数据包发送给传输层。</p>
+<p>传输层有两种协议：TCP协议（更可靠）、UDP协议（简单）</p>
+</li>
+<li>
+<p>UDP帧格式：</p>
+<ul>
+<li>UDP首部
+<ul>
+<li>源端口号</li>
+<li>目的端口号</li>
+<li>UDP长度</li>
+<li>UDP校验和</li>
+</ul>
+</li>
+<li>DATA数据</li>
+</ul>
+</li>
+</ul>
+<h3>UDP/IP首部校验和计算方法</h3>
+<ul>
+<li>
+<p>计算方法：</p>
+<ul>
+<li>
+<p>抓取IP数据包，<strong>取</strong>IP数据<strong>报头部分</strong>(20B)，</p>
+<p>如：45 00 00 30 80 4c 40 00 80 06 <strong>b5 2e</strong> d3 43 11 787b cb 51 15 3d，<strong>将校验和字段b5 2e置零</strong></p>
+<p>为：45 00 00 30 80 4c 40 00 80 06 <strong>00 00</strong> d3 43 11 787b cb 51 15 3d</p>
+</li>
+<li>
+<p>以2字节为单位，数据<strong>反码求和</strong>：4500+0030+804c+4000+8006+0000+d343+117b+cb51+153d=34ade</p>
+</li>
+<li>
+<p>将进位的0003<strong>加到低16位上</strong>：0003+4ace=4ad1</p>
+</li>
+<li>
+<p>将4ad1<strong>取反</strong>，<strong>得</strong>：checksum = b52e</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>​</p></div>
+<div style="font-size:small;margin-top:8px;float:right;"></div>
+
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
+
+</div>
+    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://niffffty.github.io">吴广喆的blog</a></div>
+<div id="footer2">
+    <span id="runday"></span><span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a></span>
+</div>
+
+<script>
+var now=new Date();
+document.getElementById("copyrightYear").innerHTML=now.getFullYear();
+
+if(""!=""){
+    var startSite=new Date("");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("runday").innerHTML="网站运行"+diffDay+"天"+" • ";
+}
+</script></div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z'};
+var utterancesLoad=0;
+
+let themeSettings={
+    "dark": ["dark","moon","#00f0ff","dark-blue"],
+    "light": ["light","sun","#ff5000","github-light"],
+    "auto": ["auto","sync","","preferred-color-scheme"]
+};
+function changeTheme(mode, icon, color, utheme){
+    document.documentElement.setAttribute("data-color-mode",mode);
+    document.getElementById("themeSwitch").setAttribute("d",value=IconList[icon]);
+    document.getElementById("themeSwitch").parentNode.style.color=color;
+    if(utterancesLoad==1){utterancesTheme(utheme);}
+}
+function modeSwitch(){
+    let currentMode=document.documentElement.getAttribute('data-color-mode');
+    let newMode = currentMode === "light" ? "dark" : currentMode === "dark" ? "auto" : "light";
+    localStorage.setItem("meek_theme", newMode);
+    if(themeSettings[newMode]){
+        changeTheme(...themeSettings[newMode]);
+    }
+}
+function utterancesTheme(theme){
+    const message={type:'set-theme',theme: theme};
+    const iframe=document.getElementsByClassName('utterances-frame')[0];
+    iframe.contentWindow.postMessage(message,'https://utteranc.es');
+}
+if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
+console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","niffffty/niffffty.github.io");
+    script.setAttribute("issue-term","title");
+    
+    if(localStorage.getItem("meek_theme")=="dark"){script.setAttribute("theme","dark-blue");}
+    else if(localStorage.getItem("meek_theme")=="light") {script.setAttribute("theme","github-light");}
+    else{script.setAttribute("theme","preferred-color-scheme");}
+    
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
+}
+
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
+
+
+
+</script>
+
+
+</html>

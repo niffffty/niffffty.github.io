@@ -1,5 +1,70 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>吴广喆的blog</title><link>https://niffffty.github.io</link><description>个人学习记录</description><copyright>吴广喆的blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/94451088?v=4</url><title>avatar</title><link>https://niffffty.github.io</link></image><lastBuildDate>Thu, 24 Apr 2025 00:51:29 +0000</lastBuildDate><managingEditor>吴广喆的blog</managingEditor><ttl>60</ttl><webMaster>吴广喆的blog</webMaster><item><title>DDR3测试工程</title><link>https://niffffty.github.io/post/DDR3-ce-shi-gong-cheng.html</link><description>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>吴广喆的blog</title><link>https://niffffty.github.io</link><description>个人学习记录</description><copyright>吴广喆的blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/94451088?v=4</url><title>avatar</title><link>https://niffffty.github.io</link></image><lastBuildDate>Thu, 24 Apr 2025 05:22:06 +0000</lastBuildDate><managingEditor>吴广喆的blog</managingEditor><ttl>60</ttl><webMaster>吴广喆的blog</webMaster><item><title>以太网基础</title><link>https://niffffty.github.io/post/yi-tai-wang-ji-chu.html</link><description># 硬件构成
+
+- FPGA只需要关注与PHY芯片通信，就能实现通过以太网和PC通信
+
+![Image](https://github.com/user-attachments/assets/05408804-a922-4957-9776-3d471452ffcf)
+
+
+# OSI七层协议
+
+![Image](https://github.com/user-attachments/assets/eb6eac6a-c99f-4573-8de7-2db061919f70)
+
+
+
+# FPGA使用TCP/IP五层协议
+
+- TCP/IP协议与OSI七层协议类似，更简洁
+- 一般来说，FPGA只做到了传输层，**PHY芯片提供物理层**
+- 通过UDP、IP、MAC层，层层**打包数据头部**，最终通过PHY芯片将数据发送出去
+
+![Image](https://github.com/user-attachments/assets/dbfe112d-dc5b-4c25-8608-8814e53786cb)
+
+
+
+# GMII和RGMII接口
+
+### 概念
+
+- GMII与RGMII是物理层(PHY)和数据链路层(MAC)之间的标准接口，RGMII更新
+
+### GMII
+
+- **数据宽度**：8位(1字节)数据总线，用于发送/接收
+- **时钟**：发送/接收时钟都是125MHz(千兆)
+- **控制信号**：
+  - **发送**使能：`TX_EN`，表示发送数据有效
+  - **发送**错误：`TX_ER`，指示发送数据错误
+  - **接收**数据有效：`RX_DX`，接收数据有效
+  - **接收**错误：`RX_ER`，接收数据错误
+  - 载波监听、冲突检测：CRS、COL
+- **引脚数量**：约24个
+- **带宽**：支持1000M，也向下兼容10、100M
+- **应用场景**：早期千兆以太网设备、对引脚数量不敏感的设计
+
+
+
+### RGMII
+
+- `RGMII`是`GMII`的**简化版本**，通过减少引脚数量、优化信号传输方式，降低设计复杂性、成本
+- **数据宽度**：4位(半字节)数据总线，即TXD[3:0]，RXD[3:0]，相比GMII减少一半
+- **时钟**：
+  - 使用双边沿触发（DDR）
+  - 时钟频率也125M（由于DDR技术，传输速率等同于GMII）
+- **控制信号**：
+  - `TX_EN`和`TX_ER`在时钟的上升沿/下降沿复用（编码为`TX_CTL`）
+  - `RX_DV`和`RX_ER`同样复用`RX_CTL`
+  - 不在需要独立的`CRS、COL`信号
+- **引脚数量**：约12个，大幅减少
+- 带宽：支持千兆速率，也向下兼容10、100M
+- **延时补偿**：时序分为延时模式和非延时模式，一半**延时模式**用的多
+- 应用场景：广泛应用于现代嵌入式、SOC系统等
+
+![Image](https://github.com/user-attachments/assets/46c179a4-6bc2-432b-8923-c51496f3bc5c)
+![Image](https://github.com/user-attachments/assets/a5b13cf3-dee2-40b7-a407-410d74e1817b)
+
+- 在时钟上升沿传输低四位，下降沿传输高四位，一共传输8bit/1字节数据
+- 延时模式：接收时在RXD的中间位置接收；发送时正常发送。</description><guid isPermaLink="true">https://niffffty.github.io/post/yi-tai-wang-ji-chu.html</guid><pubDate>Thu, 24 Apr 2025 05:21:38 +0000</pubDate></item><item><title>DDR3测试工程</title><link>https://niffffty.github.io/post/DDR3-ce-shi-gong-cheng.html</link><description>
 
 
 
