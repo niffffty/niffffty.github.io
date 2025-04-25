@@ -1,5 +1,109 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>吴广喆的blog</title><link>https://niffffty.github.io</link><description>个人学习记录</description><copyright>吴广喆的blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/94451088?v=4</url><title>avatar</title><link>https://niffffty.github.io</link></image><lastBuildDate>Thu, 24 Apr 2025 08:31:57 +0000</lastBuildDate><managingEditor>吴广喆的blog</managingEditor><ttl>60</ttl><webMaster>吴广喆的blog</webMaster><item><title>以太网基础</title><link>https://niffffty.github.io/post/yi-tai-wang-ji-chu.html</link><description># 硬件构成
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>吴广喆的blog</title><link>https://niffffty.github.io</link><description>个人学习记录</description><copyright>吴广喆的blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/94451088?v=4</url><title>avatar</title><link>https://niffffty.github.io</link></image><lastBuildDate>Fri, 25 Apr 2025 03:01:57 +0000</lastBuildDate><managingEditor>吴广喆的blog</managingEditor><ttl>60</ttl><webMaster>吴广喆的blog</webMaster><item><title>AXI4基础</title><link>https://niffffty.github.io/post/AXI4-ji-chu.html</link><description># AXI总线
+
+
+
+- AXI4：ARM公司推出的高性能、高带宽、低延迟的片内总线
+- AXI总线分类：
+  - **AXI4_FULL**：被称为AXI4，支持突发传输，突发长度1-256
+  - **AXI4_LITE**：常用于数据量较小的传输，轻量级的`AXI4_FULL`
+  - **AXI4_STREAM**：丢弃了地址项，常用于高速数据传输
+- AXI4用途：
+  - FPGA内部两个模块数据传输
+  - ZYNQ中PS与PL交互
+
+
+
+### 握手
+
+- 只有当`WVALID`和`WREADY`同时为高，握手成功，数据在这一拍完成传输
+- 握手信号：
+  - VALID：由发送方驱动，表示数据、地址、控制信号已经准备就绪
+  - READY：接收方驱动，表示接收方可以接收数据
+
+
+
+
+
+
+
+# AXI4_STEAM
+
+### 端口信号
+
+- 输入：
+  - clk
+  - reset
+  - axis_tready
+- 输出：
+  - axis_tvalid
+  - axis_tlast
+  - axis_tdata
+- 非必要信号：
+  - axis_tkeep、axis_tstrb：同时为高时tdata有效
+  - axis_tid：主机id
+  - axis_tdest：从机id
+  - axis_tuser：用户自定义
+
+
+
+
+
+
+
+
+
+# AXI4_LITE
+
+### 什么是突发
+
+- 没突发：主机发送 1个数据+1个地址
+- 突发：主机发送 4个数据+1个地址
+- 突发长度：4个数据+1个地址，则突发长度burst length为4
+
+
+
+
+
+### AXI4_LITE的通道
+
+- 写地址：**主设备**发送写操作的地址、控制信息
+- 写数据：**主设备**发送要写入的数据
+- 写响应：**从设备**返回读取的数据、状态
+- 读地址：**主设备**发送读操作的地址、控制信息
+- 读数据：**从设备**返回读取的数据、状态
+
+每个通道使用握手机制（VALID、READY信号）
+
+
+
+### AXI4_LITE的端口信号、功能
+
+![Image](https://github.com/user-attachments/assets/8a05d1e5-f7f1-44b5-a83e-2d2366c189fa)
+
+- 写数据信号：
+  - 控制信号（A开头的）
+  - 数据相关信号（W开头的）
+  - 回复信号（B开头的）
+
+
+
+
+
+
+
+
+
+### 工作流程
+
+- 写操作
+  - 主设备通过写地址通道发送目标地址；写数据通道发送数据/字节选通
+  - 从设备处理请求后，通过写响应通道返回状态
+- 读操作
+  - 主设备通过读地址通道发送目标地址
+  - 从设备通过读数据通道返回数据、状态
+
+。</description><guid isPermaLink="true">https://niffffty.github.io/post/AXI4-ji-chu.html</guid><pubDate>Fri, 25 Apr 2025 03:01:29 +0000</pubDate></item><item><title>以太网基础</title><link>https://niffffty.github.io/post/yi-tai-wang-ji-chu.html</link><description># 硬件构成
 
 - FPGA只需要关注与PHY芯片通信，就能实现通过以太网和PC通信
 
