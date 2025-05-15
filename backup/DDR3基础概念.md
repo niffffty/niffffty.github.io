@@ -103,7 +103,7 @@
   - sys_clk_i：系统时钟，给MIG核的，一般200M
   - sys_rst：**低有效**，给MIG核的复位信号
 
-
+![Image](https://github.com/user-attachments/assets/27de6808-8164-4930-9b3b-3e53a75c8401)
 
 
 
