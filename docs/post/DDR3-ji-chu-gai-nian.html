@@ -22,17 +22,9 @@
   - 驱动复杂，使用官方给的`MIG IP`核，读写`MIG`即间接读取`DDR3`
 - 存储：
   - 存储到DDR3：先指定一个Bank地址，再指定行地址，再指定列地址
-- 容量：bank数量 × 行数量 × 列数量 × 存储单元容量
-
-
-
-### 命名
-
-- 以镁光公司的DDR3举例：MT41J 64M16 -125
-  - **J**：封装
-  - **64M16**：从数据手册中可以通过此参数找到bank、行、列数量
-  - **M16**：传输数据的位宽为16
-  - **-125**：速度等级，表示支持的最大时钟频率。">
+- DDR3的容量
+  - 位宽：
+    - bank位宽：表示DDR3内部bank数量的对数形式。">
 <meta property="og:title" content="DDR3基础概念">
 <meta property="og:description" content="# DDR3概念
 
@@ -46,17 +38,9 @@
   - 驱动复杂，使用官方给的`MIG IP`核，读写`MIG`即间接读取`DDR3`
 - 存储：
   - 存储到DDR3：先指定一个Bank地址，再指定行地址，再指定列地址
-- 容量：bank数量 × 行数量 × 列数量 × 存储单元容量
-
-
-
-### 命名
-
-- 以镁光公司的DDR3举例：MT41J 64M16 -125
-  - **J**：封装
-  - **64M16**：从数据手册中可以通过此参数找到bank、行、列数量
-  - **M16**：传输数据的位宽为16
-  - **-125**：速度等级，表示支持的最大时钟频率。">
+- DDR3的容量
+  - 位宽：
+    - bank位宽：表示DDR3内部bank数量的对数形式。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://niffffty.github.io/post/DDR3-ji-chu-gai-nian.html">
 <meta property="og:image" content="https://avatars.githubusercontent.com/u/94451088?v=4">
@@ -134,7 +118,20 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <li>存储到DDR3：先指定一个Bank地址，再指定行地址，再指定列地址</li>
 </ul>
 </li>
-<li>容量：bank数量 × 行数量 × 列数量 × 存储单元容量</li>
+<li>DDR3的容量
+<ul>
+<li>位宽：
+<ul>
+<li>bank位宽：表示DDR3内部bank数量的对数形式。如果bank位宽为3，则有2的三次方=8个bank</li>
+<li>行位宽：表示每个Bank中行地址的位数，用于寻址行的数量。如果行位宽为14，意味着有2的14次方=16384行</li>
+</ul>
+</li>
+<li>数据位宽：表示每次读写操作的数据宽度，即芯片的I/O宽度。如果数据位宽是16，则每次访问传输16位数据</li>
+<li>地址大小：表示芯片的寻址能力，即可以访问的存储单元总数</li>
+<li>容量 = 地址大小*数据位宽，即：容量=bank位宽 * 行位宽 * 列位宽 * 存储单元容量</li>
+<li>例：本次实验使用的 DDR3 芯片是南亚的 NT5CC128M16IP-DI，NT5CC128M16IP-DI 的 bank位宽为 3，行位宽为 14，列位宽为 10，所以它的地址大小等于 2^3<em>2^14</em>2^10（即 2^27=128M），数据位宽为 16bit，所以容量大小为 128M*16bit，也就是 256MByte。</li>
+</ul>
+</li>
 </ul>
 <h3>命名</h3>
 <ul>

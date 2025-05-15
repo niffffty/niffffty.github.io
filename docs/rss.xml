@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>吴广喆的blog</title><link>https://niffffty.github.io</link><description>个人学习记录</description><copyright>吴广喆的blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/94451088?v=4</url><title>avatar</title><link>https://niffffty.github.io</link></image><lastBuildDate>Wed, 07 May 2025 02:17:56 +0000</lastBuildDate><managingEditor>吴广喆的blog</managingEditor><ttl>60</ttl><webMaster>吴广喆的blog</webMaster><item><title>AXI4基础</title><link>https://niffffty.github.io/post/AXI4-ji-chu.html</link><description># AXI总线
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>吴广喆的blog</title><link>https://niffffty.github.io</link><description>个人学习记录</description><copyright>吴广喆的blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/94451088?v=4</url><title>avatar</title><link>https://niffffty.github.io</link></image><lastBuildDate>Thu, 15 May 2025 00:24:20 +0000</lastBuildDate><managingEditor>吴广喆的blog</managingEditor><ttl>60</ttl><webMaster>吴广喆的blog</webMaster><item><title>AXI4基础</title><link>https://niffffty.github.io/post/AXI4-ji-chu.html</link><description># AXI总线
 
 
 
@@ -263,17 +263,9 @@
   - 驱动复杂，使用官方给的`MIG IP`核，读写`MIG`即间接读取`DDR3`
 - 存储：
   - 存储到DDR3：先指定一个Bank地址，再指定行地址，再指定列地址
-- 容量：bank数量 × 行数量 × 列数量 × 存储单元容量
-
-
-
-### 命名
-
-- 以镁光公司的DDR3举例：MT41J 64M16 -125
-  - **J**：封装
-  - **64M16**：从数据手册中可以通过此参数找到bank、行、列数量
-  - **M16**：传输数据的位宽为16
-  - **-125**：速度等级，表示支持的最大时钟频率。</description><guid isPermaLink="true">https://niffffty.github.io/post/DDR3-ji-chu-gai-nian.html</guid><pubDate>Wed, 23 Apr 2025 00:29:09 +0000</pubDate></item><item><title>subline技巧</title><link>https://niffffty.github.io/post/subline-ji-qiao.html</link><description>### subline技巧
+- DDR3的容量
+  - 位宽：
+    - bank位宽：表示DDR3内部bank数量的对数形式。</description><guid isPermaLink="true">https://niffffty.github.io/post/DDR3-ji-chu-gai-nian.html</guid><pubDate>Wed, 23 Apr 2025 00:29:09 +0000</pubDate></item><item><title>subline技巧</title><link>https://niffffty.github.io/post/subline-ji-qiao.html</link><description>### subline技巧
 
 - shift+鼠标右键：选中多列
 - ctrl+鼠标左键：选中多列
