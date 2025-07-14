@@ -1,5 +1,45 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>吴广喆的blog</title><link>https://niffffty.github.io</link><description>个人学习记录</description><copyright>吴广喆的blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/94451088?v=4</url><title>avatar</title><link>https://niffffty.github.io</link></image><lastBuildDate>Thu, 15 May 2025 00:24:20 +0000</lastBuildDate><managingEditor>吴广喆的blog</managingEditor><ttl>60</ttl><webMaster>吴广喆的blog</webMaster><item><title>AXI4基础</title><link>https://niffffty.github.io/post/AXI4-ji-chu.html</link><description># AXI总线
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>吴广喆的blog</title><link>https://niffffty.github.io</link><description>个人学习记录</description><copyright>吴广喆的blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/94451088?v=4</url><title>avatar</title><link>https://niffffty.github.io</link></image><lastBuildDate>Mon, 14 Jul 2025 10:53:45 +0000</lastBuildDate><managingEditor>吴广喆的blog</managingEditor><ttl>60</ttl><webMaster>吴广喆的blog</webMaster><item><title>使用python脚本在本地将pdf转为excel</title><link>https://niffffty.github.io/post/shi-yong-python-jiao-ben-zai-ben-di-jiang-pdf-zhuan-wei-excel.html</link><description>### 环境
+
+&lt;img width='548' height='397' alt='Image' src='https://github.com/user-attachments/assets/9b152fb4-d751-4b1d-96ac-3d10c8cad502' /&gt;
+
+
+
+```python
+python -m venv venv #建立虚拟环境
+venv\Scripts\activate #激活虚拟环境
+
+pip install tabula-py
+pip install pandas
+#安装java，jdk，添加环境变量
+pip install tabula-py
+pip install pandas openpyxl
+```
+
+```python
+# pdf_to_excel.py
+import tabula
+import pandas as pd
+
+# PDF文件路径
+pdf_path = 'E:/Users/93914/Desktop/123.pdf'
+
+# 从PDF中提取表格
+tables = tabula.read_pdf(pdf_path, pages='all', multiple_tables=True)
+
+# 检查是否提取到表格
+if tables:
+    # 将所有表格合并为一个DataFrame（如果有多个表格）
+    df = pd.concat(tables, ignore_index=True)
+
+    # 输出Excel文件路径
+    excel_path = 'E:/Users/93914/Desktop/ddddd.xlsx'
+
+    # 将DataFrame导出为Excel
+    df.to_excel(excel_path, index=False)
+    print(f'成功将 {pdf_path} 转换为 {excel_path}')
+else:
+    print('PDF中未找到表格。</description><guid isPermaLink="true">https://niffffty.github.io/post/shi-yong-python-jiao-ben-zai-ben-di-jiang-pdf-zhuan-wei-excel.html</guid><pubDate>Mon, 14 Jul 2025 10:53:17 +0000</pubDate></item><item><title>AXI4基础</title><link>https://niffffty.github.io/post/AXI4-ji-chu.html</link><description># AXI总线
 
 
 
