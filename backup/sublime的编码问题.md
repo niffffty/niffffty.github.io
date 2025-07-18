@@ -1,0 +1,2 @@
+- 左上角File-Reopen with encodeing-Chinese(GB18030)
+- 左上角File-Save with encodeing-Chinese(GB18030)
