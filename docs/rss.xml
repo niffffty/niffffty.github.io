@@ -1,2 +1,2264 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>吴广喆的blog</title><link>https://niffffty.github.io</link><description>个人学习记录</description><copyright>吴广喆的blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/94451088?v=4</url><title>avatar</title><link>https://niffffty.github.io</link></image><lastBuildDate>Mon, 27 Apr 2026 17:24:48 +0000</lastBuildDate><managingEditor>吴广喆的blog</managingEditor><ttl>60</ttl><webMaster>吴广喆的blog</webMaster></channel></rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>吴广喆的blog</title><link>https://niffffty.github.io</link><description>个人学习记录</description><copyright>吴广喆的blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/94451088?v=4</url><title>avatar</title><link>https://niffffty.github.io</link></image><lastBuildDate>Tue, 28 Apr 2026 17:48:51 +0000</lastBuildDate><managingEditor>吴广喆的blog</managingEditor><ttl>60</ttl><webMaster>吴广喆的blog</webMaster><item><title>IIC协议概念</title><link>https://niffffty.github.io/post/IIC-xie-yi-gai-nian.html</link><description>&lt;img width='4226' height='4454' alt='Image' src='https://github.com/user-attachments/assets/17a521fb-5a62-4fc6-b476-b9e64f80cbdd' /&gt;。</description><guid isPermaLink="true">https://niffffty.github.io/post/IIC-xie-yi-gai-nian.html</guid><pubDate>Sat, 13 Sep 2025 08:31:16 +0000</pubDate></item><item><title>FPGA的VGA彩条显示、OV5640-HDMI视频显示</title><link>https://niffffty.github.io/post/FPGA-de-VGA-cai-tiao-xian-shi-%E3%80%81OV5640-HDMI-shi-pin-xian-shi.html</link><description>&lt;img width='6934' height='6277' alt='Image' src='https://github.com/user-attachments/assets/f777b3be-562c-4a00-b744-fdbaf034d22b' /&gt;
+
+&lt;img width='13826' height='5399' alt='Image' src='https://github.com/user-attachments/assets/a5b81dc6-8507-49d5-8229-5f5edda817c7' /&gt;。</description><guid isPermaLink="true">https://niffffty.github.io/post/FPGA-de-VGA-cai-tiao-xian-shi-%E3%80%81OV5640-HDMI-shi-pin-xian-shi.html</guid><pubDate>Sat, 13 Sep 2025 08:30:34 +0000</pubDate></item><item><title>MIG核、DDS、FFT、FIR滤波器</title><link>https://niffffty.github.io/post/MIG-he-%E3%80%81DDS%E3%80%81FFT%E3%80%81FIR-lv-bo-qi.html</link><description>&lt;img width='8452' height='4540' alt='Image' src='https://github.com/user-attachments/assets/b09142cb-df4e-48f8-abe1-3bece8f6bbd1' /&gt;。</description><guid isPermaLink="true">https://niffffty.github.io/post/MIG-he-%E3%80%81DDS%E3%80%81FFT%E3%80%81FIR-lv-bo-qi.html</guid><pubDate>Sat, 13 Sep 2025 08:29:46 +0000</pubDate></item><item><title>AXI4总线笔记</title><link>https://niffffty.github.io/post/AXI4-zong-xian-bi-ji.html</link><description>&lt;img width='20860' height='10349' alt='Image' src='https://github.com/user-attachments/assets/9db02b83-a4f9-4916-85af-b0c609f6910c' /&gt;。</description><guid isPermaLink="true">https://niffffty.github.io/post/AXI4-zong-xian-bi-ji.html</guid><pubDate>Sat, 13 Sep 2025 08:28:43 +0000</pubDate></item><item><title>FPGA学习笔记：FIFO、状态机、串口</title><link>https://niffffty.github.io/post/FPGA-xue-xi-bi-ji-%EF%BC%9AFIFO%E3%80%81-zhuang-tai-ji-%E3%80%81-chuan-kou.html</link><description>&lt;img width='10115' height='8324' alt='Image' src='https://github.com/user-attachments/assets/608db5c0-55f0-4472-a1d4-8d3089798347' /&gt;。</description><guid isPermaLink="true">https://niffffty.github.io/post/FPGA-xue-xi-bi-ji-%EF%BC%9AFIFO%E3%80%81-zhuang-tai-ji-%E3%80%81-chuan-kou.html</guid><pubDate>Sat, 13 Sep 2025 08:22:39 +0000</pubDate></item><item><title>ddr3报错</title><link>https://niffffty.github.io/post/ddr3-bao-cuo.html</link><description>- 报错：[DRC NSTD-1] Unspecified I/O Standard: 23 out of 95 logical ports use I/O standard (IOSTANDARD) value 'DEFAULT', instead of a user assigned specific value. This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all I/O standards. This design will fail to generate a bitstream unless all logical ports have a user specified I/O standard value defined. To allow bitstream creation with unspecified I/O standard values (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks NSTD-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run. Problem ports: ddr3_addr[14], ddr3_dm[3], ddr3_dm[2], ddr3_dq[31], ddr3_dq[30], ddr3_dq[29], ddr3_dq[28], ddr3_dq[27], ddr3_dq[26], ddr3_dq[25], ddr3_dq[24], ddr3_dq[23], ddr3_dq[22], ddr3_dq[21], ddr3_dq[20]... and (the first 15 of 23 listed).
+
+[DRC UCIO-1] Unconstrained Logical Port: 23 out of 95 logical ports have no user assigned specific location constraint (LOC). This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all pin locations. This design will fail to generate a bitstream unless all logical ports have a user specified site LOC constraint defined.  To allow bitstream creation with unspecified pin locations (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks UCIO-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run.  Problem ports: ddr3_addr[14], ddr3_dm[3], ddr3_dm[2], ddr3_dq[31], ddr3_dq[30], ddr3_dq[29], ddr3_dq[28], ddr3_dq[27], ddr3_dq[26], ddr3_dq[25], ddr3_dq[24], ddr3_dq[23], ddr3_dq[22], ddr3_dq[21], ddr3_dq[20]... and (the first 15 of 23 listed).
+
+
+- 原因：常在移植代码中出现此问题。</description><guid isPermaLink="true">https://niffffty.github.io/post/ddr3-bao-cuo.html</guid><pubDate>Sat, 16 Aug 2025 13:48:52 +0000</pubDate></item><item><title>sublime的编码问题</title><link>https://niffffty.github.io/post/sublime-de-bian-ma-wen-ti.html</link><description>- 左上角File-Reopen with encodeing-Chinese(GB18030)
+- 左上角File-Save with encodeing-Chinese(GB18030)。</description><guid isPermaLink="true">https://niffffty.github.io/post/sublime-de-bian-ma-wen-ti.html</guid><pubDate>Fri, 18 Jul 2025 09:58:08 +0000</pubDate></item><item><title>使用python脚本在本地将pdf转为excel</title><link>https://niffffty.github.io/post/shi-yong-python-jiao-ben-zai-ben-di-jiang-pdf-zhuan-wei-excel.html</link><description>### 环境
+
+&lt;img width='548' height='397' alt='Image' src='https://github.com/user-attachments/assets/9b152fb4-d751-4b1d-96ac-3d10c8cad502' /&gt;
+
+
+
+```python
+python -m venv venv #建立虚拟环境
+venv\Scripts\activate #激活虚拟环境
+
+pip install tabula-py
+pip install pandas
+#安装java，jdk，添加环境变量
+pip install tabula-py
+pip install pandas openpyxl
+```
+
+```python
+# pdf_to_excel.py
+import tabula
+import pandas as pd
+
+# PDF文件路径
+pdf_path = 'E:/Users/93914/Desktop/123.pdf'
+
+# 从PDF中提取表格
+tables = tabula.read_pdf(pdf_path, pages='all', multiple_tables=True)
+
+# 检查是否提取到表格
+if tables:
+    # 将所有表格合并为一个DataFrame（如果有多个表格）
+    df = pd.concat(tables, ignore_index=True)
+
+    # 输出Excel文件路径
+    excel_path = 'E:/Users/93914/Desktop/ddddd.xlsx'
+
+    # 将DataFrame导出为Excel
+    df.to_excel(excel_path, index=False)
+    print(f'成功将 {pdf_path} 转换为 {excel_path}')
+else:
+    print('PDF中未找到表格。</description><guid isPermaLink="true">https://niffffty.github.io/post/shi-yong-python-jiao-ben-zai-ben-di-jiang-pdf-zhuan-wei-excel.html</guid><pubDate>Mon, 14 Jul 2025 10:53:17 +0000</pubDate></item><item><title>AXI4基础</title><link>https://niffffty.github.io/post/AXI4-ji-chu.html</link><description># AXI总线
+
+
+
+- AXI4：ARM公司推出的高性能、高带宽、低延迟的片内总线
+- AXI总线分类：
+  - **AXI4_FULL**：被称为AXI4，支持突发传输，突发长度1-256
+  - **AXI4_LITE**：常用于数据量较小的传输，轻量级的`AXI4_FULL`
+  - **AXI4_STREAM**：丢弃了地址项，常用于高速数据传输
+- AXI4用途：
+  - FPGA内部两个模块数据传输
+  - ZYNQ中PS与PL交互
+
+
+
+### 握手
+
+- 只有当`WVALID`和`WREADY`同时为高，握手成功，数据在这一拍完成传输
+- 握手信号：
+  - VALID：由发送方驱动，表示数据、地址、控制信号已经准备就绪
+  - READY：接收方驱动，表示接收方可以接收数据
+
+
+
+
+
+
+
+# AXI4_STEAM
+
+### 端口信号
+
+- 输入：
+  - clk
+  - reset
+  - axis_tready
+- 输出：
+  - axis_tvalid
+  - axis_tlast
+  - axis_tdata
+- 非必要信号：
+  - axis_tkeep、axis_tstrb：同时为高时tdata有效
+  - axis_tid：主机id
+  - axis_tdest：从机id
+  - axis_tuser：用户自定义
+
+
+
+
+
+
+
+
+
+# AXI4_LITE
+
+### 什么是突发
+
+- 没突发：主机发送 1个数据+1个地址
+- 突发：主机发送 4个数据+1个地址
+- 突发长度：4个数据+1个地址，则突发长度burst length为4
+
+
+
+
+
+### AXI4_LITE的通道
+
+- 写地址：**主设备**发送写操作的地址、控制信息
+- 写数据：**主设备**发送要写入的数据
+- 写响应：**从设备**返回读取的数据、状态
+- 读地址：**主设备**发送读操作的地址、控制信息
+- 读数据：**从设备**返回读取的数据、状态
+
+每个通道使用握手机制（VALID、READY信号）
+
+
+
+### AXI4_LITE的端口信号、功能
+
+![Image](https://github.com/user-attachments/assets/8a05d1e5-f7f1-44b5-a83e-2d2366c189fa)
+
+- 写数据信号：
+  - 控制信号（A开头的）
+  - 数据相关信号（W开头的）
+  - 回复信号（B开头的）
+
+
+
+
+
+
+
+
+
+### 工作流程
+
+- 写操作
+  - 主设备通过写地址通道发送目标地址；写数据通道发送数据/字节选通
+  - 从设备处理请求后，通过写响应通道返回状态
+- 读操作
+  - 主设备通过读地址通道发送目标地址
+  - 从设备通过读数据通道返回数据、状态
+
+。</description><guid isPermaLink="true">https://niffffty.github.io/post/AXI4-ji-chu.html</guid><pubDate>Fri, 25 Apr 2025 03:01:29 +0000</pubDate></item><item><title>以太网基础</title><link>https://niffffty.github.io/post/yi-tai-wang-ji-chu.html</link><description># 硬件构成
+
+- FPGA只需要关注与PHY芯片通信，就能实现通过以太网和PC通信
+
+![Image](https://github.com/user-attachments/assets/05408804-a922-4957-9776-3d471452ffcf)
+
+
+# OSI七层协议
+
+![Image](https://github.com/user-attachments/assets/eb6eac6a-c99f-4573-8de7-2db061919f70)
+
+
+
+# FPGA使用TCP/IP五层协议
+
+- TCP/IP协议与OSI七层协议类似，更简洁
+- 一般来说，FPGA只做到了传输层，**PHY芯片提供物理层**
+- 通过UDP、IP、MAC层，层层**打包数据头部**，最终通过PHY芯片将数据发送出去
+
+![Image](https://github.com/user-attachments/assets/dbfe112d-dc5b-4c25-8608-8814e53786cb)
+
+
+
+# GMII和RGMII接口
+
+### 概念
+
+- GMII与RGMII是物理层(PHY)和数据链路层(MAC)之间的标准接口，RGMII更新
+
+### GMII
+
+- **数据宽度**：8位(1字节)数据总线，用于发送/接收
+- **时钟**：发送/接收时钟都是125MHz(千兆)
+- **控制信号**：
+  - **发送**使能：`TX_EN`，表示发送数据有效
+  - **发送**错误：`TX_ER`，指示发送数据错误
+  - **接收**数据有效：`RX_DX`，接收数据有效
+  - **接收**错误：`RX_ER`，接收数据错误
+  - 载波监听、冲突检测：CRS、COL
+- **引脚数量**：约24个
+- **带宽**：支持1000M，也向下兼容10、100M
+- **应用场景**：早期千兆以太网设备、对引脚数量不敏感的设计
+
+
+
+### RGMII
+
+- `RGMII`是`GMII`的**简化版本**，通过减少引脚数量、优化信号传输方式，降低设计复杂性、成本
+- **数据宽度**：4位(半字节)数据总线，即TXD[3:0]，RXD[3:0]，相比GMII减少一半
+- **时钟**：
+  - 使用双边沿触发（DDR）
+  - 时钟频率也125M（由于DDR技术，传输速率等同于GMII）
+- **控制信号**：
+  - `TX_EN`和`TX_ER`在时钟的上升沿/下降沿复用（编码为`TX_CTL`）
+  - `RX_DV`和`RX_ER`同样复用`RX_CTL`
+  - 不在需要独立的`CRS、COL`信号
+- **引脚数量**：约12个，大幅减少
+- 带宽：支持千兆速率，也向下兼容10、100M
+- **延时补偿**：时序分为延时模式和非延时模式，一般**延时模式**用的多
+- 应用场景：广泛应用于现代嵌入式、SOC系统等
+
+![Image](https://github.com/user-attachments/assets/46c179a4-6bc2-432b-8923-c51496f3bc5c)
+![Image](https://github.com/user-attachments/assets/a5b13cf3-dee2-40b7-a407-410d74e1817b)
+
+- 在时钟上升沿传输低四位，下降沿传输高四位，一共传输8bit/1字节数据
+- 延时模式：接收时在RXD的中间位置接收；发送时正常发送。</description><guid isPermaLink="true">https://niffffty.github.io/post/yi-tai-wang-ji-chu.html</guid><pubDate>Thu, 24 Apr 2025 05:21:38 +0000</pubDate></item><item><title>DDR3测试工程</title><link>https://niffffty.github.io/post/DDR3-ce-shi-gong-cheng.html</link><description>
+
+
+
+# 测试DDR3
+
+- 若硬件是自己设计的pcb，为了检验fpga硬件是否正常工作，需要进行测试
+  - 抓DDR初始化信号是否拉高
+  - 进行一个读写测试
+
+
+
+
+
+### 上板时钟选择
+
+- A7芯片
+  - DDR芯片时钟：400M
+  - 系统时钟：200M
+  - 参考时钟：使用系统时钟
+- K7芯片：
+  - 的DDR芯片时钟800M
+
+
+
+
+
+# DDR3测试工程
+
+-  创建工程，添加MIG的IP核
+- MIG配置：
+  - AXI4接口
+  - 400M的DDR3工作时钟
+  - 选择DDR3型号
+  - 根据几个DDR，选择Data Width，一个就选16
+  - 系统时钟200M，no Buffer
+  - 参考时钟：使用系统时钟
+  - 打开Internal Vref
+  - Pin/Bank选择模式：Fixed Pin out
+  - 复制进来xdc文件，读入，验证合理性
+- 例化MIG
+  - 例化进来MIG核
+  - app开头的三个置零，三个悬空；`mmcm_locked`悬空
+  - 复位低有效：`aresetn`改为`ui_clk_sync_rst`
+- 移植ADMA工程到此工程
+- 生成example
+  - 右键MIG核，Open IP Example Design
+  - 复制`example_top.v`中的端口信号到自己的工程，15个信号
+- *例化ADMA*
+
+
+
+
+
+
+
+### 如何批量移植IP核？
+
+- **设置ip容器**：
+  - 设置- IP，勾选`Use Core Containers For IP`
+- **复制ip核文件**：
+  - 打开地址：`prj/prj.srcs/sources_1/ip`，复制需要的.xcix后缀的文件到新工程的`sources_1/past_rtl/`目录下
+- **复制verilog文件**：
+  - 复制原工程的`.v`后缀文件到新工程的`past_rtl`目录下
+- **添加文件**：
+  - 在vivado中添加所有源文件，勾选`Scan and add RTL include files into project`和`Copy sources into project`
+
+
+
+。</description><guid isPermaLink="true">https://niffffty.github.io/post/DDR3-ce-shi-gong-cheng.html</guid><pubDate>Wed, 23 Apr 2025 08:40:07 +0000</pubDate></item><item><title>Uart、usart、spi、i2c通信；pid算法概述</title><link>https://niffffty.github.io/post/Uart%E3%80%81usart%E3%80%81spi%E3%80%81i2c-tong-xin-%EF%BC%9Bpid-suan-fa-gai-shu.html</link><description>&lt;html&gt;
+&lt;body&gt;
+&lt;!--StartFragment--&gt;&lt;!DOCTYPE html&gt;&lt;h1 cid='n0' mdtype='heading' class='md-end-block md-heading' style='box-sizing: border-box; break-after: avoid-page; break-inside: avoid; orphans: 4; font-size: 2.25em; margin-top: 1rem; margin-bottom: 1rem; position: relative; font-weight: bold; line-height: 1.2; cursor: text; padding-bottom: 0.3em; border-bottom: 1px solid rgb(238, 238, 238); white-space: pre-wrap; color: rgb(51, 51, 51); font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;Clear Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'&gt;&lt;span md-inline='plain' class='md-plain md-expand' style='box-sizing: border-box;'&gt;Uart、Usart、SPI、I2C通信&lt;/span&gt;&lt;/h1&gt;&lt;ul class='ul-list' cid='n2' mdtype='list' data-mark='-' style='box-sizing: border-box; margin: 0.8em 0px; padding-left: 30px; position: relative; color: rgb(51, 51, 51); font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;Clear Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'&gt;&lt;li class='md-list-item' cid='n3' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n4' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;Uart&lt;/span&gt;&lt;span md-inline='strong' class='md-pair-s ' style='box-sizing: border-box;'&gt;&lt;strong style='box-sizing: border-box;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;（通用异步收发器）&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;：&lt;/span&gt;&lt;/p&gt;&lt;ul class='ul-list' cid='n5' mdtype='list' data-mark='-' style='box-sizing: border-box; margin: 0px; padding-left: 30px; position: relative;'&gt;&lt;li class='md-list-item' cid='n6' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n7' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;特点：&lt;/span&gt;&lt;/p&gt;&lt;ul class='ul-list' cid='n8' mdtype='list' data-mark='-' style='box-sizing: border-box; margin: 0px; padding-left: 30px; position: relative;'&gt;&lt;li class='md-list-item' cid='n9' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n10' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;仅需TX、RX两根线&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n11' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n12' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;异步通信&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n13' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n14' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;全双工通信&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n15' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n16' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;数据帧：起始位+数据位+可选校验位 + 停止位&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n17' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n18' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;使用场景：低成本、近距离通信，如mcu与传感器、计算机串口调试&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n19' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n20' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;优缺点：&lt;/span&gt;&lt;/p&gt;&lt;ul class='ul-list' cid='n21' mdtype='list' data-mark='-' style='box-sizing: border-box; margin: 0px; padding-left: 30px; position: relative;'&gt;&lt;li class='md-list-item' cid='n22' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n23' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;简单易用，无需时钟线，抗干扰能力强&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n24' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n25' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;速率慢，不支持多设备&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n26' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n27' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;Usart&lt;/span&gt;&lt;span md-inline='strong' class='md-pair-s ' style='box-sizing: border-box;'&gt;&lt;strong style='box-sizing: border-box;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;（通用同步/异步收发器）&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;：&lt;/span&gt;&lt;/p&gt;&lt;ul class='ul-list' cid='n28' mdtype='list' data-mark='-' style='box-sizing: border-box; margin: 0px; padding-left: 30px; position: relative;'&gt;&lt;li class='md-list-item' cid='n29' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n30' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;特点：&lt;/span&gt;&lt;span md-inline='tab' class='md-tab' style='box-sizing: border-box; display: inline-block; white-space: pre;'&gt;	&lt;/span&gt;&lt;/p&gt;&lt;ul class='ul-list' cid='n31' mdtype='list' data-mark='-' style='box-sizing: border-box; margin: 0px; padding-left: 30px; position: relative;'&gt;&lt;li class='md-list-item' cid='n32' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n33' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;支持同步/异步，异步时和uart相同，同步时增加SCLK时钟线&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n34' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n35' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;支持更高速率&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n36' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n37' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;应用场景：&lt;/span&gt;&lt;/p&gt;&lt;ul class='ul-list' cid='n38' mdtype='list' data-mark='-' style='box-sizing: border-box; margin: 0px; padding-left: 30px; position: relative;'&gt;&lt;li class='md-list-item' cid='n39' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n40' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;需要同步通信的高性能场景，如智能卡、IrDA红外通信&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n41' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n42' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;优缺点：&lt;/span&gt;&lt;/p&gt;&lt;ul class='ul-list' cid='n43' mdtype='list' data-mark='-' style='box-sizing: border-box; margin: 0px; padding-left: 30px; position: relative;'&gt;&lt;li class='md-list-item' cid='n44' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n45' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;灵活，支持多种协议&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n46' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n47' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;硬件复杂度高于uart&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n48' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n49' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;SPI&lt;/span&gt;&lt;span md-inline='strong' class='md-pair-s ' style='box-sizing: border-box;'&gt;&lt;strong style='box-sizing: border-box;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;（串行外设接口）&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;：&lt;/span&gt;&lt;/p&gt;&lt;ul class='ul-list' cid='n50' mdtype='list' data-mark='-' style='box-sizing: border-box; margin: 0px; padding-left: 30px; position: relative;'&gt;&lt;li class='md-list-item' cid='n51' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n52' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;特点：&lt;/span&gt;&lt;/p&gt;&lt;ul class='ul-list' cid='n53' mdtype='list' data-mark='-' style='box-sizing: border-box; margin: 0px; padding-left: 30px; position: relative;'&gt;&lt;li class='md-list-item' cid='n54' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n55' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;四线制：SCLK，MOSI，MISO，CS&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n56' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n57' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;同步通信&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n58' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n59' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;全双工&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n60' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n61' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;速率高（可达10Mbps）&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n62' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n63' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;支持一主多从&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n64' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n65' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;应用场景：&lt;/span&gt;&lt;/p&gt;&lt;ul class='ul-list' cid='n66' mdtype='list' data-mark='-' style='box-sizing: border-box; margin: 0px; padding-left: 30px; position: relative;'&gt;&lt;li class='md-list-item' cid='n67' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n68' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;高速短距离通信，如Flash存储器、ADC模块、LCD驱动器&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n69' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n70' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;优缺点：&lt;/span&gt;&lt;/p&gt;&lt;ul class='ul-list' cid='n71' mdtype='list' data-mark='-' style='box-sizing: border-box; margin: 0px; padding-left: 30px; position: relative;'&gt;&lt;li class='md-list-item' cid='n72' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n73' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;全双工、高速、硬件简单&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n74' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n75' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;占用引脚多&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n76' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n77' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;I2C&lt;/span&gt;&lt;span md-inline='strong' class='md-pair-s ' style='box-sizing: border-box;'&gt;&lt;strong style='box-sizing: border-box;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;（集成电路总线）&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;：&lt;/span&gt;&lt;/p&gt;&lt;ul class='ul-list' cid='n78' mdtype='list' data-mark='-' style='box-sizing: border-box; margin: 0px; padding-left: 30px; position: relative;'&gt;&lt;li class='md-list-item' cid='n79' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n80' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;特点：&lt;/span&gt;&lt;/p&gt;&lt;ul class='ul-list' cid='n81' mdtype='list' data-mark='-' style='box-sizing: border-box; margin: 0px; padding-left: 30px; position: relative;'&gt;&lt;li class='md-list-item' cid='n82' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n83' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;两线制：SCL 时钟线，SDA数据线&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n84' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n85' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;同步通信&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n86' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n87' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;半双工通信&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n88' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n89' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;支持多主多从&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n90' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n91' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;应用场景：&lt;/span&gt;&lt;/p&gt;&lt;ul class='ul-list' cid='n92' mdtype='list' data-mark='-' style='box-sizing: border-box; margin: 0px; padding-left: 30px; position: relative;'&gt;&lt;li class='md-list-item' cid='n93' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n94' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;短距离低速设备，如EEPROM、温度传感器、RTC时钟&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n95' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n96' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;优缺点：&lt;/span&gt;&lt;/p&gt;&lt;ul class='ul-list' cid='n97' mdtype='list' data-mark='-' style='box-sizing: border-box; margin: 0px; padding-left: 30px; position: relative;'&gt;&lt;li class='md-list-item' cid='n98' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n99' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;引脚少，支持多设备总线&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n100' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n101' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;速率低，数据帧长度受限&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;h3 cid='n102' mdtype='heading' class='md-end-block md-heading' style='box-sizing: border-box; break-after: avoid-page; break-inside: avoid; orphans: 4; font-size: 1.5em; margin-top: 1rem; margin-bottom: 1rem; position: relative; font-weight: bold; line-height: 1.43; cursor: text; white-space: pre-wrap; color: rgb(51, 51, 51); font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;Clear Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'&gt;&lt;span md-inline='strong' class='md-pair-s ' style='box-sizing: border-box;'&gt;&lt;strong style='box-sizing: border-box;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;对比总结&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/h3&gt;&lt;figure class='md-table-fig' cid='n103' mdtype='table' style='box-sizing: border-box; margin: 1.2em 0px; overflow-x: auto; max-width: calc(100% + 16px); padding: 0px; cursor: default; color: rgb(51, 51, 51); font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;Clear Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'&gt;
+特性 | UART | USART | SPI | I2C
+-- | -- | -- | -- | --
+同步/异步 | 异步 | 同步/异步 | 同步 | 同步
+双工模式 | 全双工 | 全双工 | 全双工 | 半双工
+线数 | 2线（TX/RX） | 3线（+SCLK） | 4线 | 2线（SDA/SCL）
+速率 | ≤1Mbps | ≤4.5Mbps | 可达数十Mbps | ≤3.4Mbps
+寻址方式 | 无 | 无 | 片选线 | 设备地址
+典型应用 | 调试终端 | 智能卡 | Flash存储器 | 传感器
+
+&lt;/figure&gt;&lt;p cid='n146' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0.8em 0px; white-space: pre-wrap; position: relative; color: rgb(51, 51, 51); font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;Clear Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'&gt;&lt;/p&gt;&lt;p cid='n147' mdtype='paragraph' class='md-end-block md-p md-focus' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0.8em 0px; white-space: pre-wrap; position: relative; color: rgb(51, 51, 51); font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;Clear Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'&gt;&lt;/p&gt;&lt;h1 cid='n148' mdtype='heading' class='md-end-block md-heading' style='box-sizing: border-box; break-after: avoid-page; break-inside: avoid; orphans: 4; font-size: 2.25em; margin-top: 1rem; margin-bottom: 1rem; position: relative; font-weight: bold; line-height: 1.2; cursor: text; padding-bottom: 0.3em; border-bottom: 1px solid rgb(238, 238, 238); white-space: pre-wrap; color: rgb(51, 51, 51); font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;Clear Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;pid算法&lt;/span&gt;&lt;/h1&gt;&lt;h3 cid='n149' mdtype='heading' class='md-end-block md-heading' style='box-sizing: border-box; break-after: avoid-page; break-inside: avoid; orphans: 4; font-size: 1.5em; margin-top: 1rem; margin-bottom: 1rem; position: relative; font-weight: bold; line-height: 1.43; cursor: text; white-space: pre-wrap; color: rgb(51, 51, 51); font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;Clear Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;基础原理&lt;/span&gt;&lt;/h3&gt;&lt;ul class='ul-list' cid='n150' mdtype='list' data-mark='-' style='box-sizing: border-box; margin: 0.8em 0px; padding-left: 30px; position: relative; color: rgb(51, 51, 51); font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;Clear Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'&gt;&lt;li class='md-list-item' cid='n151' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n152' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;PID（Proportional-Integral-Derivative）是一种基于&lt;/span&gt;&lt;span md-inline='strong' class='md-pair-s ' style='box-sizing: border-box;'&gt;&lt;strong style='box-sizing: border-box;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;误差反馈&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;的&lt;/span&gt;&lt;span md-inline='strong' class='md-pair-s ' style='box-sizing: border-box;'&gt;&lt;strong style='box-sizing: border-box;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;闭环控制算法&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n153' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n154' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;核心思想：&lt;/span&gt;&lt;/p&gt;&lt;ul class='ul-list' cid='n155' mdtype='list' data-mark='-' style='box-sizing: border-box; margin: 0px; padding-left: 30px; position: relative;'&gt;&lt;li class='md-list-item' cid='n156' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n157' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;当前偏差P：快速响应当前误差&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n158' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n159' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;历史补偿I：消除稳态误差&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n160' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n161' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;未来预测D：抑制超调和震荡&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n162' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n163' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;理解：现在水温30度，目标水温40度，&lt;/span&gt;&lt;span md-inline='strong' class='md-pair-s ' style='box-sizing: border-box;'&gt;&lt;strong style='box-sizing: border-box;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;比例P&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;会迅速增大加热功率，但是存在稳态误差；如果水温卡在38度，&lt;/span&gt;&lt;span md-inline='strong' class='md-pair-s ' style='box-sizing: border-box;'&gt;&lt;strong style='box-sizing: border-box;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;积分I&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;会缓慢增加热量直到误差为0；当水温快速从30到40度时，&lt;/span&gt;&lt;span md-inline='strong' class='md-pair-s ' style='box-sizing: border-box;'&gt;&lt;strong style='box-sizing: border-box;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;微分D&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;会提前减小加热功率防止过热&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;h3 cid='n164' mdtype='heading' class='md-end-block md-heading' style='box-sizing: border-box; break-after: avoid-page; break-inside: avoid; orphans: 4; font-size: 1.5em; margin-top: 1rem; margin-bottom: 1rem; position: relative; font-weight: bold; line-height: 1.43; cursor: text; white-space: pre-wrap; color: rgb(51, 51, 51); font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;Clear Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;离散形式&lt;/span&gt;&lt;/h3&gt;&lt;ul class='ul-list' cid='n165' mdtype='list' data-mark='-' style='box-sizing: border-box; margin: 0.8em 0px; padding-left: 30px; position: relative; color: rgb(51, 51, 51); font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;Clear Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'&gt;&lt;li class='md-list-item' cid='n166' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n167' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;位置式pid：输出值为全量&lt;/span&gt;&lt;/p&gt;&lt;ul class='ul-list' cid='n168' mdtype='list' data-mark='-' style='box-sizing: border-box; margin: 0px; padding-left: 30px; position: relative;'&gt;&lt;li class='md-list-item' cid='n169' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n170' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;常用于舵机&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n171' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n172' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;增量式pid：输出值为变化量&lt;/span&gt;&lt;/p&gt;&lt;ul class='ul-list' cid='n173' mdtype='list' data-mark='-' style='box-sizing: border-box; margin: 0px; padding-left: 30px; position: relative;'&gt;&lt;li class='md-list-item' cid='n174' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n175' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;常用于电机&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;pre spellcheck='false' class='md-fences md-end-block ty-contain-cm modeLoaded' lang='c' cid='n176' mdtype='fences' style='box-sizing: border-box; overflow: visible; font-family: var(--monospace); font-size: 0.9em; display: block; break-inside: avoid; text-align: left; white-space: normal; background-image: inherit; background-position: inherit; background-size: inherit; background-repeat: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: rgb(248, 248, 248); position: relative !important; border: 1px solid rgb(231, 234, 237); border-radius: 3px; padding: 8px 4px 6px; margin-bottom: 15px; margin-top: 15px; width: inherit; color: rgb(51, 51, 51); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'&gt;&lt;span role='presentation' style='box-sizing: border-box; padding-right: 0.1px;'&gt;&lt;span class='cm-comment' style='box-sizing: border-box; color: rgb(170, 85, 0);'&gt;//代码实现(c语言)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span role='presentation' style='box-sizing: border-box; padding-right: 0.1px;'&gt;&lt;span class='cm-keyword' style='box-sizing: border-box; color: rgb(119, 0, 136);'&gt;typedef&lt;/span&gt; &lt;span class='cm-keyword' style='box-sizing: border-box; color: rgb(119, 0, 136);'&gt;struct&lt;/span&gt; {&lt;/span&gt;&lt;br&gt;&lt;span role='presentation' style='box-sizing: border-box; padding-right: 0.1px;'&gt; &amp;nbsp; &amp;nbsp;&lt;span class='cm-variable-3' style='box-sizing: border-box; color: rgb(0, 136, 85);'&gt;float&lt;/span&gt; &lt;span class='cm-variable' style='box-sizing: border-box; color: rgb(0, 0, 0);'&gt;Kp&lt;/span&gt;, &lt;span class='cm-variable' style='box-sizing: border-box; color: rgb(0, 0, 0);'&gt;Ki&lt;/span&gt;, &lt;span class='cm-variable' style='box-sizing: border-box; color: rgb(0, 0, 0);'&gt;Kd&lt;/span&gt;; &amp;nbsp; &amp;nbsp;&lt;span class='cm-comment' style='box-sizing: border-box; color: rgb(170, 85, 0);'&gt;// PID参数&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span role='presentation' style='box-sizing: border-box; padding-right: 0.1px;'&gt; &amp;nbsp; &amp;nbsp;&lt;span class='cm-variable-3' style='box-sizing: border-box; color: rgb(0, 136, 85);'&gt;float&lt;/span&gt; &lt;span class='cm-variable' style='box-sizing: border-box; color: rgb(0, 0, 0);'&gt;integral&lt;/span&gt;; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;span class='cm-comment' style='box-sizing: border-box; color: rgb(170, 85, 0);'&gt;// 积分累积量&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span role='presentation' style='box-sizing: border-box; padding-right: 0.1px;'&gt; &amp;nbsp; &amp;nbsp;&lt;span class='cm-variable-3' style='box-sizing: border-box; color: rgb(0, 136, 85);'&gt;float&lt;/span&gt; &lt;span class='cm-variable' style='box-sizing: border-box; color: rgb(0, 0, 0);'&gt;last_error&lt;/span&gt;; &amp;nbsp; &amp;nbsp;&lt;span class='cm-comment' style='box-sizing: border-box; color: rgb(170, 85, 0);'&gt;// 上次误差&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span role='presentation' style='box-sizing: border-box; padding-right: 0.1px;'&gt;} &lt;span class='cm-variable' style='box-sizing: border-box; color: rgb(0, 0, 0);'&gt;PID_Controller&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span role='presentation' style='box-sizing: border-box; padding-right: 0.1px;'&gt;&lt;span cm-text='' style='box-sizing: border-box;'&gt;​&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span role='presentation' style='box-sizing: border-box; padding-right: 0.1px;'&gt;&lt;span class='cm-variable-3' style='box-sizing: border-box; color: rgb(0, 136, 85);'&gt;float&lt;/span&gt; &lt;span class='cm-def' style='box-sizing: border-box; color: rgb(0, 0, 255);'&gt;PID_Calculate&lt;/span&gt;(&lt;span class='cm-variable' style='box-sizing: border-box; color: rgb(0, 0, 0);'&gt;PID_Controller&lt;/span&gt; &lt;span class='cm-operator' style='box-sizing: border-box; color: rgb(152, 26, 26);'&gt;*&lt;/span&gt;&lt;span class='cm-variable' style='box-sizing: border-box; color: rgb(0, 0, 0);'&gt;pid&lt;/span&gt;, &lt;span class='cm-variable-3' style='box-sizing: border-box; color: rgb(0, 136, 85);'&gt;float&lt;/span&gt; &lt;span class='cm-variable' style='box-sizing: border-box; color: rgb(0, 0, 0);'&gt;setpoint&lt;/span&gt;, &lt;span class='cm-variable-3' style='box-sizing: border-box; color: rgb(0, 136, 85);'&gt;float&lt;/span&gt; &lt;span class='cm-variable' style='box-sizing: border-box; color: rgb(0, 0, 0);'&gt;feedback&lt;/span&gt;) {&lt;/span&gt;&lt;br&gt;&lt;span role='presentation' style='box-sizing: border-box; padding-right: 0.1px;'&gt; &amp;nbsp; &amp;nbsp;&lt;span class='cm-variable-3' style='box-sizing: border-box; color: rgb(0, 136, 85);'&gt;float&lt;/span&gt; &lt;span class='cm-variable' style='box-sizing: border-box; color: rgb(0, 0, 0);'&gt;error&lt;/span&gt; &lt;span class='cm-operator' style='box-sizing: border-box; color: rgb(152, 26, 26);'&gt;=&lt;/span&gt; &lt;span class='cm-variable' style='box-sizing: border-box; color: rgb(0, 0, 0);'&gt;setpoint&lt;/span&gt; &lt;span class='cm-operator' style='box-sizing: border-box; color: rgb(152, 26, 26);'&gt;-&lt;/span&gt; &lt;span class='cm-variable' style='box-sizing: border-box; color: rgb(0, 0, 0);'&gt;feedback&lt;/span&gt;;&lt;span class='cm-tab' role='presentation' cm-text='	' style='box-sizing: border-box; font-family: var(--monospace); position: relative; display: inline-block;'&gt;  &lt;/span&gt;&lt;span class='cm-comment' style='box-sizing: border-box; color: rgb(170, 85, 0);'&gt;//目标-反馈值&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span role='presentation' style='box-sizing: border-box; padding-right: 0.1px;'&gt; &amp;nbsp; &amp;nbsp;&lt;span class='cm-variable' style='box-sizing: border-box; color: rgb(0, 0, 0);'&gt;pid&lt;/span&gt;&lt;span class='cm-operator' style='box-sizing: border-box; color: rgb(152, 26, 26);'&gt;-&amp;gt;&lt;/span&gt;&lt;span class='cm-variable' style='box-sizing: border-box; color: rgb(0, 0, 0);'&gt;integral&lt;/span&gt; &lt;span class='cm-operator' style='box-sizing: border-box; color: rgb(152, 26, 26);'&gt;+=&lt;/span&gt; &lt;span class='cm-variable' style='box-sizing: border-box; color: rgb(0, 0, 0);'&gt;error&lt;/span&gt;;&lt;span class='cm-tab' role='presentation' cm-text='	' style='box-sizing: border-box; font-family: var(--monospace); position: relative; display: inline-block;'&gt; &lt;/span&gt;&lt;span class='cm-tab' role='presentation' cm-text='	' style='box-sizing: border-box; font-family: var(--monospace); position: relative; display: inline-block;'&gt;    &lt;/span&gt;&lt;span class='cm-tab' role='presentation' cm-text='	' style='box-sizing: border-box; font-family: var(--monospace); position: relative; display: inline-block;'&gt;    &lt;/span&gt;&lt;span class='cm-tab' role='presentation' cm-text='	' style='box-sizing: border-box; font-family: var(--monospace); position: relative; display: inline-block;'&gt;    &lt;/span&gt;&lt;span class='cm-comment' style='box-sizing: border-box; color: rgb(170, 85, 0);'&gt;//积分&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span role='presentation' style='box-sizing: border-box; padding-right: 0.1px;'&gt; &amp;nbsp; &amp;nbsp;&lt;span class='cm-variable-3' style='box-sizing: border-box; color: rgb(0, 136, 85);'&gt;float&lt;/span&gt; &lt;span class='cm-variable' style='box-sizing: border-box; color: rgb(0, 0, 0);'&gt;d_error&lt;/span&gt; &lt;span class='cm-operator' style='box-sizing: border-box; color: rgb(152, 26, 26);'&gt;=&lt;/span&gt; &lt;span class='cm-variable' style='box-sizing: border-box; color: rgb(0, 0, 0);'&gt;error&lt;/span&gt; &lt;span class='cm-operator' style='box-sizing: border-box; color: rgb(152, 26, 26);'&gt;-&lt;/span&gt; &lt;span class='cm-variable' style='box-sizing: border-box; color: rgb(0, 0, 0);'&gt;pid&lt;/span&gt;&lt;span class='cm-operator' style='box-sizing: border-box; color: rgb(152, 26, 26);'&gt;-&amp;gt;&lt;/span&gt;&lt;span class='cm-variable' style='box-sizing: border-box; color: rgb(0, 0, 0);'&gt;last_error&lt;/span&gt;;&lt;span class='cm-tab' role='presentation' cm-text='	' style='box-sizing: border-box; font-family: var(--monospace); position: relative; display: inline-block;'&gt;    &lt;/span&gt;&lt;span class='cm-comment' style='box-sizing: border-box; color: rgb(170, 85, 0);'&gt;//误差-上次误差&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span role='presentation' style='box-sizing: border-box; padding-right: 0.1px;'&gt; &amp;nbsp; &amp;nbsp;&lt;/span&gt;&lt;br&gt;&lt;span role='presentation' style='box-sizing: border-box; padding-right: 0.1px;'&gt; &amp;nbsp; &amp;nbsp;&lt;span class='cm-comment' style='box-sizing: border-box; color: rgb(170, 85, 0);'&gt;// 计算输出（带限幅）&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span role='presentation' style='box-sizing: border-box; padding-right: 0.1px;'&gt; &amp;nbsp; &amp;nbsp;&lt;span class='cm-variable-3' style='box-sizing: border-box; color: rgb(0, 136, 85);'&gt;float&lt;/span&gt; &lt;span class='cm-variable' style='box-sizing: border-box; color: rgb(0, 0, 0);'&gt;output&lt;/span&gt; &lt;span class='cm-operator' style='box-sizing: border-box; color: rgb(152, 26, 26);'&gt;=&lt;/span&gt; &lt;span class='cm-variable' style='box-sizing: border-box; color: rgb(0, 0, 0);'&gt;pid&lt;/span&gt;&lt;span class='cm-operator' style='box-sizing: border-box; color: rgb(152, 26, 26);'&gt;-&amp;gt;&lt;/span&gt;&lt;span class='cm-variable' style='box-sizing: border-box; color: rgb(0, 0, 0);'&gt;Kp&lt;/span&gt; &lt;span class='cm-operator' style='box-sizing: border-box; color: rgb(152, 26, 26);'&gt;*&lt;/span&gt; &lt;span class='cm-variable' style='box-sizing: border-box; color: rgb(0, 0, 0);'&gt;error&lt;/span&gt; &lt;span class='cm-operator' style='box-sizing: border-box; color: rgb(152, 26, 26);'&gt;+&lt;/span&gt; &lt;span class='cm-variable' style='box-sizing: border-box; color: rgb(0, 0, 0);'&gt;pid&lt;/span&gt;&lt;span class='cm-operator' style='box-sizing: border-box; color: rgb(152, 26, 26);'&gt;-&amp;gt;&lt;/span&gt;&lt;span class='cm-variable' style='box-sizing: border-box; color: rgb(0, 0, 0);'&gt;Ki&lt;/span&gt; &lt;span class='cm-operator' style='box-sizing: border-box; color: rgb(152, 26, 26);'&gt;*&lt;/span&gt; &lt;span class='cm-variable' style='box-sizing: border-box; color: rgb(0, 0, 0);'&gt;pid&lt;/span&gt;&lt;span class='cm-operator' style='box-sizing: border-box; color: rgb(152, 26, 26);'&gt;-&amp;gt;&lt;/span&gt;&lt;span class='cm-variable' style='box-sizing: border-box; color: rgb(0, 0, 0);'&gt;integral&lt;/span&gt; &lt;span class='cm-operator' style='box-sizing: border-box; color: rgb(152, 26, 26);'&gt;+&lt;/span&gt; &lt;span class='cm-variable' style='box-sizing: border-box; color: rgb(0, 0, 0);'&gt;pid&lt;/span&gt;&lt;span class='cm-operator' style='box-sizing: border-box; color: rgb(152, 26, 26);'&gt;-&amp;gt;&lt;/span&gt;&lt;span class='cm-variable' style='box-sizing: border-box; color: rgb(0, 0, 0);'&gt;Kd&lt;/span&gt; &lt;span class='cm-operator' style='box-sizing: border-box; color: rgb(152, 26, 26);'&gt;*&lt;/span&gt; &lt;span class='cm-variable' style='box-sizing: border-box; color: rgb(0, 0, 0);'&gt;d_error&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span role='presentation' style='box-sizing: border-box; padding-right: 0.1px;'&gt; &amp;nbsp; &amp;nbsp;&lt;span class='cm-variable' style='box-sizing: border-box; color: rgb(0, 0, 0);'&gt;output&lt;/span&gt; &lt;span class='cm-operator' style='box-sizing: border-box; color: rgb(152, 26, 26);'&gt;=&lt;/span&gt; (&lt;span class='cm-variable' style='box-sizing: border-box; color: rgb(0, 0, 0);'&gt;output&lt;/span&gt; &lt;span class='cm-operator' style='box-sizing: border-box; color: rgb(152, 26, 26);'&gt;&amp;gt;&lt;/span&gt; &lt;span class='cm-variable' style='box-sizing: border-box; color: rgb(0, 0, 0);'&gt;MAX_OUTPUT&lt;/span&gt;) &lt;span class='cm-operator' style='box-sizing: border-box; color: rgb(152, 26, 26);'&gt;?&lt;/span&gt; &lt;span class='cm-variable' style='box-sizing: border-box; color: rgb(0, 0, 0);'&gt;MAX_OUTPUT&lt;/span&gt; : (&lt;span class='cm-variable' style='box-sizing: border-box; color: rgb(0, 0, 0);'&gt;output&lt;/span&gt; &lt;span class='cm-operator' style='box-sizing: border-box; color: rgb(152, 26, 26);'&gt;&amp;lt;&lt;/span&gt; &lt;span class='cm-operator' style='box-sizing: border-box; color: rgb(152, 26, 26);'&gt;-&lt;/span&gt;&lt;span class='cm-variable' style='box-sizing: border-box; color: rgb(0, 0, 0);'&gt;MAX_OUTPUT&lt;/span&gt;) &lt;span class='cm-operator' style='box-sizing: border-box; color: rgb(152, 26, 26);'&gt;?&lt;/span&gt; &lt;span class='cm-operator' style='box-sizing: border-box; color: rgb(152, 26, 26);'&gt;-&lt;/span&gt;&lt;span class='cm-variable' style='box-sizing: border-box; color: rgb(0, 0, 0);'&gt;MAX_OUTPUT&lt;/span&gt; : &lt;span class='cm-variable' style='box-sizing: border-box; color: rgb(0, 0, 0);'&gt;output&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span role='presentation' style='box-sizing: border-box; padding-right: 0.1px;'&gt; &amp;nbsp; &amp;nbsp;&lt;/span&gt;&lt;br&gt;&lt;span role='presentation' style='box-sizing: border-box; padding-right: 0.1px;'&gt; &amp;nbsp; &amp;nbsp;&lt;span class='cm-variable' style='box-sizing: border-box; color: rgb(0, 0, 0);'&gt;pid&lt;/span&gt;&lt;span class='cm-operator' style='box-sizing: border-box; color: rgb(152, 26, 26);'&gt;-&amp;gt;&lt;/span&gt;&lt;span class='cm-variable' style='box-sizing: border-box; color: rgb(0, 0, 0);'&gt;last_error&lt;/span&gt; &lt;span class='cm-operator' style='box-sizing: border-box; color: rgb(152, 26, 26);'&gt;=&lt;/span&gt; &lt;span class='cm-variable' style='box-sizing: border-box; color: rgb(0, 0, 0);'&gt;error&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span role='presentation' style='box-sizing: border-box; padding-right: 0.1px;'&gt; &amp;nbsp; &amp;nbsp;&lt;span class='cm-keyword' style='box-sizing: border-box; color: rgb(119, 0, 136);'&gt;return&lt;/span&gt; &lt;span class='cm-variable' style='box-sizing: border-box; color: rgb(0, 0, 0);'&gt;output&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span role='presentation' style='box-sizing: border-box; padding-right: 0.1px;'&gt;}&lt;/span&gt;&lt;/pre&gt;&lt;p cid='n177' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0.8em 0px; white-space: pre-wrap; position: relative; color: rgb(51, 51, 51); font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;Clear Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'&gt;&lt;/p&gt;&lt;p cid='n178' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0.8em 0px; white-space: pre-wrap; position: relative; color: rgb(51, 51, 51); font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;Clear Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'&gt;&lt;/p&gt;&lt;p cid='n179' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0.8em 0px; white-space: pre-wrap; position: relative; color: rgb(51, 51, 51); font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;Clear Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'&gt;&lt;/p&gt;&lt;p cid='n180' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0.8em 0px; white-space: pre-wrap; position: relative; color: rgb(51, 51, 51); font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;Clear Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'&gt;&lt;/p&gt;&lt;p cid='n181' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0.8em 0px; white-space: pre-wrap; position: relative; color: rgb(51, 51, 51); font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;Clear Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'&gt;&lt;/p&gt;&lt;p cid='n182' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0.8em 0px; white-space: pre-wrap; position: relative; color: rgb(51, 51, 51); font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;Clear Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'&gt;&lt;/p&gt;&lt;p cid='n183' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0.8em 0px; white-space: pre-wrap; position: relative; color: rgb(51, 51, 51); font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;Clear Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'&gt;&lt;/p&gt;&lt;p cid='n184' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0.8em 0px; white-space: pre-wrap; position: relative; color: rgb(51, 51, 51); font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;Clear Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'&gt;&lt;/p&gt;&lt;p cid='n185' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0.8em 0px; white-space: pre-wrap; position: relative; color: rgb(51, 51, 51); font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;Clear Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'&gt;&lt;/p&gt;&lt;p cid='n186' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0.8em 0px; white-space: pre-wrap; position: relative; color: rgb(51, 51, 51); font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;Clear Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'&gt;&lt;/p&gt;&lt;p cid='n187' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0.8em 0px; white-space: pre-wrap; position: relative; color: rgb(51, 51, 51); font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;Clear Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'&gt;&lt;/p&gt;&lt;p cid='n188' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0.8em 0px; white-space: pre-wrap; position: relative; color: rgb(51, 51, 51); font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;Clear Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'&gt;&lt;/p&gt;&lt;p cid='n189' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0.8em 0px; white-space: pre-wrap; position: relative; color: rgb(51, 51, 51); font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;Clear Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'&gt;&lt;/p&gt;&lt;br class='Apple-interchange-newline'&gt;&lt;!--EndFragment--&gt;
+&lt;/body&gt;
+&lt;/html&gt;。</description><guid isPermaLink="true">https://niffffty.github.io/post/Uart%E3%80%81usart%E3%80%81spi%E3%80%81i2c-tong-xin-%EF%BC%9Bpid-suan-fa-gai-shu.html</guid><pubDate>Wed, 23 Apr 2025 07:01:11 +0000</pubDate></item><item><title>DDR3基础概念</title><link>https://niffffty.github.io/post/DDR3-ji-chu-gai-nian.html</link><description># DDR3概念
+
+### 特点
+
+- DDR3：第三代双倍速率同步动态随机存储器
+- 特点：
+  - 掉电无法保存数据，需要周期性刷新
+  - 时钟上升沿/下降沿都传输数据
+  - 突发传输，突发长度Burst Length一般为8
+  - 驱动复杂，使用官方给的`MIG IP`核，读写`MIG`即间接读取`DDR3`
+- 存储：
+  - 存储到DDR3：先指定一个Bank地址，再指定行地址，再指定列地址
+- DDR3的容量
+  - 位宽：
+    - bank位宽：表示DDR3内部bank数量的对数形式。</description><guid isPermaLink="true">https://niffffty.github.io/post/DDR3-ji-chu-gai-nian.html</guid><pubDate>Wed, 23 Apr 2025 00:29:09 +0000</pubDate></item><item><title>subline技巧</title><link>https://niffffty.github.io/post/subline-ji-qiao.html</link><description>### subline技巧
+
+- shift+鼠标右键：选中多列
+- ctrl+鼠标左键：选中多列
+
+
+
+。</description><guid isPermaLink="true">https://niffffty.github.io/post/subline-ji-qiao.html</guid><pubDate>Wed, 23 Apr 2025 00:27:06 +0000</pubDate></item><item><title>CRC校验</title><link>https://niffffty.github.io/post/CRC-xiao-yan.html</link><description># CRC校验
+
+- 校验：发送数据时，带着校验一起发送；在接收端检测校验是否一致
+- 特点：
+  - 基于模2除法（异或）
+  - 若模型为`CRC-8 x8+x2+x+1`，则展开为：x8+x7+x6+...+x0，取系数，则为1000 0011 1
+- CRC校验步骤：
+  - 把G（X）换成二进制
+  - 将待校验数据转换成二进制后，在低位补0（模型是几，补几个0）
+  - 进行模2除法，待校验数据当被除数，G(x)的表达式当除数
+  - 得到模2除法的余数，就是CRC校验的值
+
+
+
+# Verilog实现CRC校验
+
+### 端口
+
+- 输入：
+  - `clk`
+  - `reset`
+  - `crc_din_vld`：CRC输入有效
+  - `crc_din`：待校验数据
+  - `crc_done`：校验成功
+- 输出：
+  - `crc_dout`：CRC输出待校验的值
+
+
+
+
+
+### 代码思路
+
+- 将待校验的数据，进行两位两位校验。</description><guid isPermaLink="true">https://niffffty.github.io/post/CRC-xiao-yan.html</guid><pubDate>Mon, 21 Apr 2025 10:36:10 +0000</pubDate></item><item><title>vivado打开不同版本工程时ip核被锁</title><link>https://niffffty.github.io/post/vivado-da-kai-bu-tong-ban-ben-gong-cheng-shi-ip-he-bei-suo.html</link><description>- 问题：vivado打开不同版本工程时ip核被锁
+
+- 解决：法一：在命令行中输入命令：upgrade_ip [get_ips]。</description><guid isPermaLink="true">https://niffffty.github.io/post/vivado-da-kai-bu-tong-ban-ben-gong-cheng-shi-ip-he-bei-suo.html</guid><pubDate>Sat, 19 Apr 2025 11:12:25 +0000</pubDate></item><item><title>FPGA串口接收/发送数据</title><link>https://niffffty.github.io/post/FPGA-chuan-kou-jie-shou---fa-song-shu-ju.html</link><description># 接收模块
+
+### 变量
+
+- 端口：
+  - 输入：
+    - `clk`
+    - `reset`
+    - `uart_rxd`：串口接收的数据
+  - 输出：
+    - `uart_rx_en`：接收完数据的标志
+    - `uart_rx_data`：接收到的数据
+- 参数：
+  - `CLK_FREQ `：FPGA的时钟频率
+  - `BAUD_RATE`：波特率，一秒传输多少bit数据
+- 本地参数：
+  - `BAUD_CNT_MAX `：波特计数的最大值
+  - `BAUD_CNT_MAX_HALF`：波特计数的中间值
+- 代码中用到的变量：
+  - `uart_rxd_d0`，`uart_rxd_d1`：用于把接收的数据级联两层寄存器，防止亚稳态
+  - `baud_cnt`：波特计数器，数到最大周期数时(即一个bit传输完毕)清零
+  - `bit_cnt`：比特计数器，数哪一位数据。</description><guid isPermaLink="true">https://niffffty.github.io/post/FPGA-chuan-kou-jie-shou---fa-song-shu-ju.html</guid><pubDate>Tue, 15 Apr 2025 11:17:53 +0000</pubDate></item><item><title>复位问题；时序优化问题</title><link>https://niffffty.github.io/post/fu-wei-wen-ti-%EF%BC%9B-shi-xu-you-hua-wen-ti.html</link><description>### 科学设计复位信号
+
+- 两种复位方式
+
+  - 异步低复位：reset_n拉低时，不等待clk，直接复位
+
+    ```verilog
+    always @(posedge clk or negedge reset_n)begin
+        if(~reset_n)begin
+        	led &lt;= 1'b0;
+        end
+        else begin
+        
+        end
+    end
+    ```
+
+  - 同步高复位：reset拉高以后，等到下一个clk上升沿复位
+
+    
+
+    ```verilog
+    always @(posedge clk)begin
+        if(reset)begin
+        	led &lt;= 1'b0;
+        end
+        else begin
+        
+        end
+    end
+    ```
+
+- Xilinx复位策略：
+
+  - 同步高复位
+  - 计数器和状态机必须复位
+  - 能不使用复位尽量不使用。</description><guid isPermaLink="true">https://niffffty.github.io/post/fu-wei-wen-ti-%EF%BC%9B-shi-xu-you-hua-wen-ti.html</guid><pubDate>Mon, 14 Apr 2025 12:02:50 +0000</pubDate></item><item><title>xadc采集芯片温度</title><link>https://niffffty.github.io/post/xadc-cai-ji-xin-pian-wen-du.html</link><description>### xadc硬核
+
+- 概念
+
+  - xadc是7系列芯片集成的硬核，功能：测fpga芯片温度、类似于adc功能
+  - ip核搜XADC Wizard
+
+- 配置
+
+  - 第一页Basic：勾选Channel Sequencer、取消reset_in
+  - 第四页Channel Sequencer：
+    - 勾选TEMPERATURE的Enable、vauxp0到5的Enable
+    - 取消勾选VP/VN
+
+- 计算温度
+
+  - 输出的温度值为0-4096，需要通过公式计算（一般工程中讲数字值传输到单片机计算温度）
+  - 此次demo使用的板对应`ug480_xadc`，温度=`adc_code*503.975/4086 - 273.15`
+
+- 使用现成的xadc_ctrl.v和top.v来驱动硬核
+
+  ```verilog
+  //top.v
+  
+  `timescale 1ns / 1ps
+  module top(
+  	input 	wire		clk
+      );
+  
+  
+  	wire        vauxp0;
+  	wire        vauxn0;
+  	wire        vauxp1;
+  	wire        vauxn1;
+  	wire        vauxp2;
+  	wire        vauxn2;
+  	wire        vauxp3;
+  	wire        vauxn3;
+  	wire        vauxp4;
+  	wire        vauxn4;
+  	wire        vauxp5;
+  	wire        vauxn5;
+  	wire [11:0] analog_wave_vaux0;
+  	wire [11:0] analog_wave_vaux1;
+  	wire [11:0] analog_wave_vaux2;
+  	wire [11:0] analog_wave_vaux3;
+  	wire [11:0] analog_wave_vaux4;
+  	wire [11:0] analog_wave_vaux5;
+  	wire [11:0] Temperature;
+  
+  	xadc_ctrl xadc_ctrl
+  		(
+  			.clk               (clk),
+  			.vauxp0            (vauxp0),
+  			.vauxn0            (vauxn0),
+  			.vauxp1            (vauxp1),
+  			.vauxn1            (vauxn1),
+  			.vauxp2            (vauxp2),
+  			.vauxn2            (vauxn2),
+  			.vauxp3            (vauxp3),
+  			.vauxn3            (vauxn3),
+  			.vauxp4            (vauxp4),
+  			.vauxn4            (vauxn4),
+  			.vauxp5            (vauxp5),
+  			.vauxn5            (vauxn5),
+  			.analog_wave_vaux0 (analog_wave_vaux0),
+  			.analog_wave_vaux1 (analog_wave_vaux1),
+  			.analog_wave_vaux2 (analog_wave_vaux2),
+  			.analog_wave_vaux3 (analog_wave_vaux3),
+  			.analog_wave_vaux4 (analog_wave_vaux4),
+  			.analog_wave_vaux5 (analog_wave_vaux5),
+  			.Temperature       (Temperature)
+  		);
+  
+  
+  ila_0  ila_0(
+  	.clk(clk), // input wire clk
+  	.probe0(Temperature) // input wire [11:0] probe0
+  );
+  
+  
+  
+  endmodule
+  
+  ```
+
+  
+
+  ```verilog
+  //xadc_ctrl.v
+  //更改了ip核端口后，需要在本文件添加对应的端口
+  
+  `timescale 1ps/1ps
+  module xadc_ctrl(
+     input             clk,
+     input             vauxp0,		//外部输入一对差分信号
+     input             vauxn0,		//输入到内部经过adc转换成数字信号
+     input             vauxp1,
+     input             vauxn1,
+     input             vauxp2,
+     input             vauxn2,
+     input             vauxp3,
+     input             vauxn3,
+     input             vauxp4,
+     input             vauxn4,
+     input             vauxp5,
+     input             vauxn5,
+    
+     output reg [11:0] analog_wave_vaux0,    //输出的各模拟量端口的数字值
+     output reg [11:0] analog_wave_vaux1,
+     output reg [11:0] analog_wave_vaux2,
+     output reg [11:0] analog_wave_vaux3,
+     output reg [11:0] analog_wave_vaux4,
+     output reg [11:0] analog_wave_vaux5,
+     output reg [11:0] Temperature           //输出温度 
+     
+      );
+  	
+     localparam  ONE_NS      = 1000;
+     integer    count       = 0   ;
+  
+     wire EOC_TB;   //转换信号结束
+     wire EOS_TB;   //顺序采集结束
+     reg [6:0] DADDR_TB; //每个采样通道的具体地址
+     reg DEN_TB;  //enable signal for drp
+     reg DWE_TB;  //write enable for drp
+     reg [15:0] DI_TB;  //input databus for drp
+     wire [15:0] DO_TB;  //output databus for drp
+     wire DRDY_TB;   //data ready signal for drp
+     wire ALARM_OUT_TB;
+     wire VCCAUX_ALARM_TB;
+     wire VCCINT_ALARM_TB;
+     wire USER_TEMP_ALARM_TB;
+     wire BUSY_TB;   //ADC busy signal
+     wire [4:0] CHANNEL_TB;  //通道选择输出
+     wire OT_TB;     //过温报警输出
+     wire DCLK_TB;    //DRP的时钟输入
+  
+         
+  assign DCLK_TB = clk;  
+  always @(posedge DCLK_TB)
+     begin
+       DADDR_TB = {2'b00,CHANNEL_TB};
+       DI_TB = 16'h0000;
+       DWE_TB = 1'b0;
+       DEN_TB = EOC_TB;
+     end
+     
+  always @(posedge DCLK_TB)
+   begin
+     if (DRDY_TB)
+       if (DADDR_TB == 7'h10)
+          analog_wave_vaux0 &lt;= DO_TB[15:4];
+   end
+  
+  always @(posedge DCLK_TB)
+   begin
+     if (DRDY_TB)
+       if (DADDR_TB == 7'h11)
+          analog_wave_vaux1 &lt;= DO_TB[15:4];
+   end        
+  
+  always @(posedge DCLK_TB)
+   begin
+     if (DRDY_TB)
+       if (DADDR_TB == 7'h12)
+          analog_wave_vaux2 &lt;= DO_TB[15:4];
+   end 
+   
+  always @(posedge DCLK_TB)
+    begin
+      if (DRDY_TB)
+        if (DADDR_TB == 7'h13)
+           analog_wave_vaux3 &lt;= DO_TB[15:4];
+    end  
+    
+  always @(posedge DCLK_TB)
+     begin
+       if (DRDY_TB)
+         if (DADDR_TB == 7'h14)
+            analog_wave_vaux4 &lt;= DO_TB[15:4];
+     end 
+     
+  always @(posedge DCLK_TB)
+    begin
+      if (DRDY_TB)
+        if (DADDR_TB == 7'h15)
+           analog_wave_vaux5 &lt;= DO_TB[15:4];
+    end
+    
+    //可输出芯片的温度
+  always @(posedge DCLK_TB)begin 
+     if(DRDY_TB == 1'b1 &amp;&amp; DADDR_TB == 7'h00)begin // 地址DADDR_TB配置为ox00，可输出芯片温度
+         Temperature &lt;= DO_TB[15:4];              //  地址DADDR_TB 可以理解为寄存器
+     end else begin
+         Temperature &lt;= Temperature;
+     end
+  end
+  
+  xadc_wiz_0  xadc_wiz_0
+  (
+     .daddr_in           (DADDR_TB[6:0]),            // Address bus for the dynamic reconfiguration port           
+     .dclk_in            (~DCLK_TB),             // Clock input for the dynamic reconfiguration port                
+     .den_in             (DEN_TB),              // Enable Signal for the dynamic reconfiguration port  转换结束可读了       
+     .di_in              (DI_TB[15:0]),               // Input data bus for the dynamic reconfiguration port          
+     .dwe_in             (DWE_TB),              // Write Enable for the dynamic reconfiguration port
+  
+     .vauxp0             (vauxp0),              // Auxiliary channel 0                                                 
+     .vauxn0             (vauxn0),                                                                                     
+     .vauxp1             (vauxp1),              // Auxiliary channel 1                                                 
+     .vauxn1             (vauxn1),                                                                                     
+     .vauxp2             (vauxp2),              // Auxiliary channel 5                                                 
+     .vauxn2             (vauxn2),                                                                                     
+     .vauxp3             (vauxp3),              // Auxiliary channel 8                                                 
+     .vauxn3             (vauxp3),                                                                                     
+     .vauxp4             (vauxp4),              // Auxiliary channel 9                                                 
+     .vauxn4             (vauxn4), 
+     .vauxp5             (vauxp5),              // Auxiliary channel 9                                                 
+     .vauxn5             (vauxn5),                                                                                   
+     .busy_out           (BUSY_TB),            // ADC Busy signal                                                  
+     .channel_out        (CHANNEL_TB[4:0]),         // Channel Selection Outputs                                
+     .do_out             (DO_TB[15:0]),              // Output data bus for dynamic reconfiguration port             
+     .drdy_out           (DRDY_TB),            // Data ready signal for the dynamic reconfiguration port           
+     .eoc_out            (EOC_TB),             // End of Conversion Signal                                          
+     .eos_out            (EOS_TB),             // End of Sequence Signal                                            
+     .ot_out             (OT_TB),              // Over-Temperature alarm output                                      
+     .vccaux_alarm_out   (VCCAUX_ALARM_TB),    // VCCAUX-sensor alarm output                               
+     .vccint_alarm_out   (VCCINT_ALARM_TB),    //  VCCINT-sensor alarm output                              
+     .user_temp_alarm_out(USER_TEMP_ALARM_TB), // Temperature-sensor alarm output                       
+     .alarm_out          (ALARM_OUT_TB),                                                                          
+     .vp_in              (1'b0),               // Dedicated Analog Input Pair                                         
+     .vn_in              (1'b0)            //一般情况置0                                                                           
+     );  
+     
+  
+    
+     
+  endmodule
+  ```
+
+  。</description><guid isPermaLink="true">https://niffffty.github.io/post/xadc-cai-ji-xin-pian-wen-du.html</guid><pubDate>Mon, 14 Apr 2025 01:59:46 +0000</pubDate></item><item><title>RAM读写三段状态机demo</title><link>https://niffffty.github.io/post/RAM-du-xie-san-duan-zhuang-tai-ji-demo.html</link><description>ram的ip核：Block Memory Generater
+
+- 信号：
+  - clka
+  - ena：ena和wea同时为高，就是写
+  - wea：1是写，0是读
+  - addra：地址
+  - dina：往RAM写入的数据
+  - douta：从RAM读出来的数据
+- 配置：
+  - 第一页Memory Type：single port RAM
+  - 第二页Memory Size：16/16; 128/128
+  - 第二页Primitives Output Register：勾选后，读比写延时两个时间单位，不勾选则延时一个单位（与fifo不一样，不能对齐）
+
+
+![Image](https://github.com/user-attachments/assets/ac84edb0-3860-42ff-bb04-7b860b9ba495)
+
+
+```verilog
+//top.v
+//往RAM写128数据，等待10，读128，等10，写，循环
+`timescale 1ns / 1ps
+
+module top(
+	input wire		clk,
+	input wire      reset_n
+    );
+
+/*------------------------------------------*\
+                 状态机定义
+\*------------------------------------------*/
+reg [3:0] cur_status;
+reg [3:0] nex_status;
+
+localparam IDLE  = 4'b0000; //独热码
+localparam WRITE = 4'b0001;
+localparam WAIT1 = 4'b0010;
+localparam READ  = 4'b0100;
+localparam WAIT2 = 4'b1000;
+/*------------------------------------------*\
+                 RAM端口信号定义
+\*------------------------------------------*/
+reg         ena;
+reg         wea;
+reg  [6: 0] addra;
+reg  [15:0] dina;
+wire [15:0] douta;
+
+/*------------------------------------------*\
+                 计数器信号定义
+\*------------------------------------------*/
+reg [7:0] wr_cnt;
+reg [7:0] rd_cnt;
+reg [3:0] delay_cnt;
+
+/*------------------------------------------*\
+         三段状态机第一段：次态打一拍给现态
+\*------------------------------------------*/
+always @(posedge clk or negedge reset_n) begin
+	if (~reset_n) begin
+		cur_status &lt;= IDLE;
+	end
+	else begin
+		cur_status &lt;= nex_status;
+	end
+end
+
+/*------------------------------------------*\
+       三段状态机第二段：组合逻辑描述状态跳转
+\*------------------------------------------*/
+always @(*) begin
+	if (~reset_n) begin
+		nex_status &lt;= IDLE;
+	end
+	else begin
+        case(cur_status)		//状态：IDLE-WRITE-WAIT1-READ-WAIT2-循环
+			IDLE : begin
+				nex_status &lt;= WRITE;
+			end
+			WRITE :begin
+				if(wr_cnt == 'd127 &amp;&amp; wea &amp;&amp; ena)
+					nex_status &lt;= WAIT1;
+				else 
+					nex_status &lt;= cur_status;		//保持现态
+			end
+			WAIT1 : begin
+				if (delay_cnt == 'd9)
+					nex_status &lt;= READ;
+				else 
+					nex_status &lt;= cur_status;
+			end
+			READ : begin
+				if (rd_cnt == 'd127 &amp;&amp; ~wea &amp;&amp; ena)
+					nex_status &lt;= WAIT2;
+			end
+			WAIT2 : begin
+				if (delay_cnt == 'd9)
+					nex_status &lt;= WRITE;
+				else 
+					nex_status &lt;= cur_status;
+			end			
+			default : nex_status &lt;= IDLE;
+		endcase
+	end
+end
+
+/*------------------------------------------*\
+       三段状态机第三段：设计状态机输出
+\*------------------------------------------*/
+    always @(posedge clk or negedge reset_n) begin		//wea：写/读信号，1写，0读
+        if (~reset_n) begin								//根据WRITE-READ状态，拉高拉低
+		wea &lt;= 1'b0;
+	end
+	else if (cur_status == WRITE) begin
+		wea &lt;= 1'b1;
+	end
+	else if (cur_status == READ) begin
+		wea &lt;= 1'b0;
+	end
+end
+
+    always @(posedge clk or negedge reset_n) begin		//ena：使能信号，1开，0关
+        if (~reset_n) begin								//根据读写状态，写完/读完拉低
+		ena &lt;= 1'b0;
+	end
+	else if (wr_cnt == 'd127 &amp;&amp; wea &amp;&amp; ena &amp;&amp; cur_status == WRITE) begin
+		ena &lt;= 1'b0;
+	end
+	else if (rd_cnt == 'd127 &amp;&amp; ~wea &amp;&amp; ena &amp;&amp; cur_status == READ) begin
+		ena &lt;= 1'b0;
+	end		
+	else if (cur_status == READ) begin
+		ena &lt;= 1'b1;
+	end
+	else if (cur_status == WRITE)begin
+		ena &lt;= 1'b1;
+	end
+end
+
+    always @(posedge clk or negedge reset_n) begin		//addr：地址
+        if (~reset_n) begin								//0写到127清零，使能时递增写下一个地址
+		addra &lt;= 7'd0;
+	end
+	else if(addra == 'd127 &amp;&amp; ena) begin
+		addra &lt;= 7'd0;
+	end
+	else if (ena) begin
+		addra &lt;= addra + 1'b1;
+	end
+end
+
+    always @(posedge clk or negedge reset_n) begin			//din：写进来的数据
+        if (~reset_n) begin									//假设数据为0-127
+		dina &lt;= 16'd0;
+	end
+	else if(wea &amp;&amp; ena) begin
+		dina &lt;= dina + 1'b1;
+	end
+end
+
+    always @(posedge clk or negedge reset_n) begin			//写数据计数器，写完128个清零
+	if (~reset_n) begin
+		wr_cnt &lt;= 8'd0;
+	end
+	else if (cur_status == WRITE &amp;&amp; wea &amp;&amp; ena &amp;&amp; wr_cnt == 'd127) begin
+		wr_cnt &lt;= 8'd0;
+	end
+	else if (cur_status == WRITE &amp;&amp; wea &amp;&amp; ena) begin
+		wr_cnt &lt;= wr_cnt + 1'b1;
+	end
+end
+
+    always @(posedge clk or negedge reset_n) begin			//读数据计数器，读完128个清零
+	if (~reset_n) begin
+		rd_cnt &lt;= 8'd0;
+	end
+	else if (cur_status == READ &amp;&amp; ~wea &amp;&amp; ena &amp;&amp; rd_cnt == 'd127) begin
+		rd_cnt &lt;= 8'd0;
+	end
+	else if (cur_status == READ &amp;&amp; ~wea &amp;&amp; ena) begin
+		rd_cnt &lt;= rd_cnt + 1'b1;
+	end
+end
+
+    always @(posedge clk or negedge reset_n) begin			//延时计数器，根据WAIT1状态清零
+	if (~reset_n) begin
+		delay_cnt &lt;= 4'd0;
+	end
+	else if (cur_status == WAIT1 || cur_status == WAIT2) begin
+		delay_cnt &lt;= delay_cnt + 1'b1;
+	end
+	else begin
+		delay_cnt &lt;= 4'd0;
+	end
+end
+
+    blk_mem_gen_0  blk_mem_gen_0(								//例化ip核
+  .clka (clk),    // input wire clka
+  .ena  (ena),      // input wire ena
+  .wea  (wea),      // input wire [0 : 0] wea
+  .addra(addra),  // input wire [6 : 0] addra
+  .dina (dina),    // input wire [15 : 0] dina
+  .douta(douta)  // output wire [15 : 0] douta
+);
+
+endmodule
+
+```
+
+
+
+```verilog
+//tb_top
+`timescale 1ns / 1ps
+module tb_top();
+	reg clk;
+	reg reset_n;
+
+	initial begin
+		clk = 0;
+		forever #10 
+		clk = ~clk;
+	end
+
+	initial begin
+		reset_n  = 0;
+		#100
+		reset_n  = 1;
+	end
+
+	top top 
+	(
+		 .clk(clk),
+		 .reset_n(reset_n)
+    );
+endmodule
+
+```
+
+
+
+
+
+
+
+
+
+
+
+。</description><guid isPermaLink="true">https://niffffty.github.io/post/RAM-du-xie-san-duan-zhuang-tai-ji-demo.html</guid><pubDate>Thu, 10 Apr 2025 02:37:15 +0000</pubDate></item><item><title>FIFO_demo</title><link>https://niffffty.github.io/post/FIFO_demo.html</link><description># fifo的ip核
+
+- 特性：
+  - 存数据，先入先出
+  - size：深度/宽度
+  - 同步FIFO与异步FIFO
+- 时序
+  - 写时序
+    - wr_en(写使能)和din(读数据)对齐
+  - 读时序
+    - 读数据与读使能对齐
+    - 读数据比读使能延迟一个clk
+
+
+
+### 使用
+
+- 找到FIFO generator
+
+- 配置：
+
+  - 第一页Fifo Implementation：
+    - Common是同步，Independent异步
+    - BRAM：数据大
+    - DRAM：数据小
+  - 第二页Read Mode：
+    - Standard FIFO：读数据比读使能延迟一个clk
+    - First W F T：对齐
+  - 宽度/深度：默认18/128
+  - Reset pin：复位引脚（此次demo不用）
+  - 第四页勾选Data Count
+
+- 例化ip核：从veo里复制
+
+- ip核内容：
+
+  - 端口信号：
+    - full:为高时，fifo满了
+    - empty：为高时，fifo没数据
+      - 往fifo写数据时，过几个clk，才拉高
+      - 读完数据时，立马拉高
+    - data_count:表示FIFO里大约有多少数据
+
+  
+
+  
+
+  
+
+  
+
+  
+
+### 状态机
+
+- 两个条件：
+  - 状态机的跳转
+  - 状态机的输出
+- demo：
+  - 目标：往fifo里面写入128个数据，等待一会，然后读出来128个数据
+  - 流程：IDLE--写--等待--读--等待--写。</description><guid isPermaLink="true">https://niffffty.github.io/post/FIFO_demo.html</guid><pubDate>Wed, 09 Apr 2025 12:15:44 +0000</pubDate></item><item><title>报错：使用gentime导出svg格式文件时编码报错</title><link>https://niffffty.github.io/post/bao-cuo-%EF%BC%9A-shi-yong-gentime-dao-chu-svg-ge-shi-wen-jian-shi-bian-ma-bao-cuo.html</link><description>报错：使用gentime导出svg格式文件时编码报错
+原因：文件中有中文，默认为utf-8编码，应该为GB2312
+解决：用vscode打开svg文件，修改编码为GB2312。</description><guid isPermaLink="true">https://niffffty.github.io/post/bao-cuo-%EF%BC%9A-shi-yong-gentime-dao-chu-svg-ge-shi-wen-jian-shi-bian-ma-bao-cuo.html</guid><pubDate>Wed, 09 Apr 2025 01:18:32 +0000</pubDate></item><item><title>ila，vio使用</title><link>https://niffffty.github.io/post/ila%EF%BC%8Cvio-shi-yong.html</link><description># ila使用
+
+ 功能：当程序下载到板子之后， 可以抓取FPGA代码中的信号，并将信号的波形在VIVADO界面以时序图的方 式呈现。</description><guid isPermaLink="true">https://niffffty.github.io/post/ila%EF%BC%8Cvio-shi-yong.html</guid><pubDate>Tue, 08 Apr 2025 11:30:14 +0000</pubDate></item><item><title>时钟ip核使用、分频倍频demo</title><link>https://niffffty.github.io/post/shi-zhong-ip-he-shi-yong-%E3%80%81-fen-pin-bei-pin-demo.html</link><description># 时钟ip核使用、分频倍频demo
+
+- xilinx的ip核：软核、硬核
+  - 硬核：FPGA内镶嵌其他的芯片，如dsp、GT
+  - 软核：相当于一个.v文件，有输入有输出，可以调用
+- 时钟ip核
+  - 时钟分频、倍频：50M时钟到100M，就是倍频，使用一个ip核，叫做锁相环PLL
+  - PLL是一个硬核，可以用赛灵思给的软核Clock间接控制PLL
+  - 操作：vivado左侧的IP Catalog，搜clock，找到Clocking Wizard
+
+
+
+- 案例：
+
+  - 功能：
+
+    - 输入50M
+    - 输出10M、20M、30M、50M、100M、150M、200M
+
+  - 操作：
+
+    - IP核设置页面，第一页修改输入Primary为50；Source选Single
+
+      - Source：单端、差分、No buffer（先经过一个时钟，再传出来的时钟）
+
+    - 第二页配置输出，勾选clk-out后，修改Requested输出，10 20 30 50 100 150
+
+      - 如果7个输出不够，就需要级联，先保存第一个ip核，再点击一个ip核，输入50M、no buffer，输出200M，生成
+
+    - 创建设计文件top.v，例化clk的ip核，
+
+      - vivado-Sources-IP Source-点击clk_wiz_1打开clk_wiz_1.veo，下拉找到clk_wiz_1 instance_name函数；clk_wiz_2.veo中复制例化函数
+
+        ```verilog
+        //top.v
+        `timescale 1ns / 1ps
+        module top(
+        	input 		clk
+        );
+            wire locked1;	//在系统初始化阶段，需要等待locked信号为高电平后，
+            wire clk_out1;	//才能安全地使用时钟管理模块输出的时钟信号，以避免因时钟不稳定导致的电路异常行为
+            wire clk_out2;
+            wire clk_out3;
+            wire clk_out4;
+            wire clk_out5;
+            wire clk_out6;
+            wire clk_out7;
+            
+            wire locked2;
+            wire clk_out8;
+        //clk的ip核1
+            clk_wiz_0 clk_wiz_0
+            (
+                .clk_out1(clk_out1),
+                .clk_out2(clk_out2),
+                .clk_out3(clk_out3),
+                .clk_out4(clk_out4),
+                .clk_out5(clk_out5),
+                .clk_out6(clk_out6),
+                .clk_out7(clk_out7),
+                .reset(1'd0),
+                .locked(locked1),
+                .clk_in1(clk)
+            );
+        //clk的ip核2
+            clk_wiz_1 clk_wiz_1                 //此处注意例化ip核的名称！ 是clk0还是clk1还是clk2！
+            (
+                .clk_out1(clk_out8),
+                .reset(1'd0),
+                .locked(locked2),
+                .clk_in1(clk_out5)
+            );
+        endmodule
+        ```
+
+        ```verilog
+        //top_tb.v
+        //Subline里右键生成Testbench
+        `timescale 1ns / 1ps
+        module tb_top();
+            
+            reg clk;
+            
+            initial begin
+            	clk = 0;
+                forever #(10)
+                clk = ~clk;    
+            end
+            
+            top inst_top(
+                .clk(clk)
+            );
+        endmodule
+        ```
+
+        
+
+
+
+。</description><guid isPermaLink="true">https://niffffty.github.io/post/shi-zhong-ip-he-shi-yong-%E3%80%81-fen-pin-bei-pin-demo.html</guid><pubDate>Wed, 19 Mar 2025 13:59:06 +0000</pubDate></item><item><title>如何突破贫困陷阱？基于诺奖研究的贫富差异解析</title><link>https://niffffty.github.io/post/ru-he-tu-po-pin-kun-xian-jing-%EF%BC%9F-ji-yu-nuo-jiang-yan-jiu-de-pin-fu-cha-yi-jie-xi.html</link><description>
+
+---
+
+# 如何突破贫困陷阱？基于诺奖研究的贫富差异解析  
+——班纳吉与迪弗洛发展经济学研究框架
+
+### 研究背景与理论突破
+2019年诺贝尔经济学奖授予麻省理工学院班纳吉（Abhijit Banerjee）、迪弗洛（Esther Duflo）夫妇及哈佛大学克雷默（Michael Kremer），表彰其基于随机对照试验（RCT）的贫困研究范式创新。</description><guid isPermaLink="true">https://niffffty.github.io/post/ru-he-tu-po-pin-kun-xian-jing-%EF%BC%9F-ji-yu-nuo-jiang-yan-jiu-de-pin-fu-cha-yi-jie-xi.html</guid><pubDate>Tue, 18 Mar 2025 13:17:54 +0000</pubDate></item><item><title>电路笔记3</title><link>https://niffffty.github.io/post/dian-lu-bi-ji-3.html</link><description># 十四章 线性动态电路的复频域分析
+
+### 概念
+
+1. 作用：
+
+   - 在之前章节中，电路不那么复杂，可以使用三要素法求解
+   - 当电路足够复杂，电感电容数量多时，可以使用拉氏变换求解
+
+2. 定义：
+  
+![Image](https://github.com/user-attachments/assets/dfb9cca5-5fec-4d48-85bc-29d7681210c3)
+
+3. 性质
+
+   - 线性：
+   
+![Image](https://github.com/user-attachments/assets/453cc1aa-b2fd-42b6-9b2a-57a93a84e95d)
+
+     
+
+   - 微分性质：
+     
+![Image](https://github.com/user-attachments/assets/cf990bb9-7772-4c1b-9f30-ef7bef461ef6)
+
+     
+
+   - 积分性质
+     
+![Image](https://github.com/user-attachments/assets/016eb34a-f135-4c03-961e-aabed7f308f1)
+
+     
+
+   - 延时性质
+     
+![Image](https://github.com/user-attachments/assets/215451d2-573a-45c1-b62f-600515d4b39e)
+
+4. 常用变换对：
+
+   
+![Image](https://github.com/user-attachments/assets/c2bdbf4b-04a8-4e5f-9fca-f10aa21a91df)
+
+
+
+
+
+### 运算电路
+
+- 转换
+
+![Image](https://github.com/user-attachments/assets/291adffd-2adb-4708-83d2-2349534f0dec)
+
+- 求解步骤：
+  - 求t=0-时刻的电感电流，电容电压
+  - 将电路的图转换为运算电路，电压源拉氏变换
+  - 列方程求解（网孔电流法等）
+  - 拉氏逆变换解出待求电流/电压
+
+
+
+### 网络函数。</description><guid isPermaLink="true">https://niffffty.github.io/post/dian-lu-bi-ji-3.html</guid><pubDate>Tue, 18 Mar 2025 11:44:27 +0000</pubDate></item><item><title>FPGA开发流程、Led_demo</title><link>https://niffffty.github.io/post/FPGA-kai-fa-liu-cheng-%E3%80%81Led_demo.html</link><description>### fpga开发流程
+
+1. 明确功能
+2. 设计模块波形
+3. 写代码
+4. 仿真
+5. 管脚约束
+6. 综合
+7. 布局布线
+8. 生成bit流
+9. 上板验证
+10. 使用工具抓信号
+
+
+
+### led_demo
+
+- 创建工程，选择文件位置，勾选创建子目录，next，勾选不定义源文件
+
+- 选择芯片型号（此处使用正点原子达芬奇XC7A35T-2FGG484C）
+
+- add source---创建设计源文件---创建文件---文件名---
+
+- subline打开，写代码（**核心：verilog代码和时序图的对应关系，看到波形图，可以写出波形图所对应代码；看到verilog代码，可以画出代码所对应的波形图**）
+
+  ```verilog
+  //led.v
+  module led(
+  	input  wire clk,
+      input  wire reset_n,
+      output reg  led
+  );
+      
+      localparam  CNT_MAX = 'd49_999_999;
+      reg [25:0] cnt;
+  //计数器
+      always @(posedge clk or negedge reset_n)begin
+          if(~reset_n)begin
+          	cnt &lt;='d0;
+          end
+          else if(cnt ==CNT_MAX)begin
+          	cnt &lt;='d0;
+          end
+          else begin
+          	cnt &lt;=cnt+1'b1;
+          end
+      end
+  //控制led反转
+      always @(posedge clk or negedge reset_n)begin
+          if(~reset_n)begin
+          	led &lt;=1'b0;
+          end
+          else if(cnt ==CNT_MAX)begin
+          	led&lt;=~led;
+          end
+      end
+  endmodule
+  ```
+
+  
+
+- 仿真
+
+  - add sources-仿真文件-创建文件tb_led-finish
+
+  - 仿真格式
+
+    ```verilog
+    'timescale				//仿真单位/仿真精度
+    module Test_bench();	//仿真模块通常无输入/输出	
+    	//1.信号或变量声明（输入一般定义reg，输出定义为wire）		//2.使用initial或always语句产生激励
+        //3.例化待测试模块
+        //4.监控和比较输出响应
+    
+    endmodule
+    ```
+
+  - 仿真代码
+
+    ```verilog
+    //tb_led.v
+    
+    'timescale 1ns / 1ps				
+    module tb_led();		
+    	reg clk;
+        reg reset_n;
+        wire led;
+
+    //激励
+        initial begin 	//可以从testbench文件复制
+        	clk = 0;
+            forever #10
+            clk = ~clk;
+        end
+        
+        initial begin 	//可以从testbench文件复制
+        	reset_n = 0;
+            #100
+            reset_n = 1;
+        end
+        
+    //例化待测试模块,
+        led inst_led(		 //可以从testbench文件复制
+            .clk(clk),
+            .reset_n(reset_n),
+            .led(led));
+       
+    
+    endmodule
+    ```
+
+    
+
+- 开启仿真
+
+  - Run Simulation
+  - 把Objects的信号去掉，把Scope-inst_led中的信号右键添加到仿真图中（Add to Wave Window）
+  - Restart-- Run all--暂停
+  - 在Name右键--Radix选择进制--Unsigned Decimal
+  - （改代码以后重新run Simulation；添加Divider分割；添加组group）
+
+- 添加管脚约束
+
+  - Schematic--3 I/O Ports或右上角I/O Planning
+  - 原理图中找到GCLK、Reset、led引脚 ，绑定
+  - 电平标准选择LVCMOS33*
+  - Ctrl+S保存，文件名led
+
+- 生成bit流
+
+  - Generate Bitsteam
+  - Open Hardware Manager
+  - auto connect，左键xc7a...，右键选择Program Device，选择bit文件
+
+
+
+### 流水灯_demo
+
+功能：
+
+```verilog
+//led_shift.v
+module led_shift(
+    input wire clk,
+    input wire reset_n,
+    output reg [3:0] led
+);
+    reg [25:0] cnt;  // 1秒计数器
+    reg [1:0] cnt_shift;  // 移位计数器，2位足够表示0~3
+    localparam CNT_MAX = 49_999_999;  // 最大计数值
+
+    always @(posedge clk or negedge reset_n) begin
+        if (~reset_n) begin
+            cnt &lt;= 0;  // 重置计数器
+            cnt_shift &lt;= 0;  // 重置移位计数器
+            led &lt;= 4'b0001;  // 初始状态
+        end
+        else begin
+            // 计数器逻辑
+            if (cnt == CNT_MAX) begin
+                cnt &lt;= 0;  // 重置计数器
+                // LED 移位逻辑
+                if (cnt_shift == 3) begin
+                    cnt_shift &lt;= 0;  // 重置移位计数器
+                    led &lt;= 4'b0001;  // 重置LED状态
+                end
+                else begin
+                    led &lt;= led &lt;&lt; 1;  // 左移一位
+                    cnt_shift &lt;= cnt_shift + 1;  // 移位计数器加1
+                end
+            end
+            else begin
+                cnt &lt;= cnt + 1;  // 计数器加1
+            end
+        end
+    end
+endmodule
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+。</description><guid isPermaLink="true">https://niffffty.github.io/post/FPGA-kai-fa-liu-cheng-%E3%80%81Led_demo.html</guid><pubDate>Thu, 13 Mar 2025 03:06:53 +0000</pubDate></item><item><title>电路笔记2</title><link>https://niffffty.github.io/post/dian-lu-bi-ji-2.html</link><description># 正弦稳态电路
+
+### 概念
+
+- 正限量表示方式
+- 最大值
+- 有效值
+- 向量形式
+- 复数形式
+- 角频率，角频率，周期
+
+
+
+### 正弦稳态电路求解
+
+- 阻抗计算：
+  - R：Z=R
+  - L：Z=jwL
+  - C：z=1/jwC
+- 阻性：Z=R+jX
+  - 阻性：X=0
+  - 感性：X&gt;0
+  - 容性：X&lt;0
+
+
+
+### 正弦稳态电路的功率
+
+- 有功功率：P=U I cosθz
+- 无功功率：P=U I sinθz
+- 视在功率：S=根号P方+Q方=UI
+- 复功率：S=P+jQ
+- 功率因数：Cosθz
+
+
+
+
+
+# 互感变压器
+
+### 互感
+
+将耦合电感电路进行去耦，6种去耦方式
+
+
+
+### 变压器
+
+n=N1:N2
+
+- 同名端：
+  - U1=n*U2
+  - i1 = -1/n * i2
+- 异名端：
+  - U1=-n*U2
+  - i1 = 1/n * i2
+- 等效电阻：
+  - Z1=n方*Z2
+
+
+
+
+
+# 三相电路
+
+### 三相电路的电源
+
+
+
+### Y型负载
+
+
+
+### 角型负载
+
+
+
+### 总结
+
+- Y型
+  - 线电压=根号3*相电压
+  - 线电流=相电流
+  - 线电压超前于相电压30°
+- 角型
+  - 线电压=相电压
+  - 线电流=根号3*相电流
+  - 线电流之后相电流30°。</description><guid isPermaLink="true">https://niffffty.github.io/post/dian-lu-bi-ji-2.html</guid><pubDate>Wed, 12 Mar 2025 11:18:35 +0000</pubDate></item><item><title>verilog模块例化，计数器</title><link>https://niffffty.github.io/post/verilog-mo-kuai-li-hua-%EF%BC%8C-ji-shu-qi.html</link><description>### 模块例化
+     
+- 模块例化=c语言中的函数调用
+
+```verilog
+//被例化的文件，d触发器,右键生成testbench
+module d_trigger(
+	input wire clk,
+    input wire d,
+    output reg q
+);
+    always @(posedge clk) begin
+    	q&lt;=d;
+    end
+endmodule
+```
+
+```verilog
+//调用例化的文件，实现d触发器
+module top(
+	input wire clk,
+    input wire d2,
+    output reg q2
+);
+    d_trigger d_trigger_inst (		//调用d_trigger
+        .clk	(clk),				//将两个模块的线连上
+        .d		(d2),
+        .q		(q2)
+    );
+    
+endmodule
+```
+
+
+
+### 4种计数器
+
+- 计数器1,每个上升沿反转
+
+![Image](https://github.com/user-attachments/assets/602c906d-187e-4e6d-a079-943aef2beb84)
+
+  ```verilog
+  //根据以上时序图实现每一个上升沿led反转一次
+  module led1(
+  	input wire clk,				
+      input wire reset_n,
+      output reg led
+  );
+      always @(posedge clk or negedge reset_n) begin
+          if(~reset_n) begin
+          	led &lt;=1'b0;
+          end
+          else begin
+          	led &lt;= ~led;
+          end
+      end
+  endmodule
+  ```
+
+- 计数器2，两个上升沿反转
+
+  
+![Image](https://github.com/user-attachments/assets/d3e3c764-cd9d-4172-8434-8bf79dde85c3)
+
+  ```verilog
+  //用计数器实现每两个上升沿led反转一次
+  module led2(
+  	input wire clk,				
+      input wire reset_n,
+      output reg led
+  );
+      reg [11:0] cnt;
+  //反转 
+      always @(posedge clk or negedge reset_n) begin
+          if(~reset_n) begin
+          	led &lt;=1'b0;
+          end
+          else begin
+          	led &lt;= ~led;
+          end
+      end
+  //计数器
+      always @(posedge clk or negedge reset_n) begin
+          if(~reset_n) begin			//复位cnt清0
+          	cnt &lt;='d0;
+          end
+          else if(cnt == 'd1)begin	//计数到xx值清0
+          	cnt &lt;='d0;
+          end
+          else begin					//正常计数
+          	cnt &lt;= cnt + 1'd1;
+          end
+      end
+  endmodule
+  ```
+
+- 计数器3，1s反转
+
+  ```verilog
+  //用计数器实现每1s,led反转一次
+  module led3(
+  	input wire clk,			//50M	
+      input wire reset_n,
+      output reg led
+  );
+      reg [25:0] cnt;			//cnt26位宽
+      
+  always @(posedge clk or negedge reset_n) begin
+      if(~reset_n) begin
+      	led &lt;=1'b0;
+      end
+      else if(cnt == 'd49_999_999) begin //主频50M=每秒50_000_000个时钟周期
+      	led &lt;= ~led;				   //当计数器计时到50M时，反转led
+      end
+  end
+  
+  always @(posedge clk or negedge reset_n) begin
+      if(~reset_n) begin			//复位cnt清0
+      	cnt &lt;='d0;
+      end
+      else if(cnt == 'dd49_999_999)begin	//计数到xx值清0
+      	cnt &lt;='d0;
+      end
+      else begin					//正常计数
+      	cnt &lt;= cnt + 1'd1;
+      end
+  end
+  endmodule
+  ```
+
+- 计时器4，1min反转
+
+  
+![Image](https://github.com/user-attachments/assets/900d5005-bb99-468c-a756-c0c3a2f26f06)
+
+  ```verilog
+  //用计数器实现每1min,led反转一次
+  module led3(
+  	input wire clk,			//50M	
+      input wire reset_n,
+      output reg led
+  );
+      reg [25:0] cnt;			//cnt26位宽
+      reg [7:0]  min_cnt;		//min_cnt分钟计数器
+  //反转
+  always @(posedge clk or negedge reset_n) begin
+      if(~reset_n) begin
+      	led &lt;=1'b0;
+      end
+      else if(cnt == 'd49_999_999) begin //主频50M=每秒50_000_000个时钟周期
+      	led &lt;= ~led;				   //当计数器计时到50M时，反转led
+      end
+  end
+  //秒计时
+  always @(posedge clk or negedge reset_n) begin
+      if(~reset_n) begin			//复位cnt清0
+      	cnt &lt;='d0;
+      end
+      else if(cnt == 'dd49_999_999)begin	//计数到xx值清0
+      	cnt &lt;='d0;
+      end
+      else begin					//正常计数
+      	cnt &lt;= cnt + 1'd1;
+      end
+  end
+  //分钟计时
+      always @(posedge clk or negedge reset_n) begin
+      if(~reset_n) begin			//复位cnt清0
+      	min_cnt &lt;='d0;
+      end
+      else if(cnt == 'd49_999_999 &amp;&amp; min_cnt=='d59)begin	//计数到xx值清0
+      	min_cnt &lt;='d0;
+      end
+      else if(cnt=='d49_999_999)begin					//正常计数
+      	min_cnt &lt;= min_cnt + 1'd1;
+      end
+  end
+  endmodule
+  ```
+
+  。</description><guid isPermaLink="true">https://niffffty.github.io/post/verilog-mo-kuai-li-hua-%EF%BC%8C-ji-shu-qi.html</guid><pubDate>Mon, 10 Mar 2025 08:35:05 +0000</pubDate></item><item><title>电路笔记1</title><link>https://niffffty.github.io/post/dian-lu-bi-ji-1.html</link><description>&lt;html&gt;
+&lt;body&gt;
+&lt;!--StartFragment--&gt;&lt;!DOCTYPE html&gt;&lt;h1 cid='n0' mdtype='heading' class='md-end-block md-heading' style='box-sizing: border-box; break-after: avoid-page; break-inside: avoid; orphans: 2; font-size: 2.25em; margin-top: 1rem; margin-bottom: 1rem; position: relative; font-weight: bold; line-height: 1.2; cursor: text; padding-bottom: 0.3em; border-bottom: 1px solid rgb(238, 238, 238); white-space: pre-wrap; color: rgb(51, 51, 51); font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;Clear Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'&gt;&lt;span md-inline='plain' class='md-plain md-expand' style='box-sizing: border-box;'&gt;一、电路分析法&lt;/span&gt;&lt;/h1&gt;&lt;ul class='ul-list' cid='n173' mdtype='list' data-mark='-' style='box-sizing: border-box; margin: 0.8em 0px; padding-left: 30px; position: relative; color: rgb(51, 51, 51); font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;Clear Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'&gt;&lt;li class='md-list-item' cid='n172' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n170' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;网孔电流法（回路电流法）&lt;/span&gt;&lt;/p&gt;&lt;ul class='ul-list' cid='n183' mdtype='list' data-mark='-' style='box-sizing: border-box; margin: 0px; padding-left: 30px; position: relative;'&gt;&lt;li class='md-list-item' cid='n182' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n180' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;解题步骤：&lt;/span&gt;&lt;/p&gt;&lt;ul class='ul-list' cid='n206' mdtype='list' data-mark='-' style='box-sizing: border-box; margin: 0px; padding-left: 30px; position: relative;'&gt;&lt;li class='md-list-item' cid='n205' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n203' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;画绕行方向&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n209' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n207' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;列电流方程：R自I自+R互I互=电压升&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n212' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n210' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;解方程&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n192' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n190' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;题型：&lt;/span&gt;&lt;/p&gt;&lt;ul class='ul-list' cid='n196' mdtype='list' data-mark='-' style='box-sizing: border-box; margin: 0px; padding-left: 30px; position: relative;'&gt;&lt;li class='md-list-item' cid='n195' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n193' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;只有电压源：按步骤&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n199' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n197' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;有电流源：先设电流源电压，再补电流方程&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n215' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n213' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;有受控源：设受控源电压，补方程&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n176' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n174' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;节点电压法&lt;/span&gt;&lt;/p&gt;&lt;ul class='ul-list' cid='n219' mdtype='list' data-mark='-' style='box-sizing: border-box; margin: 0px; padding-left: 30px; position: relative;'&gt;&lt;li class='md-list-item' cid='n218' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n216' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;解题步骤：&lt;/span&gt;&lt;/p&gt;&lt;ul class='ul-list' cid='n227' mdtype='list' data-mark='-' style='box-sizing: border-box; margin: 0px; padding-left: 30px; position: relative;'&gt;&lt;li class='md-list-item' cid='n226' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n224' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;标节点，标接地点&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n230' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n228' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;列节点电压方程：G自U自-G互U互=流进电流&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n233' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n231' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;解方程&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n236' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n237' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;题型：&lt;/span&gt;&lt;/p&gt;&lt;ul class='ul-list' cid='n241' mdtype='list' data-mark='-' style='box-sizing: border-box; margin: 0px; padding-left: 30px; position: relative;'&gt;&lt;li class='md-list-item' cid='n240' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n238' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;只有电流源&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n244' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n242' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;含电压源：将电压源等效为电流源，设电流&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n247' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n245' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;含受控源：补受控源方程&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n179' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n177' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;支路电流法&lt;/span&gt;&lt;/p&gt;&lt;ul class='ul-list' cid='n251' mdtype='list' data-mark='-' style='box-sizing: border-box; margin: 0px; padding-left: 30px; position: relative;'&gt;&lt;li class='md-list-item' cid='n250' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n248' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;步骤：KVL，KCL，解方程&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;h1 cid='n255' mdtype='heading' class='md-end-block md-heading' style='box-sizing: border-box; break-after: avoid-page; break-inside: avoid; orphans: 2; font-size: 2.25em; margin-top: 1rem; margin-bottom: 1rem; position: relative; font-weight: bold; line-height: 1.2; cursor: text; padding-bottom: 0.3em; border-bottom: 1px solid rgb(238, 238, 238); white-space: pre-wrap; color: rgb(51, 51, 51); font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;Clear Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;二、电路定理&lt;/span&gt;&lt;/h1&gt;&lt;h3 cid='n258' mdtype='heading' class='md-end-block md-heading' style='box-sizing: border-box; break-after: avoid-page; break-inside: avoid; orphans: 2; font-size: 1.5em; margin-top: 1rem; margin-bottom: 1rem; position: relative; font-weight: bold; line-height: 1.43; cursor: text; white-space: pre-wrap; color: rgb(51, 51, 51); font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;Clear Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;叠加定理&lt;/span&gt;&lt;/h3&gt;&lt;ul class='ul-list' cid='n268' mdtype='list' data-mark='-' style='box-sizing: border-box; margin: 0.8em 0px; padding-left: 30px; position: relative; color: rgb(51, 51, 51); font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;Clear Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'&gt;&lt;li class='md-list-item' cid='n267' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n262' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;步骤：&lt;/span&gt;&lt;/p&gt;&lt;ul class='ul-list' cid='n272' mdtype='list' data-mark='-' style='box-sizing: border-box; margin: 0px; padding-left: 30px; position: relative;'&gt;&lt;li class='md-list-item' cid='n271' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n269' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;去掉电流源，电压源独立作用，KVL/KCL求U1，i1&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n275' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n273' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;去掉电压源，电流源独立作用，求U2，i2&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n278' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n276' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;叠加：U=U1+U2&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p cid='n281' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0.8em 0px; white-space: pre-wrap; position: relative; color: rgb(51, 51, 51); font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;Clear Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'&gt;&lt;/p&gt;&lt;h3 cid='n283' mdtype='heading' class='md-end-block md-heading' style='box-sizing: border-box; break-after: avoid-page; break-inside: avoid; orphans: 2; font-size: 1.5em; margin-top: 1rem; margin-bottom: 1rem; position: relative; font-weight: bold; line-height: 1.43; cursor: text; white-space: pre-wrap; color: rgb(51, 51, 51); font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;Clear Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;戴维宁定理&lt;/span&gt;&lt;/h3&gt;&lt;ul class='ul-list' cid='n290' mdtype='list' data-mark='-' style='box-sizing: border-box; margin: 0.8em 0px; padding-left: 30px; position: relative; color: rgb(51, 51, 51); font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;Clear Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'&gt;&lt;li class='md-list-item' cid='n289' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n285' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;步骤：&lt;/span&gt;&lt;/p&gt;&lt;ul class='ul-list' cid='n294' mdtype='list' data-mark='-' style='box-sizing: border-box; margin: 0px; padding-left: 30px; position: relative;'&gt;&lt;li class='md-list-item' cid='n293' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n291' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;拿走待求支路，求Uoc&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n297' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n295' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;独立源置零，求等效电阻Req&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n300' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n298' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;画出戴维宁等效电路（一个电阻，一个电压源）&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n303' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n301' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;放回待求支路&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n306' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n307' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;题型：&lt;/span&gt;&lt;/p&gt;&lt;ul class='ul-list' cid='n311' mdtype='list' data-mark='-' style='box-sizing: border-box; margin: 0px; padding-left: 30px; position: relative;'&gt;&lt;li class='md-list-item' cid='n310' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n308' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;无受控源：按步骤解题&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n314' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n312' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;有受控源：第二步求Req时，外加电压&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p cid='n317' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0.8em 0px; white-space: pre-wrap; position: relative; color: rgb(51, 51, 51); font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;Clear Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'&gt;&lt;/p&gt;&lt;h3 class='md-end-block md-heading' mdtype='heading' cid='n319' style='box-sizing: border-box; break-after: avoid-page; break-inside: avoid; orphans: 2; font-size: 1.5em; margin-top: 1rem; margin-bottom: 1rem; position: relative; font-weight: bold; line-height: 1.43; cursor: text; white-space: pre-wrap; color: rgb(51, 51, 51); font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;Clear Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'&gt;&lt;span class='md-plain' md-inline='plain' style='box-sizing: border-box;'&gt;最大功率传输&lt;/span&gt;&lt;/h3&gt;&lt;ul class='ul-list' cid='n324' mdtype='list' data-mark='-' style='box-sizing: border-box; margin: 0.8em 0px; padding-left: 30px; position: relative; color: rgb(51, 51, 51); font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;Clear Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'&gt;&lt;li class='md-list-item' cid='n323' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n321' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;步骤&lt;/span&gt;&lt;/p&gt;&lt;ul class='ul-list' cid='n328' mdtype='list' data-mark='-' style='box-sizing: border-box; margin: 0px; padding-left: 30px; position: relative;'&gt;&lt;li class='md-list-item' cid='n327' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n325' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;用戴维宁定理求等效电路&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n331' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n329' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;用公式：Pmax=Uoc方/4Req&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p cid='n334' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0.8em 0px; white-space: pre-wrap; position: relative; color: rgb(51, 51, 51); font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;Clear Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'&gt;&lt;/p&gt;&lt;h1 class='md-end-block md-heading' mdtype='heading' cid='n336' style='box-sizing: border-box; break-after: avoid-page; break-inside: avoid; orphans: 2; font-size: 2.25em; margin-top: 1rem; margin-bottom: 1rem; position: relative; font-weight: bold; line-height: 1.2; cursor: text; padding-bottom: 0.3em; border-bottom: 1px solid rgb(238, 238, 238); white-space: pre-wrap; color: rgb(51, 51, 51); font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;Clear Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'&gt;&lt;span class='md-plain' md-inline='plain' style='box-sizing: border-box;'&gt;三、动态电路响应&lt;/span&gt;&lt;/h1&gt;&lt;h3 class='md-end-block md-heading' mdtype='heading' cid='n338' style='box-sizing: border-box; break-after: avoid-page; break-inside: avoid; orphans: 2; font-size: 1.5em; margin-top: 1rem; margin-bottom: 1rem; position: relative; font-weight: bold; line-height: 1.43; cursor: text; white-space: pre-wrap; color: rgb(51, 51, 51); font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;Clear Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'&gt;&lt;span class='md-plain' md-inline='plain' style='box-sizing: border-box;'&gt;电感电容&lt;/span&gt;&lt;/h3&gt;&lt;figure class='md-table-fig' cid='n345' mdtype='table' style='box-sizing: border-box; margin: 1.2em 0px; overflow-x: auto; max-width: calc(100% + 16px); padding: 0px; cursor: default; color: rgb(51, 51, 51); font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;Clear Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'&gt;
+  | 电容C | 电感L
+-- | -- | --
+  | i=C*dU/dt | U=L*di/dt
+串联 | 电阻并联 | 电阻串联
+并联 | 电阻串联 | 电阻并联
+  |   |  
+
+&lt;/figure&gt;&lt;p cid='n366' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0.8em 0px; white-space: pre-wrap; position: relative; color: rgb(51, 51, 51); font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;Clear Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'&gt;&lt;/p&gt;&lt;p cid='n368' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0.8em 0px; white-space: pre-wrap; position: relative; color: rgb(51, 51, 51); font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;Clear Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'&gt;&lt;/p&gt;&lt;h3 class='md-end-block md-heading' mdtype='heading' cid='n370' style='box-sizing: border-box; break-after: avoid-page; break-inside: avoid; orphans: 2; font-size: 1.5em; margin-top: 1rem; margin-bottom: 1rem; position: relative; font-weight: bold; line-height: 1.43; cursor: text; white-space: pre-wrap; color: rgb(51, 51, 51); font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;Clear Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'&gt;&lt;span class='md-plain' md-inline='plain' style='box-sizing: border-box;'&gt;电路响应&lt;/span&gt;&lt;/h3&gt;&lt;ul class='ul-list' cid='n375' mdtype='list' data-mark='-' style='box-sizing: border-box; margin: 0.8em 0px 0px; padding-left: 30px; position: relative; color: rgb(51, 51, 51); font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;Clear Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'&gt;&lt;li class='md-list-item' cid='n374' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n372' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;换路定理：电路发生变化（开关闭合）时，电容电压不变，电感电流不变&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li class='md-list-item md-focus-container' cid='n378' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n376' mdtype='paragraph' class='md-end-block md-p md-focus' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain md-expand' style='box-sizing: border-box;'&gt;解题步骤：&lt;/span&gt;&lt;/p&gt;&lt;ul class='ul-list' cid='n382' mdtype='list' data-mark='-' style='box-sizing: border-box; margin: 0px; padding-left: 30px; position: relative;'&gt;&lt;li class='md-list-item' cid='n381' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n379' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;画t=0-的电路（电容开路，电感短路），求Uc，iL&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n385' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n383' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain' style='box-sizing: border-box;'&gt;换路定理求0+时刻电容/电感的电压/电流&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li class='md-list-item' cid='n388' mdtype='list_item' style='box-sizing: border-box; margin: 0px; position: relative;'&gt;&lt;p cid='n386' mdtype='paragraph' class='md-end-block md-p' style='box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; white-space: pre-wrap; position: relative;'&gt;&lt;span md-inline='plain' class='md-plain md-expand' style='box-sizing: border-box;'&gt;画出t=0+的电路（电容当电压源，电感当电流源），KCL/KVL求解方程&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;!--EndFragment--&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+### 三要素法求响应
+
+- 概念
+  - 零输入响应：换路后没有电源
+  - 零状态响应：环路前U，i等于0的电路
+  - 全响应：三要素公式求的
+- 解题步骤：
+  - 前三步不变
+  - 求等效电阻Ri，求时间常数 RiC，L/Ri
+  - 画t=∞时的电路，求f(∞)，此时是稳态，电容开路/电感短路
+  - 三要素法公式求U/i
+
+。</description><guid isPermaLink="true">https://niffffty.github.io/post/dian-lu-bi-ji-1.html</guid><pubDate>Sun, 09 Mar 2025 13:05:38 +0000</pubDate></item><item><title>Verilog基础语法</title><link>https://niffffty.github.io/post/Verilog-ji-chu-yu-fa.html</link><description>- 进制：4'b0000为二进制的0，四位宽
+
+  - 二进制： Binary 
+  - 八进制：Octal
+  - 十进制：Decimal
+  - 十六进制：Hexadecimal
+
+
+
+
+
+
+
+- 单位换算：
+  - 1bit = 1位（最小信息单位）
+  - 8 bit = 1字节 = 1B
+  - 1KB = 1024 字节
+  - 1MB = 1024 KB
+  - 1GM = 1024 MB
+  - 二进制与十进制不同，可能导致实际容量略有差异（十进制：1KB=1000B）
+
+
+
+
+
+- 数电基础：
+
+  - 与或非
+
+  - D触发器：在时钟上升沿的时候，将D赋给Q
+
+    ```verilog
+    // Verilog实现D触发器
+    module d_trigger(
+    	input wire clk,
+        input wire d,
+        output reg q		//q与时间有关，需要reg类型
+    );
+        always @(posedge clk)begin
+        	q&lt;=d;
+        end
+    endmodule
+    ```
+
+    
+
+- verilog数据类型：
+
+  - wire：线型，默认数据类型，输入信号默认为wire
+  - reg：与时间有关的信号
+    - 特例：在always块中被赋值的语句都定义为reg，即使这个信号为组合逻辑，即使与时间无关
+
+- 二路选择器：
+
+  ```verilog
+  module sel(
+      input wire sel,
+      input wire a,
+      input wire b,
+      output reg c		
+  );
+      
+      //第一种写法
+      assign c = sel==1'b1 ? a:b;		//但是c可能为:0,1，不定态，高阻态
+      
+      //第二种写法
+      always @(sel,a,b)begin
+          if(sel==1'b)begin
+          	c=a;
+          end
+          else if(sel==1'b0)begin
+          	c=b;
+          end
+          
+      end
+  endmodule
+  ```
+
+  
+
+- 运算符
+
+  - 位运算符：&amp;,|,~ 是按位相与/或/非
+  - 逻辑运算符：&amp;&amp;,||,!，一般用在if条件里
+  - 移位运算符：《《   ， 》》
+  - 拼接运算符：{a,b}
+
+- if运算：
+
+  ```verilog
+  always@(posedge clk)begin
+      if(条件1)begin
+      	语句1			//如果满足条件1，就执行语句1，执行完后跳出if
+      end
+      else if(条件2)begin
+      	语句2
+      end
+  end
+  ```
+
+  
+
+- case语句
+
+  ```verilog
+  //组合逻辑实现3_8译码器
+  module decoder_3_8(
+      input wire [2:0] sel,
+      output reg [7:0] out
+  );
+      always@(sel) begin
+          case(sel)
+              3'b000:out = 8'b0000_0001;
+              3'b001:out = 8'b0000_0010;
+              3'b010:out = 8'b0000_0100;
+              3'b011:out = 8'b0000_1000;
+              3'b100:out = 8'b0001_0000;
+              3'b101:out = 8'b0010_0000;
+              3'b110:out = 8'b0100_0000;
+              3'b111:out = 8'b1000_0000;
+              default:out = 8'b1000_0001;
+           endcase
+      end
+  ```
+
+  
+
+。</description><guid isPermaLink="true">https://niffffty.github.io/post/Verilog-ji-chu-yu-fa.html</guid><pubDate>Sun, 09 Mar 2025 11:14:39 +0000</pubDate></item><item><title>树莓派3B重装系统</title><link>https://niffffty.github.io/post/shu-mei-pai-3B-zhong-zhuang-xi-tong.html</link><description># 树莓派3B重装系统
+
+- sd卡插读卡器再插电脑usb
+
+- 使用SD Card Formatter工具格式化sd卡
+
+- 使用官方烧录工具Imager烧录系统
+
+  - 设备选择树莓派3
+  - 操作系统选择树莓派OS32位
+  - 选择SD卡
+  - 提示：Would you like to apply OS等，编辑设置：修改主机名、用户名、密码、wifi、ssh使用密码登录
+  - 烧录成功
+
+  
+
+# 初始配置
+
+### 外接7寸显示屏
+
+- 打开sd卡根目录下的config.txt文件，在文件最后加入：
+
+  ```
+  max_usb_current=1
+  hdmi_force_hotplug=1 
+  hdmi_group=2
+  hdmi_mode=87
+  hdmi_timings=1024 0 168 32 120 600 0 15 6 14 0 0 0 60 0 51200000 3
+  hdmi_drive=1
+  ```
+
+  
+
+### vscode连接树莓派
+
+- 前提：树莓派与电脑连接在同一网络下
+- ifconfig查看树莓派wlan0下的ip
+- vscode下载remote ssh插件
+- Ctrl+Shift+P添加远程连接
+- 配置完成，即可在vscode终端输入命令，在左侧文件管理器中查看树莓派文件
+
+
+
+
+
+# 配环境
+
+```
+sudo apt update
+python3 -m venv ~/myenv //创建虚拟环境
+source ~/myenv/bin/activate 	//激活虚拟环境
+pip install tensorflow numpy pillow		//在虚拟环境中安装包
+deactivate					//退出虚拟环境
+
+pip3 install protobuf
+pip3 install tensorflow-hub
+pip3 install pycocotools
+```
+
+
+
+
+
+。</description><guid isPermaLink="true">https://niffffty.github.io/post/shu-mei-pai-3B-zhong-zhuang-xi-tong.html</guid><pubDate>Fri, 07 Mar 2025 14:36:04 +0000</pubDate></item><item><title>香橙派Orange PI zero3实现NAS</title><link>https://niffffty.github.io/post/xiang-cheng-pai-Orange%20PI%20zero3-shi-xian-NAS.html</link><description>
+### 概括：
+
+- 香橙派+CasaOS+移动硬盘来实现内网访问存储
+- Cpolar进行内网穿透实现外网访问
+
+### 烧录香橙派系统系统
+
+1. 硬件准备：
+
+   1. 香橙派zero3
+   2. 读卡器、sd卡（我用的32G）
+   3. typeC线（香橙派电源）
+   4. 外接显示器+转接头（香橙派是Micro HDMI口）
+   5. 键盘
+
+2. 烧录系统
+
+   1. sd卡+读卡器插电脑
+   2. 官网下载镜像：打开官网-服务于下载-下载-搜索zero3-下拉选择下载ubuntu镜像
+   3. 下载完解压出img后缀镜像文件，用烧录软件ether烧录系统到sd卡中，烧录完成后将sd卡插到香橙派上
+   4. 给香橙派插上电源、显示器、键盘，电源灯亮即可开机，屏幕显示OrangePI即为烧录成功
+
+3. 配置系统
+
+   1. 配置网络（若用网线则可忽略）
+      1. 命令行输入sudo su获取root权限，密码默认为orangepi
+      2. 输入orangepi-config进入配置界面，方向键进入network，再进入WIFI，输入密码连接Wifi
+   2. 设置中国时区
+      1. 返回到配置界面主菜单，选择Personal-Timezone-Asia-shanghai
+   3. 获取Wifi分配给香橙派的ip地址
+      1. 返回到命令行，输入ip address，输入的3：inet后边的即ip地址（我的是192.168.18.104）
+      2. 现在就不需要显示器和键盘了
+   4. 用自己的电脑ssh连接香橙派
+      1. 使用putty连接：用户名为root，密码默认为orangepi，地址为刚刚获取的ip地址
+      2. 能看到此页面即配置完成：
+
+![Image](https://github.com/user-attachments/assets/b3480da6-a435-4206-b9e6-483423ab192c)
+
+   ### 部署CasaOS
+
+   1. 登录casaos的官网，下拉
+   2. 找到`curl -fsSL https://get.casaos.io | sudo bash`，复制到香橙派的命令行，耐心等待部署
+   3. 在同一个wifi下输入刚才获取的ip地址即可内网访问部署在香橙派上的CasaOS了，根据提示注册一个casaOS的账号
+   4. 进入以下页面即部署完成（可以通过下方的Files进行文件存储与下载，若需扩大储存可外插移动硬盘）
+
+![Image](https://github.com/user-attachments/assets/0f7d18cf-f07a-421f-bccb-28e53d23cc4e)
+
+   ### Cpolar内网穿透
+
+   1. 下载Cpolar
+
+      ```
+      #在香橙派命令行输入：
+      curl -L https://www.cpolar.com/static/downloads/install-release-cpolar.sh | sudo bash		#下载cpolar
+      
+      cpolar version	#查看Cpolar是否下载成功
+      
+      ```
+
+      
+
+   2. token认证
+
+      1. 登录cpolar官网，注册，登录
+
+      2. 点击左侧的认证，复制自己的token
+
+![Image](https://github.com/user-attachments/assets/1416e096-032f-45f8-81f3-6bccf827bd9f)
+
+      3. 命令行中输入`cpolar authtoken abcd`，abcd为刚才复制的token
+
+      4. 简单的穿透测试
+
+         ```
+         cpolar http 8080		#可以看到成功生成了两个指向本机8080端口的随机公网地址
+         ```
+
+   3. 向香橙派系统中添加cpolar服务
+
+      ```
+      systemctl enable cpolar
+      systemctl start cpolar		#开启服务
+      systemctl status cpolar		#查看服务
+      ```
+
+      
+![Image](https://github.com/user-attachments/assets/f35dbf58-91f1-4123-9025-89f2cfb6db04)
+
+4. 创建外网连接的地址
+
+   1. 浏览器输入： http://香橙派的局域网ip:9200 
+
+   2. 创建隧道
+
+![Image](https://github.com/user-attachments/assets/37ca4ab4-6b99-4823-aa0b-41ca75015af9)
+
+   3. 在状态-在线隧道列表中可以看到自己创建的隧道和公网地址
+
+      
+![Image](https://github.com/user-attachments/assets/3407bcaa-cc68-4434-b8c8-c1ba06c2604b)
+
+5. 创建的是免费隧道，公网地址24小时内会随机变化，固定的地址需要付费升级
+
+
+
+
+
+
+
+。</description><guid isPermaLink="true">https://niffffty.github.io/post/xiang-cheng-pai-Orange%20PI%20zero3-shi-xian-NAS.html</guid><pubDate>Thu, 20 Feb 2025 12:40:51 +0000</pubDate></item><item><title>沉没成本</title><link>https://niffffty.github.io/post/chen-mei-cheng-ben.html</link><description># 沉没成本
+
+- **概念**：已经付出，不可回收的成本
+
+- **决策时不应考虑沉没成本**
+
+  - **来源**：2001年诺贝尔经济学奖得主斯蒂格里茨在著作《经济学》中提到： “如果一项开支已经付出并且不管作出何种选择都不能收回，一个理性的人就会忽略它。</description><guid isPermaLink="true">https://niffffty.github.io/post/chen-mei-cheng-ben.html</guid><pubDate>Fri, 14 Feb 2025 01:16:51 +0000</pubDate></item><item><title>Cursor：AI编程助手</title><link>https://niffffty.github.io/post/Cursor%EF%BC%9AAI-bian-cheng-zhu-shou.html</link><description># cursor：AI编程助手
+### 概括
+Cursor 是一个基于人工智能的编程助手，提供智能代码补全、错误检测和自然语言处理功能，帮助开发者更高效地编写和优化代码。</description><guid isPermaLink="true">https://niffffty.github.io/post/Cursor%EF%BC%9AAI-bian-cheng-zhu-shou.html</guid><pubDate>Thu, 23 Jan 2025 13:00:16 +0000</pubDate></item><item><title>信息聚合工具Follow</title><link>https://niffffty.github.io/post/xin-xi-ju-he-gong-ju-Follow.html</link><description>### 简介&#13;
+&#13;
+Follow可以订阅文章、图片、视频、音频等，用一个软件包揽信息获取的所有渠道，帮助摆脱信息茧房，提高信息收集效率。</description><guid isPermaLink="true">https://niffffty.github.io/post/xin-xi-ju-he-gong-ju-Follow.html</guid><pubDate>Fri, 10 Jan 2025 10:14:25 +0000</pubDate></item><item><title>挑战每天精听2个小时英语听力</title><link>https://niffffty.github.io/post/tiao-zhan-mei-tian-jing-ting-2-ge-xiao-shi-ying-yu-ting-li.html</link><description>### 挑战每天精听2个小时英语听力
+
+- [x] 2025.1.7
+
+- [x] 2025.1.8
+
+- [x] 2025.1.9
+
+- [x] 2025.1.10
+
+- [x] 2025.1.11
+
+- [ ] 2025.1.12
+
+- [x] 2025.1.13
+
+- [x] 2025.1.14
+
+- [ ] 2025.1.15
+
+- [x] 2025.1.16
+
+- [x] 2025.1.17
+
+- [x] 2025.1.18
+
+- [x] 2025.1.19
+
+- [x] 2025.1.20
+
+- [x] 2025.1.21
+
+- [x] 2025.1.22
+
+- [x] 2025.1.23
+
+- [ ] 2025.1.24
+
+- [x] 2025.1.25
+
+- [x] 2025.1.26
+
+- [x] 2025.1.27
+
+- [ ] 2025.1.28
+
+- [ ] 2025.1.29
+
+- [ ] 2025.1.30
+
+- [x] 2025.1.31
+
+- [x] 2025.2.1
+
+- [x] 2025.2.2
+
+- [x] 2025.2.3
+
+- [x] 2025.2.4
+
+- [x] 2025.2.5
+
+- [x] 2025.2.6
+
+- [x] 2025.2.7
+
+- [x] 2025.2.8
+
+- [ ] 2025.2.9
+
+- [x] 2025.2.10
+
+- [ ] 2025.2.11
+
+- [x] 2025.2.12
+
+- [ ] 2025.2.13
+
+- [x] 2025.2.14
+
+- [x] 2025.2.15
+
+- [x] 2025.2.16
+
+- [x] 2025.2.17
+
+- [x] 2025.2.18
+
+- [ ] 2025.2.19
+
+- [x] 2025.2.20
+
+- [x] 2025.2.21
+
+- [x] 2025.2.22
+
+- [ ] 2025.2.23
+
+- [ ] 2025.2.24
+
+- [x] 2025.2.25
+
+- [x] 2025.2.26
+
+- [ ] 2025.2.27
+
+- [x] 2025.2.28
+
+- [ ] 2025.3.1
+
+- [x] 2025.3.2
+
+- [x] 2025.3.3
+
+- [x] 2025.3.4
+
+- [x] 2025.3.5
+
+- [x] 2025.3.6
+
+- [x] 2025.3.7
+
+- [x] 2025.3.8
+
+- [x] 2025.3.9
+
+- [x] 2025.3.10
+
+- [x] 2025.3.11
+
+- [x] 2025.3.12
+
+- [x] 2025.3.13
+
+- [x] 2025.3.14
+
+- [x] 2025.3.15
+
+- [ ] 2025.3.16
+
+- [x] 2025.3.17
+
+- [x] 2025.3.18
+
+- [x] 2025.3.19
+
+- [x] 2025.3.20
+
+- [x] 2025.3.21
+
+- [x] 2025.3.22
+
+- [x] 2025.3.23
+
+- [x] 2025.3.24
+
+- [ ] 2025.2.25
+
+- [ ] 2025.2.26
+
+- [ ] 2025.3.27
+
+- [ ] 2025.3.28
+
+- [x] 2025.3.29
+
+- [x] 2025.3.30
+
+- [x] 2025.3.31
+
+- [x] 2025.4.1
+
+- [x] 2025.4.2
+
+- [x] 2025.43
+
+- [x] 2025.4.4
+
+- [ ] 2025.4.5
+
+- [ ] 2025.4.6
+
+- [ ] 2025.4.7
+
+- [x] 2025.4.8
+
+- [x] 2025.4.9
+
+- [ ] 2025.4.10
+
+- [ ] 2025.4.11
+
+- [x] 2025.4.12
+
+- [x] 2025.4.13
+
+- [x] 2025.4.14
+
+- [x] 2025.4.15
+
+- [x] 2025.4.16
+
+- [x] 2025.4.17
+
+- [ ] 2025.4.18
+
+- [x] 2025.4.19
+
+- [ ] 2025.4.20
+
+- [x] 2025.4.21
+
+- [x] 2025.4.22
+
+- [x] 2025.4.23
+
+- [x] 2025.4.24
+
+- [ ] 2025.4.25
+
+- [x] 2025.4.26
+
+- [ ] 2025.4.27
+
+- [x] 2025.4.28
+
+- [ ] 2025.4.29
+
+- [ ] 2025.4.30
+
+- [ ] 2025.51
+
+- [ ] 2025.5.2
+
+- [ ] 2025.5.3
+
+- [ ] 2025.5.4
+
+- [ ] 2025.5.5
+
+- [ ] 2025.5.6
+
+- [ ] 2025.5.7
+
+- [ ] 2025.5.8
+
+- [ ] 20255.9
+
+- [ ] 2025.5.10
+
+- [ ] 20255.11
+
+- [ ] 2025.5.12
+
+- [ ] 2025.5.13
+
+- [ ] 2025.5.14
+
+- [ ] 2025.5.15
+
+- [ ] 2025.5.16
+
+- [ ] 2025.5.17
+
+- [ ] 2025.5.18
+
+- [ ] 2025.5.19
+
+- [ ] 2025.5.20
+
+- [ ] 2025.5.21
+
+- [ ] 2025.5.22
+
+- [ ] 2025.5.23
+
+- [ ] 2025.5.24
+
+
+
+
+
+。</description><guid isPermaLink="true">https://niffffty.github.io/post/tiao-zhan-mei-tian-jing-ting-2-ge-xiao-shi-ying-yu-ting-li.html</guid><pubDate>Thu, 09 Jan 2025 14:51:23 +0000</pubDate></item><item><title>使用Gmeek博客框架搭建个人博客</title><link>https://niffffty.github.io/post/shi-yong-Gmeek-bo-ke-kuang-jia-da-jian-ge-ren-bo-ke.html</link><description> ### fork框架&#13;
+&#13;
+- 打开框架网站`github.com/Meekdai/Gmeek`，找到安装--通过模板创建仓库&#13;
+- 修改自己的仓库名，创建仓库&#13;
+- `Settings--Pages`，修改`Source`为`Github Actions`&#13;
+&#13;
+### 通过Issues写作&#13;
+&#13;
+- 点击仓库的`Issues--new issues`，修改标题，右侧添加一个`labels`，写作完成，点击`submit new issues`&#13;
+- 仓库--Actions可以可以看见正在构建，构建完即可打开仓库首页的域名&#13;
+&#13;
+### 修改配置&#13;
+&#13;
+- 修改配置：仓库--代码--`config.json`--编辑文件，修改title、subTitle、avatarUrl即标题、描述、头像，修改完成后点击右上角`Commit changes`&#13;
+- 手动构建(每次修改完config.json需要手动构建一次)：仓库--Actions--左侧build Gmeek--右侧Run workflow--Run workflow&#13;
+&#13;
+&#13;
+&#13;
+### 自定义域名&#13;
+&#13;
+&#13;
+&#13;
+&#13;
+&#13;
+### 参考文献&#13;
+&#13;
+- https://www.bilibili.com/video/BV1GM4m1m7ZD/?spm_id_from=333.999.0.0&amp;vd_source=30154a2ba097dc64dcb082bf3c72da38。</description><guid isPermaLink="true">https://niffffty.github.io/post/shi-yong-Gmeek-bo-ke-kuang-jia-da-jian-ge-ren-bo-ke.html</guid><pubDate>Thu, 09 Jan 2025 14:14:05 +0000</pubDate></item></channel></rss>
