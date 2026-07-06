@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
+    <script src='https://blog.meekdai.com/Gmeek/plugins/GmeekBSZ.js'></script>
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/94451088?v=4"><script>
+        let theme = localStorage.getItem("meek_theme") || "light";
+        document.documentElement.setAttribute("data-color-mode", theme);
+    </script>
+<meta name="description" content="# 用 Pi Agent 搭建 AI 视频工作流：从安装到实战
+
+## 一、Pi Agent 是什么？
+
+在聊实操之前，先说说 Pi Agent 到底是什么、它和市面上其他 AI 编程 Agent 有什么不同。">
+<meta property="og:title" content="用 Pi Agent 搭建 AI 视频工作流：从安装到实战">
+<meta property="og:description" content="# 用 Pi Agent 搭建 AI 视频工作流：从安装到实战
+
+## 一、Pi Agent 是什么？
+
+在聊实操之前，先说说 Pi Agent 到底是什么、它和市面上其他 AI 编程 Agent 有什么不同。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://niffffty.github.io/post/yong-%20Pi%20Agent%20-da-jian-%20AI%20-shi-pin-gong-zuo-liu-%EF%BC%9A-cong-an-zhuang-dao-shi-zhan.html">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/94451088?v=4">
+<title>用 Pi Agent 搭建 AI 视频工作流：从安装到实战</title>
+
+
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:24px;}
+}
+
+</style>
+
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle">用 Pi Agent 搭建 AI 视频工作流：从安装到实战</h1>
+<div class="title-right">
+    <a href="https://niffffty.github.io" id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+    <a href="https://github.com/niffffty/niffffty.github.io/issues/43" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="markdown-body" id="postBody"><h1>用 Pi Agent 搭建 AI 视频工作流：从安装到实战</h1>
+<h2>一、Pi Agent 是什么？</h2>
+<p>在聊实操之前，先说说 Pi Agent 到底是什么、它和市面上其他 AI 编程 Agent 有什么不同。</p>
+<p>目前 AI Agent 领域的主流工具——如 Cloud Code、Codex、Open Code——从名字里的"Code"就能看出来，核心定位是帮你写代码。它们预装了代码索引、测试运行、Git 操作、编码规范等一整套围绕代码交付设计的工具，开箱即用。</p>
+<p>但问题是，不是每个人每天都在写代码。更多人日常需要搜资料、读 PDF、整理表格、做汇报、做视频。</p>
+<p>Pi Agent 走了一条截然不同的路。<strong>Pi 是一个极简的终端 AI coding agent harness</strong>。它的核心哲学是：<strong>Adapt pi to your workflows, not the other way around</strong>——让 Agent 适应你的工作流，而不是让你去适应 Agent 的默认形态。</p>
+<p>翻译成人话就是：Pi 只给你最基础的积木——默认只提供 <code class="notranslate">read</code>、<code class="notranslate">write</code>、<code class="notranslate">edit</code>、<code class="notranslate">bash</code> 四个工具——其他的能力，你需要什么就自己往上加什么。通过 <strong>Extensions</strong>（TypeScript 扩展）、<strong>Skills</strong>（可复用功能包）、<strong>Prompt Templates</strong>（提示模板）和 <strong>Themes</strong>（主题），你可以把 Pi 改造成任何你想要的样子。</p>
+<p>这就是 Pi 和 Codex、Open Code 最大的区别：<strong>Codex 是开箱即用的完整产品，Pi 是你可以自己搭积木的 Agent 底座</strong>。每个人根据自己的需求装上不同的 Skill 和 Extension，最后用到的 Pi 都不一样。</p>
+<blockquote>
+<p>有一个数据很能说明问题：在 OpenRouter 的排行榜上，Pi 每天的 token 消耗量排在第五名，紧跟 Cloud Code 后面。OpenAI Codex 的负责人甚至公开表示，他们大约有 5% 的生产流量已经跑在了 Pi Agent 上面。同样规模的任务，Pi 的 token 消耗大概只有 Cloud Code 的三分之一甚至更少。</p>
+</blockquote>
+<h2>二、实操案例：用 Pi Agent 搭建 AI 视频工作流</h2>
+<p>接下来，我用一个真实的案例，带你走一遍从零开始搭建 Pi Agent 视频工作流的全过程。</p>
+<blockquote>
+<p><strong>案例目标</strong>：用 Pi Agent 自动完成一个 AI 视频的制作——搜索素材、生成图片、合成配音、渲染成片。</p>
+</blockquote>
+<p>用到的主要工具包括：</p>
+<ul>
+<li><strong>Tavily</strong>：AI 优化的搜索引擎，用于搜集素材和资料</li>
+<li><strong>PDF 工具</strong>：读取和处理文档资料</li>
+<li><strong>Edge TTS</strong>：微软 Edge 的神经网络 TTS，免费高质量配音</li>
+<li><strong>GPT Image-2</strong>：OpenAI 的图像生成模型</li>
+<li><strong>HyperFrames</strong>：让 AI Agent 用 HTML 写视频、渲染成 MP4 的框架</li>
+</ul>
+<h3>第一步：安装 WSL（Windows 用户必看）</h3>
+<p>Pi 对 Windows 的原生适配存在一些问题，但在 WSL 中运行非常丝滑。所以第一步是装好 WSL。</p>
+<p><strong>1. 检查 CPU 虚拟化是否开启</strong></p>
+<p>打开任务管理器 → 性能选项卡 → 查看"虚拟化"是否已启用。如果未启用，需要进 BIOS 开启。</p>
+<p><strong>2. 启用 Windows 功能</strong></p>
+<p>在任务栏搜索"功能"，打开"启动或关闭 Windows 功能"，勾选：</p>
+<ul>
+<li><strong>适用于 Linux 的 Windows 子系统</strong></li>
+<li><strong>虚拟机平台</strong></li>
+</ul>
+<p>然后重启电脑。</p>
+<p><strong>3. 安装 WSL Ubuntu</strong></p>
+<p>以管理员身份打开 cmd 或 PowerShell，运行：<br>
+<code class="notranslate">wsl --install --web-download</code><br>
+这会自动下载并安装 WSL 和 Ubuntu 系统。</p>
+<p>安装完成后，在 PowerShell 中输入 <code class="notranslate">wsl</code> 就能启动默认的 WSL 系统。</p>
+<p><strong>4. WSL 与 Windows 文件互访</strong></p>
+<ul>
+<li>在 WSL 中查看 Windows 文件：<code class="notranslate">explorer.exe .</code></li>
+<li>在 Windows 中查看 WSL 文件：打开"我的电脑" → 点开右下角的 Linux</li>
+</ul>
+<p><strong>5. 配置 WSL 网络（解决 VPN 和代理问题）</strong></p>
+<p>WSL 默认是 NAT 网络模式，无法直接使用本机的 VPN 和代理。我们需要改成<strong>镜像模式</strong>。</p>
+<p>在 <code class="notranslate">C:\Users\你的用户名\</code> 目录下新建一个 <code class="notranslate">.wslconfig</code> 文件，内容如下：<br>
+[wsl2]<br>
+networkingMode=mirrored</p>
+<p>text<br>
+然后在 PowerShell 中执行 <code class="notranslate">wsl --shutdown</code> 重启 WSL，等 8 秒再重新打开。</p>
+<h3>第二步：安装 Pi Agent</h3>
+<p>进入 WSL 环境，执行安装命令：<br>
+<code class="notranslate">curl -fsSL https://pi.dev/install.sh | sh</code><br>
+或者用 npm：<br>
+<code class="notranslate">npm install -g @earendil-works/pi-coding-agent</code></p>
+<p>配置 API Key（以 Anthropic 为例）：<br>
+可以用 <code class="notranslate">/login</code> 命令交互式登录，选择你喜欢的模型提供商。</p>
+<h3>第三步：安装各种工具（Extensions &amp; Skills）</h3>
+<p>现在开始往 Pi 上"搭积木"。<strong>最省事的方式是直接用自然语言指挥 Pi 一键完成</strong>——你只需对 Pi 说：</p>
+<blockquote>
+<p>"请帮我安装所有视频工作流所需的扩展和技能，包括 Tavily 搜索、PDF 处理、Edge TTS 配音、GPT Image-2 生图和 HyperFrames 渲染，并配置好对应的 API 密钥（Tavily 和 OpenAI）。"</p>
+</blockquote>
+<p>Pi 会根据你的指令自动执行安装。当然，如果你想手动控制，也可以分别运行下面的命令（仅供参考）：</p>
+<p><strong>1. Tavily 搜索工具</strong></p>
+<p>Tavily 是一个专为 AI Agent 优化的搜索引擎。先注册获取 API Key（有免费额度），然后安装扩展：<br>
+<code class="notranslate">pi install npm:@jmcombs/pi-tavily-search</code><br>
+配置 API Key：<br>
+<code class="notranslate">export TAVILY_API_KEY="tvly-your-key-here"</code></p>
+<p><strong>2. PDF 工具</strong></p>
+<p>安装 PDF 处理 Skill，让 Pi 能读取和解析 PDF 文档（具体包名请参考官方仓库，或直接让 Pi 自行查找安装）。</p>
+<p><strong>3. Edge TTS 配音工具</strong></p>
+<p>Edge TTS 通过 <code class="notranslate">node-edge-tts</code> 库调用微软 Edge 的在线神经网络 TTS 服务，完全免费、无需 API Key。安装对应的 Skill 即可使用。</p>
+<p><strong>4. GPT Image-2 生图工具</strong></p>
+<p>安装 GPT Image-2 扩展，Pi 就能调用 OpenAI 的 <code class="notranslate">gpt-image-2</code> 模型生成图片：<br>
+<code class="notranslate">pi install npm:@kuzat/pi-extension-gpt-image-2</code></p>
+<p><strong>5. HyperFrames 视频渲染</strong></p>
+<p>HyperFrames 是一个开源框架，让 AI Agent 用 HTML、CSS 和 JavaScript 来"写"视频，然后渲染成 MP4。安装后，Pi 就能自动生成视频脚本、动画效果和合成代码。</p>
+<h3>第四步：串联成完整的视频工作流</h3>
+<p>所有工具装好之后，你只需要给 Pi 一条指令，比如：</p>
+<blockquote>
+<p>"帮我做一个 30 秒的产品介绍视频。用 Tavily 搜索产品资料，读取 PDF 文档提取关键信息，用 GPT Image-2 生成配图，用 Edge TTS 生成配音，最后用 HyperFrames 渲染成 MP4。"</p>
+</blockquote>
+<p>Pi 会自动拆解任务、依次调用各个工具、交付完整的视频成品。</p>
+<p>这就是 Pi Agent 的真正威力——<strong>它不是让你多了一个"写代码的工具"，而是让你拥有一个可以自由组装的全能工作流引擎</strong>。</p>
+<h2>三、写在最后</h2>
+<p>Pi Agent 的价值不在于它"有什么"，而在于它"没有什么"。它没有内置 MCP、没有子智能体、没有 plan mode、没有权限弹窗——因为它把选择权交给了你。</p>
+<blockquote>
+<p>官网首页写着一句话："There are many agent harnesses, but this one is yours."</p>
+</blockquote>
+<p>在这个"大而全"成为主流的时代，Pi 选择做减法。它只提供一个极简的底座，剩下的——用什么模型、装什么工具、搭什么工作流——全由你来决定。</p>
+<p>而当你把 Pi 和 Tavily、Edge TTS、GPT Image-2、HyperFrames 这些工具组合在一起时，它就不再只是一个"编程助手"了——它变成了一个能帮你做视频、做 PPT、做调研、做任何事情的<strong>全能数字员工</strong>。</p>
+<p>这才是 2026 年真正会用 AI 的人在做的事：<strong>把 AI 当成工作流引擎，而不是问答机器</strong>。</p></div>
+<div style="font-size:small;margin-top:8px;float:right;"></div>
+
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
+
+</div>
+    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://niffffty.github.io">吴广喆的blog</a></div>
+<div id="footer2">
+    <span id="runday"></span><span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a></span>
+</div>
+
+<script>
+var now=new Date();
+document.getElementById("copyrightYear").innerHTML=now.getFullYear();
+
+if(""!=""){
+    var startSite=new Date("");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("runday").innerHTML="网站运行 "+diffDay+" 天"+" • ";
+}
+</script></div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z'};
+var utterancesLoad=0;
+
+let themeSettings={
+    "dark": ["dark","moon","#00f0ff","dark-blue"],
+    "light": ["light","sun","#ff5000","github-light"],
+    "auto": ["auto","sync","","preferred-color-scheme"]
+};
+function changeTheme(mode, icon, color, utheme){
+    document.documentElement.setAttribute("data-color-mode",mode);
+    document.getElementById("themeSwitch").setAttribute("d",value=IconList[icon]);
+    document.getElementById("themeSwitch").parentNode.style.color=color;
+    if(utterancesLoad==1){utterancesTheme(utheme);}
+}
+function modeSwitch(){
+    let currentMode=document.documentElement.getAttribute('data-color-mode');
+    let newMode = currentMode === "light" ? "dark" : currentMode === "dark" ? "auto" : "light";
+    localStorage.setItem("meek_theme", newMode);
+    if(themeSettings[newMode]){
+        changeTheme(...themeSettings[newMode]);
+    }
+}
+function utterancesTheme(theme){
+    const message={type:'set-theme',theme: theme};
+    const iframe=document.getElementsByClassName('utterances-frame')[0];
+    iframe.contentWindow.postMessage(message,'https://utteranc.es');
+}
+if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
+console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.disabled=true;
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","niffffty/niffffty.github.io");
+    script.setAttribute("issue-term","title");
+    
+    if(localStorage.getItem("meek_theme")=="dark"){script.setAttribute("theme","dark-blue");}
+    else if(localStorage.getItem("meek_theme")=="light") {script.setAttribute("theme","github-light");}
+    else{script.setAttribute("theme","preferred-color-scheme");}
+    
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
+}
+
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
+
+
+
+</script>
+
+
+</html>
